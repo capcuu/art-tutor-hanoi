@@ -1,0 +1,35 @@
+tier,priority,page_type,label_en,current_path,current_full_url,proposed_path,proposed_full_url,in_header_current,in_header_proposed,in_homepage_body,in_footer_v2,redirect_on_launch,notes
+P0,1,home,Home,/,https://arttutorhanoi.com/,/,https://arttutorhanoi.com/,logo,logo,yes,yes,no,Homepage
+P0,2,conversion,Book trial session,/book-a-trial-art-session-art-tutor-hanoi/,https://arttutorhanoi.com/book-a-trial-art-session-art-tutor-hanoi/,/book/,https://arttutorhanoi.com/book/,no,yes+cta,yes,no,yes,Primary CTA; not in current header
+P0,3,classes,Fine art courses (12 programs),/art-tutor-fine-art-courses-hanoi/,https://arttutorhanoi.com/art-tutor-fine-art-courses-hanoi/,/classes/programs/,https://arttutorhanoi.com/classes/programs/,submenu Links,yes submenu,no,no,yes,Was under Links > Courses
+P0,4,pricing,Pricing,/art-class-pricing-in-hanoi/,https://arttutorhanoi.com/art-class-pricing-in-hanoi/,/classes/pricing/,https://arttutorhanoi.com/classes/pricing/,submenu Links,yes submenu,no,no,yes,Was Links > Price
+P0,5,calendar,Weekly calendar,/weekly-calendar/,https://arttutorhanoi.com/weekly-calendar/,/calendar/,https://arttutorhanoi.com/calendar/,submenu Links,yes,no,yes*,yes,MEC events; v2 footer uses /calendar/ (wrong on WP today)
+P1,6,class,Life / nude drawing,/nude-drawing-class/,https://arttutorhanoi.com/nude-drawing-class/,/classes/life-drawing/,https://arttutorhanoi.com/classes/life-drawing/,yes,yes submenu,no,no,yes,Header: Nude Drawing Class
+P1,7,class,Kids art class,/art-tutor-for-kids-eng/,https://arttutorhanoi.com/art-tutor-for-kids-eng/,/classes/kids/,https://arttutorhanoi.com/classes/kids/,yes,yes submenu,yes,no,yes,MEC event page
+P1,8,about,About us / meet artists,/meet-the-artists/,https://arttutorhanoi.com/meet-the-artists/,/about/,https://arttutorhanoi.com/about/,yes,yes,no,no,yes,Header: About us
+P1,9,support,FAQ,/faq/,https://arttutorhanoi.com/faq/,/faq/,https://arttutorhanoi.com/faq/,submenu Links,yes,no,yes,no,no,Keep same path
+P2,10,portfolio,Students artworks (WP hub),/students-artworks/,https://arttutorhanoi.com/students-artworks/,/portfolio/,https://arttutorhanoi.com/portfolio/,yes,yes,yes,no,yes,Merge with PHP portfolio app
+P2,11,portfolio,Student portfolio app,/portfolio/,https://arttutorhanoi.com/portfolio/,/portfolio/,https://arttutorhanoi.com/portfolio/,no,yes,no,no,no,Query: ?student={slug}; keep as canonical for profiles
+P2,12,post,Student profile Emma,/emma/,https://arttutorhanoi.com/emma/,/portfolio/?student=emma,https://arttutorhanoi.com/portfolio/?student=emma,no,no,yes,no,maybe,Homepage sample
+P2,13,post,Student profile Jay Ryu,/jay-ryu/,https://arttutorhanoi.com/jay-ryu/,/portfolio/?student=jay-ryu,https://arttutorhanoi.com/portfolio/?student=jay-ryu,no,no,yes,no,maybe,Homepage sample
+P2,14,post,Student profile Tayuna,/tayuna/,https://arttutorhanoi.com/tayuna/,/portfolio/?student=tayuna,https://arttutorhanoi.com/portfolio/?student=tayuna,no,no,yes,no,maybe,Homepage sample
+P3,15,resource,Art supplies map,/hanoi-art-supply-map/,https://arttutorhanoi.com/hanoi-art-supply-map/,/resources/art-supplies/,https://arttutorhanoi.com/resources/art-supplies/,submenu Links,footer,no,yes*,yes,v2 footer: /art-supplies/ (404 on WP)
+P3,16,blog,Art tutorials archive,/art-tutorials/,https://arttutorhanoi.com/art-tutorials/,/blog/,https://arttutorhanoi.com/blog/,submenu Links,footer,no,no,no,yes,Category hub
+P3,17,community,Join art community,/join-our-art-community/,https://arttutorhanoi.com/join-our-art-community/,/community/,https://arttutorhanoi.com/community/,submenu Links,footer,no,yes,no,yes,
+P3,18,resource,Free art feedback,/free-art-feedback/,https://arttutorhanoi.com/free-art-feedback/,/resources/feedback/,https://arttutorhanoi.com/resources/feedback/,submenu Links,footer,no,yes*,no,yes,v2 footer: /art-feedback/
+P3,19,event,Exhibition Living Colors 2025,/exhibitionlivingcolors2025/,https://arttutorhanoi.com/exhibitionlivingcolors2025/,/exhibition/,https://arttutorhanoi.com/exhibition/,submenu Links,footer,no,yes*,no,yes,v2 footer: /exhibition-2026/
+P3,20,utility,External links hub,/link/,https://arttutorhanoi.com/link/,/links/,https://arttutorhanoi.com/links/,submenu Links,no,no,no,yes,OTA GetYourGuide Airbnb Tripadvisor
+P3,21,class,Self-study studio,TBD,TBD,/classes/self-study/,https://arttutorhanoi.com/classes/self-study/,no,yes submenu,no,no,TBD,On live homepage; confirm WP slug
+P3,22,page,Art fundamentals,TBD,TBD,/resources/art-fundamentals/,https://arttutorhanoi.com/resources/art-fundamentals/,no,footer,no,yes*,TBD,v2 footer only — verify if page exists
+P3,23,prototype,v2 redesign,/v2/index.html,https://arttutorhanoi.com/v2/index.html,TBD,TBD,no,no,no,no,no,Static prototype; not production IA
+P3,24,category,Blog category,/category/blog/,https://arttutorhanoi.com/category/blog/,/blog/,https://arttutorhanoi.com/blog/,no,no,no,no,maybe,
+P3,25,category,Courses category,/category/courses/,https://arttutorhanoi.com/category/courses/,/blog/category/courses/,https://arttutorhanoi.com/blog/category/courses/,no,no,no,no,maybe,
+P3,26,category,Art tutorials category,/category/art-tutorials/,https://arttutorhanoi.com/category/art-tutorials/,/blog/category/art-tutorials/,https://arttutorhanoi.com/blog/category/art-tutorials/,no,no,no,no,maybe,
+P3,27,category,Drawing techniques,/category/drawing-techniques/,https://arttutorhanoi.com/category/drawing-techniques/,/blog/category/drawing-techniques/,https://arttutorhanoi.com/blog/category/drawing-techniques/,no,no,no,no,maybe,
+P3,28,category,Painting techniques,/category/painting-techniques/,https://arttutorhanoi.com/category/painting-techniques/,/blog/category/painting-techniques/,https://arttutorhanoi.com/blog/category/painting-techniques/,no,no,no,no,maybe,
+P3,29,category,Pencil basic 1,/category/pencil-basic-1/,https://arttutorhanoi.com/category/pencil-basic-1/,/blog/category/pencil-basic-1/,https://arttutorhanoi.com/blog/category/pencil-basic-1/,no,no,no,no,maybe,
+P3,30,category,Pencil basic 2,/category/pencil-basic-2/,https://arttutorhanoi.com/category/pencil-basic-2/,/blog/category/pencil-basic-2/,https://arttutorhanoi.com/blog/category/pencil-basic-2/,no,no,no,no,maybe,
+P3,31,category,Studio insights,/category/art-tutorials/studio-insights-art-education/,https://arttutorhanoi.com/category/art-tutorials/studio-insights-art-education/,/blog/category/studio-insights/,https://arttutorhanoi.com/blog/category/studio-insights/,no,no,no,no,maybe,Nested category today
+P3,32,category,Uncategorized,/category/uncategorized/,https://arttutorhanoi.com/category/uncategorized/,/blog/category/uncategorized/,https://arttutorhanoi.com/blog/category/uncategorized/,no,no,no,no,maybe,Legacy — consolidate in migration
+P3,33,external,WhatsApp chat,https://wa.me/84988288302,https://wa.me/84988288302,https://wa.me/84988288302,https://wa.me/84988288302,floating,floating,yes,no,no,Contact
+P3,34,external,Email,mailto:contact@arttutorhanoi.com,mailto:contact@arttutorhanoi.com,mailto:contact@arttutorhanoi.com,mailto:contact@arttutorhanoi.com,footer,footer,yes,yes,no,Contact

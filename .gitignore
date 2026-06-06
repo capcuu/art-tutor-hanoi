@@ -1,0 +1,68 @@
+# WordPress core (cài/update trên server, không deploy từ local)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/index.php
+
+# Cấu hình local — chứa mật khẩu DB
+/wp-config.php
+/wp-config-docker.php
+/wp-config-sample.php
+
+# Backup / cache / upload
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/backup*/
+/wp-content/boost-cache/
+/wp-content/mu-plugins/
+/wp-content/debug.log
+*.log
+
+# Plugins bên thứ 3 — cài qua WP Admin trên server
+/wp-content/plugins/
+
+# Themes mặc định WordPress
+/wp-content/themes/twentytwenty*/
+
+# Thư mục khác không deploy
+/portfolio/
+/website_a416c647/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+# --- WHITELIST: chỉ track phần custom ---
+
+# Child theme + parent theme
+!/wp-content/themes/
+!/wp-content/themes/art-tutor-hanoi/
+!/wp-content/themes/masu-wpcom/
+
+# Site PHP độc lập (rebuild v2)
+!/v2/
+
+# Plugin custom (bỏ comment dòng plugin cần track)
+!/wp-content/plugins/
+!/wp-content/plugins/artist-countries-shortcode/
+!/wp-content/plugins/artist-country-summary/
+!/wp-content/plugins/arth-send-invoice/
+!/wp-content/plugins/galleryFeedBackHozirontal/
+!/wp-content/plugins/galleryFeedBackHozirontalPrivate/
+!/wp-content/plugins/google-photo-comment-fixer-alt-final/
+!/wp-content/plugins/gsheet-image-gallery-pinterest-old123/
+!/wp-content/plugins/portfolio-form-fill/
+!/wp-content/plugins/comment-email-notifier-acfV3/
+!/wp-content/plugins/latest-by-comment-plugin-v1.1-fixed-v3/
+
+# Tài liệu IA
+!/SITE-IA.md
+!/sitemap.csv
