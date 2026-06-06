@@ -20,10 +20,26 @@
 /wp-content/boost-cache/
 /wp-content/mu-plugins/
 /wp-content/debug.log
+/wp-content/autoptimize_404_handler.php*
+/wp-content/boost-cache*/
+/wp-content/gallery*/
+/wp-content/jetpack-waf*/
+/wp-content/jpcrm-storage*/
+/wp-content/mu-plugins*/
+/wp-content/smush-webp*/
+/wp-content/updraft/
+/wp-content/wflogs*/
+/wp-content/uploads.zip
+/wp-content/*.log*
+/wp-content/*.php-old*
+/wp-content/index.php*
 *.log
 
-# Plugins bên thứ 3 — cài qua WP Admin trên server
-/wp-content/plugins/
+# Root backup
+.htaccess.nfd-backup
+
+# Plugins — ignore tất cả, whitelist plugin custom bên dưới
+/wp-content/plugins/*
 
 # Themes mặc định WordPress
 /wp-content/themes/twentytwenty*/
@@ -50,8 +66,7 @@ Thumbs.db
 # Site PHP độc lập (rebuild v2)
 !/v2/
 
-# Plugin custom (bỏ comment dòng plugin cần track)
-!/wp-content/plugins/
+# Plugin custom (thêm dòng !/wp-content/plugins/ten-plugin/ khi cần)
 !/wp-content/plugins/artist-countries-shortcode/
 !/wp-content/plugins/artist-country-summary/
 !/wp-content/plugins/arth-send-invoice/
