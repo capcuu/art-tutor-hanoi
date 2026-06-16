@@ -85,3 +85,9 @@ Thumbs.db
 # Tài liệu IA
 !/SITE-IA.md
 !/sitemap.csv
+
+# Build / cache — không lưu trên Git
+*.zip
+art-tutor-deploy.zip
+artist_portfolio/cache/*
+!artist_portfolio/cache/.gitkeep
