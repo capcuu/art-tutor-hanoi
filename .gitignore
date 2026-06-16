@@ -54,7 +54,8 @@ Thumbs.db
 *.swp
 *~
 .idea/
-.vscode/
+.vscode/*
+!.vscode/sftp.json.example
 
 # --- WHITELIST: chỉ track phần custom ---
 
@@ -65,6 +66,9 @@ Thumbs.db
 
 # Site PHP độc lập (rebuild v2)
 !/v2/
+
+# Adult portfolio app (static → PHP + Google Sheet)
+!/artist_portfolio/
 
 # Plugin custom (thêm dòng !/wp-content/plugins/ten-plugin/ khi cần)
 !/wp-content/plugins/artist-countries-shortcode/

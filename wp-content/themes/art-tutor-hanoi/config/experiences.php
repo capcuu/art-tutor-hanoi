@@ -25,10 +25,10 @@ function v2_experience_by_slug( $slug ) {
 
 	if ( ! empty( $experience['book']['url'] ) ) {
 		$tab_by_slug = array(
-			'trial-art-class'  => 'trial',
-			'life-drawing'     => 'workshops',
-			'silk-painting'    => 'workshops',
-			'artist-residency' => 'residency',
+			'trial-art-class'  => 'adult',
+			'life-drawing'     => 'adult',
+			'silk-painting'    => 'adult',
+			'artist-residency' => 'adult',
 		);
 
 		if ( isset( $tab_by_slug[ $slug ] ) ) {

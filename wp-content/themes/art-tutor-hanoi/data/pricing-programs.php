@@ -1,77 +1,94 @@
 <?php
 /**
- * Programs & pricing cards — content from arttutorhanoi.com/programs/
+ * Pricing page — accordion sections and rates.
  */
 return array(
 	'intro' => array(
-		'Not sure where to start?',
-		'Here are a few ways to begin your art journey at our studio.',
-		'At Art Tutor Hanoi, we focus on building strong foundations — whether you are learning, practicing, or simply making time for your own art.',
+		'Clear, simple rates for every way to study at our Hanoi studio.',
+		'All prices are in USD. Long-term course packages are valid for 12 months.',
 	),
-	'faq_url'   => 'https://arttutorhanoi.com/faq/',
+	'faq_url'   => 'faq',
 	'faq_label' => 'FAQ',
-	'programs'  => array(
+	'sections'  => array(
 		array(
-			'id'          => 'trial',
+			'id'          => 'trial-art-class',
+			'num'         => '01',
 			'title'       => 'Trial Art Class',
-			'tag'         => 'For beginners',
+			'description' => 'A 2-hour introductory session — try our teaching style before committing to a full course.',
 			'price'       => '$40',
-			'description' => 'Intro to drawing and painting.',
-			'cta'         => array(
-				'label' => 'Start Trial',
-				'url'   => 'trial',
-			),
+			'book_tab'    => 'adult',
 		),
 		array(
-			'id'          => 'six-session',
-			'title'       => '6-session Course',
-			'tag'         => 'Specific skill',
-			'price'       => '$115',
-			'description' => 'Focus on one core technique.',
-			'features'    => array( 'Pencil', 'Charcoal', 'Oil', 'Watercolor' ),
-			'cta'         => array(
-				'label' => 'Start Course',
-				'url'   => 'adults',
+			'id'          => 'workshops',
+			'num'         => '02',
+			'title'       => 'Workshops',
+			'description' => 'One-off studio sessions with guided instruction — ideal for trying a new medium or skill.',
+			'from_price'  => 'from $40',
+			'items'       => array(
+				array(
+					'title' => 'Figure Drawing',
+					'price' => '$40',
+				),
+				array(
+					'title' => 'Silk Painting',
+					'price' => '$40',
+				),
 			),
+			'book_tab'    => 'adult',
 		),
 		array(
-			'id'          => 'twelve-session',
-			'title'       => '12-session Program',
-			'tag'         => 'Long-term study',
+			'id'          => 'adult-classes',
+			'num'         => '03',
+			'title'       => 'Adult Classes',
+			'description' => 'Structured fine-art programs — pencil, charcoal, colour, and oil painting for adults.',
+			'from_price'  => 'from $115',
+			'items'       => array(
+				array(
+					'title' => '6-session class',
+					'price' => '$115',
+				),
+				array(
+					'title' => '12-session class',
+					'price' => '$183',
+				),
+			),
+			'book_tab'    => 'adult',
+		),
+		array(
+			'id'          => 'kids-classes',
+			'num'         => '04',
+			'title'       => 'Kids Classes',
+			'description' => 'Creative art programs for children aged 5–12, exploring drawing and painting in a supportive setting.',
 			'price'       => '$183',
-			'description' => 'Develop your skills over time.',
-			'badge'       => 'Most Popular',
-			'featured'    => true,
-			'cta'         => array(
-				'label' => 'Join Program',
-				'url'   => 'adults',
+			'items'       => array(
+				array(
+					'title' => '12-session class',
+					'price' => '$183',
+				),
 			),
+			'book_tab'    => 'kids',
 		),
 		array(
-			'id'          => 'kids',
-			'title'       => 'Kids Art Program',
-			'tag'         => 'Age 5–12',
-			'price'       => '$183',
-			'description' => 'Explore creativity through art styles.',
-			'features'    => array( 'Impressionism', 'Expressionism', 'Surrealism', 'Pop Art' ),
-			'cta'         => array(
-				'label' => 'Book for Kids',
-				'url'   => 'kids',
+			'id'          => 'artist-residency',
+			'num'         => '05',
+			'title'       => 'Artist Residency',
+			'description' => 'Dedicated studio time for independent practice, with optional guidance from our tutors.',
+			'from_price'  => 'from $135',
+			'items'       => array(
+				array(
+					'title' => '1 week',
+					'price' => '$135',
+				),
+				array(
+					'title' => '2 weeks',
+					'price' => '$250',
+				),
+				array(
+					'title' => '4 weeks',
+					'price' => '$480',
+				),
 			),
-		),
-	),
-	'solo_note' => array(
-		'heading' => 'Not looking for a class?',
-		'text'    => 'You can also work independently at our studio.',
-	),
-	'residency' => array(
-		'title'       => 'Artist Residency',
-		'tag'         => 'Independent practice',
-		'price'       => '$135 / week',
-		'description' => 'A quiet studio for independent art practice.',
-		'cta'         => array(
-			'label' => 'Work Independently',
-			'url'   => 'residency',
+			'book_tab'    => 'adult',
 		),
 	),
 );

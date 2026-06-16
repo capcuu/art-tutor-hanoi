@@ -11,6 +11,7 @@ $tabs        = ath_book_tabs();
 $active_tab  = ath_book_active_tab();
 $active_data = $tabs[ $active_tab ];
 ?>
+<!-- ath-book-tabs: <?php echo esc_html( implode( ',', array_keys( $tabs ) ) ); ?> -->
 <main class="book-page">
   <section class="courses-hero book-page__hero" aria-labelledby="book-heading">
     <div class="courses-hero__inner">
@@ -45,29 +46,9 @@ $active_data = $tabs[ $active_tab ];
           <p class="book-panel__intro"><?php echo esc_html( $active_data['intro'] ); ?></p>
         <?php endif; ?>
 
-        <?php if ( $active_tab === 'workshops' && ! empty( $active_data['workshops'] ) ) : ?>
-          <ul class="book-workshops">
-            <?php foreach ( $active_data['workshops'] as $workshop ) : ?>
-              <li class="book-workshops__item">
-                <h2 class="book-workshops__title"><?php echo esc_html( $workshop['title'] ); ?></h2>
-                <p class="book-workshops__desc"><?php echo esc_html( $workshop['desc'] ); ?></p>
-                <a href="<?php echo esc_url( $workshop['url'] ); ?>" class="book-workshops__link">Learn more</a>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-          <p class="book-panel__note">
-            <a href="<?php echo esc_url( ath_page_url( 'calendar' ) ); ?>">View weekly calendar</a>
-            for session dates, or
-            <a href="<?php echo esc_url( ath_book_url( 'trial' ) ); ?>">book a trial class</a>
-            to visit the studio first.
-          </p>
-        <?php endif; ?>
-
-        <?php if ( ! empty( $active_data['form_id'] ) ) : ?>
-          <div class="book-form-section__inner calendar-wp-content">
-            <?php ath_render_fluent_form( (int) $active_data['form_id'] ); ?>
-          </div>
-        <?php endif; ?>
+        <div class="book-form-section__inner calendar-wp-content">
+          <?php ath_render_fluent_form( (int) ( $active_data['form_id'] ?? 0 ) ); ?>
+        </div>
       </div>
     </div>
   </section>

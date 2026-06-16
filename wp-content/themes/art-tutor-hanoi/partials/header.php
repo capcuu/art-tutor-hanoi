@@ -6,6 +6,21 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+$workshops_hub = ath_workshops_hub_url();
+$hub_data      = ath_workshops_hub_data();
+$nav_workshops = array();
+foreach ( ath_workshop_hub_slugs() as $slug ) {
+	foreach ( (array) ( $hub_data['workshops'] ?? array() ) as $row ) {
+		if ( ( $row['slug'] ?? '' ) === $slug ) {
+			$nav_workshops[] = array(
+				'slug'  => $slug,
+				'label' => (string) ( $row['title'] ?? $slug ),
+			);
+			break;
+		}
+	}
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -34,17 +49,17 @@ defined( 'ABSPATH' ) || exit;
         <ul class="nav">
           <li><a href="<?php echo esc_url( ath_page_url( 'about' ) ); ?>">About</a></li>
           <li class="nav-item">
-            <a class="nav-item__trigger" href="<?php echo esc_url( ath_page_url( 'pricing' ) ); ?>">Workshops</a>
+            <a class="nav-item__trigger" href="<?php echo esc_url( $workshops_hub ); ?>">Workshops</a>
             <ul class="nav-submenu">
-              <li><a href="<?php echo esc_url( ath_experience_url( 'trial-art-class' ) ); ?>">Trial Art Class</a></li>
-              <li><a href="<?php echo esc_url( ath_experience_url( 'life-drawing' ) ); ?>">Nude Model Drawing</a></li>
-              <li><a href="<?php echo esc_url( ath_experience_url( 'silk-painting' ) ); ?>">Silk Painting</a></li>
-              <li><a href="<?php echo esc_url( ath_experience_url( 'artist-residency' ) ); ?>">Artist Residency</a></li>
+              <?php foreach ( $nav_workshops as $item ) : ?>
+                <li><a href="<?php echo esc_url( ath_experience_url( $item['slug'] ) ); ?>"><?php echo esc_html( $item['label'] ); ?></a></li>
+              <?php endforeach; ?>
             </ul>
           </li>
           <li class="nav-item">
             <a class="nav-item__trigger" href="<?php echo esc_url( ath_page_url( 'courses' ) ); ?>">Adults</a>
             <ul class="nav-submenu">
+              <li><a href="<?php echo esc_url( ath_experience_url( 'trial-art-class' ) ); ?>">Trial Art Class</a></li>
               <li><a href="<?php echo esc_url( ath_page_url( 'courses' ) ); ?>">Courses</a></li>
               <li><a href="<?php echo esc_url( ath_page_url( 'adults-portfolio' ) ); ?>">Portfolio Preparation</a></li>
             </ul>
@@ -58,12 +73,12 @@ defined( 'ABSPATH' ) || exit;
           </li>
           <li><a href="<?php echo esc_url( ath_page_url( 'pricing' ) ); ?>">Pricing</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'calendar' ) ); ?>">Calendar</a></li>
-          <li class="nav-item nav-item--book"><a href="<?php echo esc_url( ath_book_url( 'trial' ) ); ?>">Book a Class</a></li>
+          <li class="nav-item nav-item--book"><a href="<?php echo esc_url( ath_book_url( 'adult' ) ); ?>">Book a Class</a></li>
         </ul>
       </nav>
 
       <div class="header__actions">
-        <a href="<?php echo esc_url( ath_book_url( 'trial' ) ); ?>" class="btn-contact">Book a Class</a>
+        <a href="<?php echo esc_url( ath_book_url( 'adult' ) ); ?>" class="btn-contact">Book a Class</a>
       </div>
     </div>
   </header>

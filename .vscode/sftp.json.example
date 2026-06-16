@@ -1,0 +1,19 @@
+[
+    {
+        "name": "website-c1e4d7c9.zmu.xib.mybluehost.me — Theme",
+        "host": "zmu.xib.mybluehost.me",
+        "protocol": "ftp",
+        "port": 21,
+        "secure": false,
+        "connectTimeout": 60000,
+        "passive": true,
+        "username": "YOUR_FTP_USER@arttutorhanoi.com",
+        "password": "YOUR_FTP_PASSWORD",
+        "context": "wp-content/themes/art-tutor-hanoi",
+        "remotePath": "/wp-content/themes/art-tutor-hanoi",
+        "uploadOnSave": true,
+        "downloadOnOpen": false,
+        "ignore": [".vscode", ".git", "backup/**"],
+        "_comment": "FTP root is often .../public_html/website_c1e4d7c9 — remotePath is relative to that folder."
+    }
+]

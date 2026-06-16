@@ -1,21 +1,21 @@
 <?php
 /**
- * Adult course detail — /courses/{slug}/
+ * Kids course detail — /kids-courses/{slug}/ (adult courses use WP pages).
  *
  * @package Art_Tutor_Hanoi
  */
 
 defined( 'ABSPATH' ) || exit;
 
-$slug   = sanitize_title( (string) get_query_var( 'ath_course' ) );
-$course = v2_course_by_slug( $slug );
+$kids_slug = sanitize_title( (string) get_query_var( 'ath_kids_course' ) );
+$course    = v2_kids_course_by_slug( $kids_slug );
 
 if ( ! $course ) {
 	ath_render_not_found(
 		'Course not found',
-		'We couldn\'t find that course. Browse our learning pathways to see all programs.',
-		ath_page_url( 'courses' ),
-		'View all courses'
+		'We couldn\'t find that course. Browse our kids programs to see what\'s available.',
+		ath_page_url( 'kids-courses' ),
+		'View kids courses'
 	);
 }
 

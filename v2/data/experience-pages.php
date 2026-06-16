@@ -12,7 +12,7 @@ return array(
 		'price'       => '$40',
 		'price_note'  => 'We accept Stripe, PayPal and bank transfer',
 		'image'       => array(
-			'url' => $cld . '/v1767942119/Arttutor_Pics/TrialArtClass_119508bc00/TrialArtClass_119508bc00.jpg',
+			'url' => 'https://res.cloudinary.com/dftadlujq/image/upload/v1766205032/Arttutor_Pics/daniel-garber-september-morning-detail-4.jpg',
 			'alt' => 'Trial art class at Art Tutor Hanoi',
 		),
 		'intro'       => 'The trial session introduces our academic approach to drawing and painting, focusing on fundamentals and instructor feedback — not on completing a finished artwork.',

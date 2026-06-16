@@ -4,8 +4,7 @@
  */
 require_once __DIR__ . '/../config/images.php';
 
-$hero_src  = v2_img_url( $experience['image']['url'], 'hero' );
-$hero_size = v2_img_display_size( 'hero' );
+$hero_src = ath_experience_hero_img_url( $experience['image']['url'] );
 ?>
 <main class="experience-page">
   <nav class="course-breadcrumb" aria-label="Breadcrumb">
@@ -21,10 +20,9 @@ $hero_size = v2_img_display_size( 'hero' );
         <img
           src="<?php echo htmlspecialchars( $hero_src, ENT_QUOTES, 'UTF-8' ); ?>"
           alt="<?php echo htmlspecialchars( $experience['image']['alt'], ENT_QUOTES, 'UTF-8' ); ?>"
-          width="<?php echo (int) $hero_size['width']; ?>"
-          <?php if ( $hero_size['height'] ) : ?>height="<?php echo (int) $hero_size['height']; ?>"<?php endif; ?>
           decoding="async"
           fetchpriority="high"
+          loading="eager"
         >
       </div>
       <div class="experience-hero__content">
@@ -86,14 +84,12 @@ $hero_size = v2_img_display_size( 'hero' );
         <div class="course-gallery__grid">
           <?php foreach ( $experience['gallery'] as $item ) : ?>
             <?php
-            $gallery_src  = v2_img_url( $item['url'], 'gallery' );
-            $gallery_size = v2_img_display_size( 'gallery' );
+            $gallery_src = ath_course_gallery_img_url( $item['url'] );
             ?>
             <figure class="course-gallery__item">
               <img
                 src="<?php echo htmlspecialchars( $gallery_src, ENT_QUOTES, 'UTF-8' ); ?>"
                 alt="<?php echo htmlspecialchars( isset( $item['caption'] ) ? $item['caption'] : $experience['title'], ENT_QUOTES, 'UTF-8' ); ?>"
-                width="<?php echo (int) $gallery_size['width']; ?>"
                 loading="lazy"
                 decoding="async"
               >

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About
+ * Homepage template.
  *
  * @package Art_Tutor_Hanoi
  */
@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 ath_render_page(
 	static function () {
-		require ATH_THEME_DIR . '/partials/about-content.php';
+		require ATH_THEME_DIR . '/partials/home-content.php';
 	},
-	'About — Art Tutor Hanoi'
+	'Art Tutor Hanoi'
 );

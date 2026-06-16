@@ -1,0 +1,19 @@
+# Theme files included in art-tutor-deploy.zip (paths relative to theme root).
+# Edit this list, then run scripts/build-theme-deploy.ps1 from repo root.
+
+inc/thank-you-page.php
+inc/book-page.php
+inc/fluent-qr.php
+config/fluent-qr.php
+config/book-tabs.php
+partials/footer.php
+partials/thank-you-content.php
+partials/book-content.php
+assets/css/main.css
+inc/seo-page.php
+inc/seo.php
+inc/seo-schema.php
+inc/seo-onpage.php
+inc/seo-content.php
+inc/seo-monitor.php
+inc/gutenberg-migration.php

@@ -1,6 +1,6 @@
 <?php
 /**
- * Book page — canonical /book/ URL, page setup, redirects.
+ * Book page — canonical /book/ URL and page setup.
  *
  * @package Art_Tutor_Hanoi
  */
@@ -25,7 +25,7 @@ function ath_is_book_page( $post = null ) {
 		return false;
 	}
 
-	if ( in_array( $post->post_name, array( 'book', 'book-a-class' ), true ) ) {
+	if ( $post->post_name === 'book' ) {
 		return true;
 	}
 
@@ -96,11 +96,11 @@ add_action( 'after_switch_theme', 'ath_ensure_book_page' );
 add_action(
 	'init',
 	function () {
-		if ( get_option( 'ath_book_page_setup' ) === '3' ) {
+		if ( get_option( 'ath_book_page_setup' ) === '4' ) {
 			return;
 		}
 		ath_ensure_book_page();
-		update_option( 'ath_book_page_setup', '3' );
+		update_option( 'ath_book_page_setup', '4' );
 	},
 	5
 );
@@ -132,43 +132,7 @@ add_filter(
 add_action(
 	'init',
 	function () {
-		$book   = get_page_by_path( 'book' );
-		$legacy = get_page_by_path( 'book-a-class' );
-		$target = $book ? 'book' : ( $legacy ? 'book-a-class' : 'book' );
-		add_rewrite_rule( '^book/?$', 'index.php?pagename=' . $target, 'top' );
+		add_rewrite_rule( '^book/?$', 'index.php?pagename=book', 'top' );
 	},
 	6
-);
-
-add_action(
-	'template_redirect',
-	function () {
-		if ( ! is_page( 'book-a-class' ) ) {
-			return;
-		}
-
-		$target = ath_book_base_url();
-		if ( isset( $_GET['tab'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$tab = sanitize_key( wp_unslash( $_GET['tab'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			if ( $tab !== '' ) {
-				$target = add_query_arg( 'tab', $tab, $target );
-			}
-		}
-
-		wp_safe_redirect( $target, 301 );
-		exit;
-	},
-	1
-);
-
-add_filter(
-	'wp_nav_menu_objects',
-	function ( $items ) {
-		foreach ( $items as $item ) {
-			if ( ! empty( $item->url ) && strpos( $item->url, 'book-a-class' ) !== false ) {
-				$item->url = preg_replace( '#/book-a-class/?#', '/book/', $item->url );
-			}
-		}
-		return $items;
-	}
 );

@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
     <div class="site-footer__main">
       <div class="site-footer__brand">
         <a href="<?php echo esc_url( ath_page_url( 'home' ) ); ?>" aria-label="Art Tutor Hanoi home">
-          <img src="<?php echo esc_url( ath_asset_url( 'logo_footer.png' ) ); ?>" alt="Art Tutor Hanoi" id="footer-logo" width="240" height="160" decoding="async">
+          <img src="<?php echo esc_url( ath_asset_url( 'logo.png' ) ); ?>" alt="Art Tutor Hanoi" class="logo" width="252" height="168" decoding="async">
         </a>
         <p class="site-footer__desc">English-speaking painting and drawing classes in a quiet studio near West Lake, Hanoi — for beginners, expats, and travellers.</p>
       </div>
@@ -19,6 +19,7 @@ defined( 'ABSPATH' ) || exit;
       <div>
         <ul class="site-footer__links">
           <li><a href="<?php echo esc_url( ath_page_url( 'faq' ) ); ?>">FAQ</a></li>
+          <li><a href="<?php echo esc_url( ath_students_artworks_url() ); ?>">Students&rsquo; Artworks</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'art-supplies' ) ); ?>">Art Supplies</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'exhibition' ) ); ?>">Exhibition 2026</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'links' ) ); ?>">More links</a></li>
@@ -92,6 +93,43 @@ defined( 'ABSPATH' ) || exit;
       <span>English-speaking art studio in Hanoi</span>
     </div>
   </footer>
+  <script>
+  (function () {
+    var path = window.location.pathname || '';
+    var search = window.location.search || '';
+    if (path.indexOf('thank-you') === -1 || search.indexOf('entry=') === -1) {
+      return;
+    }
+    var params = new URLSearchParams(search);
+    var entry = params.get('entry');
+    if (!entry) {
+      return;
+    }
+    var api = <?php echo wp_json_encode( rest_url( 'ath/v1/thank-you-qr' ) ); ?>;
+    var url = api + '?entry=' + encodeURIComponent(entry) + '&from=' + encodeURIComponent(params.get('from') || '') + '&_=' + Date.now();
+    fetch(url, { credentials: 'same-origin', cache: 'no-store' })
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (data) {
+        if (!data || !data.html) {
+          return;
+        }
+        var inner = document.querySelector('.thank-you-page__inner');
+        if (!inner || inner.querySelector('.thank-you-page__payment')) {
+          return;
+        }
+        inner.insertAdjacentHTML('afterbegin', data.html);
+        var heading = document.getElementById('thank-you-heading');
+        var lead = document.querySelector('.thank-you-page__lead');
+        if (heading) {
+          heading.textContent = 'Booking received — please complete payment';
+        }
+        if (lead) {
+          lead.textContent = 'Your booking details are saved. Transfer the exact amount below via VietQR to confirm your place.';
+        }
+      })
+      .catch(function () {});
+  })();
+  </script>
   <?php wp_footer(); ?>
 </body>
 </html>

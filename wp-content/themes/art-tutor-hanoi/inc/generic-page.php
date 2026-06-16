@@ -21,6 +21,7 @@ function ath_calendar_page_slug() {
  */
 function ath_routed_page_partials() {
 	$map = array(
+		'about'           => 'about-content.php',
 		'link'            => 'links-content.php',
 		'thank-you'       => 'thank-you-content.php',
 		'weekly-calendar' => 'calendar-content.php',
@@ -97,16 +98,10 @@ function ath_generic_v2_page_slugs() {
 		'art-tutor-fine-art-courses-hanoi',
 		'call-for-artists',
 		'practice-at-home',
-		'workshops',
 		'discount-code',
 		'quotation-table',
 		'certificate_form',
-		'nude-drawing-class',
-		'programs',
-		'beginner-friendly-art-class-in-hanoi',
-		'artist-residency-in-hanoi',
-		'book-a-class',
-		'book-a-trial-art-session-art-tutor-hanoi',
+		'guide',
 	);
 
 	return apply_filters( 'ath_generic_v2_page_slugs', $slugs );
@@ -119,7 +114,6 @@ function ath_generic_v2_page_slugs() {
  */
 function ath_dedicated_v2_page_templates() {
 	$map = array(
-		'about'             => 'page-templates/about.php',
 		'students-artworks' => 'page-templates/students-artworks.php',
 		'book'              => 'page-templates/book.php',
 	);
@@ -155,20 +149,8 @@ function ath_is_generic_v2_page( $post = null ) {
 	}
 
 	$dedicated = ath_dedicated_v2_page_templates();
-	if ( isset( $dedicated[ $post->post_name ] ) ) {
-		return false;
-	}
 
-	if ( in_array( $post->post_name, ath_page_php_slugs(), true ) ) {
-		return true;
-	}
-
-	$template = get_page_template_slug( $post->ID );
-	if ( $template === '' || $template === 'default' ) {
-		return true;
-	}
-
-	return false;
+	return ! isset( $dedicated[ $post->post_name ] );
 }
 
 /**
@@ -268,6 +250,73 @@ function ath_ensure_generic_v2_pages() {
 
 add_action( 'after_switch_theme', 'ath_ensure_generic_v2_pages' );
 
+/**
+ * Split gallery items into initial + load-more batches.
+ *
+ * @param array $items            Rows from data/{source}.php.
+ * @param int   $visible_count    Images in the first visible batch.
+ * @param int   $load_more_count  Images in batch 2; 0 = all remaining.
+ * @param bool  $shuffle          Randomize order and collage layout each request.
+ * @return array<int, array<int, array>>
+ */
+function ath_prepare_frontpage_gallery_batches( array $items, $visible_count = 5, $load_more_count = 0, $shuffle = true ) {
+	if ( empty( $items ) ) {
+		return array( 1 => array(), 2 => array() );
+	}
+
+	$pool = array_values( $items );
+
+	if ( $shuffle ) {
+		shuffle( $pool );
+
+		$width_options = array( 32, 34, 36, 38, 42, 44, 46, 52, 58 );
+		foreach ( $pool as &$item ) {
+			$item['width_pct']  = $width_options[ array_rand( $width_options ) ];
+			$item['rotate']     = round( wp_rand( -28, 28 ) / 10, 1 );
+			$item['margin_top'] = wp_rand( 0, 22 );
+			unset( $item['batch'], $item['badge_near'] );
+		}
+		unset( $item );
+	} else {
+		$uses_batch_field = false;
+		foreach ( $pool as $item ) {
+			if ( isset( $item['batch'] ) ) {
+				$uses_batch_field = true;
+				break;
+			}
+		}
+
+		if ( $uses_batch_field ) {
+			$batches = array( 1 => array(), 2 => array() );
+			foreach ( $pool as $item ) {
+				$batch = (int) ( $item['batch'] ?? 1 );
+				$batches[ 2 === $batch ? 2 : 1 ][] = $item;
+			}
+
+			return $batches;
+		}
+	}
+
+	$visible_count = max( 1, min( (int) $visible_count, count( $pool ) ) );
+	$batches       = array( 1 => array(), 2 => array() );
+
+	$load_more_count = max( 0, (int) $load_more_count );
+	$batch2_limit    = $load_more_count > 0 ? $load_more_count : PHP_INT_MAX;
+
+	foreach ( $pool as $i => $item ) {
+		if ( $i < $visible_count ) {
+			$batches[1][] = $item;
+			continue;
+		}
+
+		if ( count( $batches[2] ) < $batch2_limit ) {
+			$batches[2][] = $item;
+		}
+	}
+
+	return $batches;
+}
+
 add_filter(
 	'template_include',
 	function ( $template ) {
@@ -285,11 +334,11 @@ add_filter(
 add_action(
 	'init',
 	function () {
-		if ( get_option( 'ath_generic_v2_pages_setup' ) === '5' ) {
+		if ( get_option( 'ath_generic_v2_pages_setup' ) === '6' ) {
 			return;
 		}
 		ath_ensure_generic_v2_pages();
-		update_option( 'ath_generic_v2_pages_setup', '5' );
+		update_option( 'ath_generic_v2_pages_setup', '6' );
 	},
 	5
 );

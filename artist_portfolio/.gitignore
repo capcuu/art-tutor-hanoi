@@ -1,0 +1,10 @@
+# Secrets — copy from .env.example on each server
+.env
+
+# Runtime cache (Google Sheet CSV, Cloudinary gallery lists)
+cache/*
+!cache/.gitkeep
+
+# Local debug downloads
+cache/live-page.html
+_sheet_sample.csv

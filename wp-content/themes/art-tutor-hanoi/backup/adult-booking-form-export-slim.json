@@ -1,0 +1,1203 @@
+[
+    {
+        "title": "Adult Booking — Art Tutor Hanoi",
+        "status": "published",
+        "appearance_settings": null,
+        "form_fields": {
+            "fields": [
+                {
+                    "index": 1,
+                    "element": "input_text",
+                    "attributes": {
+                        "type": "text",
+                        "name": "first_name",
+                        "value": "",
+                        "id": "",
+                        "class": "",
+                        "placeholder": "Your full name",
+                        "maxlength": ""
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "label": "Full name",
+                        "admin_field_label": "Full name",
+                        "help_message": "",
+                        "label_placement": "top",
+                        "visible": true,
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "message": "This field is required",
+                                "global": false,
+                                "global_message": "This field is required"
+                            }
+                        },
+                        "conditional_logics": [],
+                        "is_unique": "no",
+                        "unique_validation_message": "This field value need to be unique.",
+                        "prefix_label": "",
+                        "suffix_label": ""
+                    },
+                    "editor_options": {
+                        "title": "Simple Text",
+                        "icon_class": "ff-edit-text",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_adult_full_name"
+                },
+                {
+                    "index": 2,
+                    "element": "input_text",
+                    "attributes": {
+                        "type": "text",
+                        "name": "input_text",
+                        "value": "",
+                        "class": "",
+                        "placeholder": "",
+                        "maxlength": ""
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "label": "Phone",
+                        "label_placement": "",
+                        "admin_field_label": "",
+                        "help_message": "",
+                        "prefix_label": "",
+                        "suffix_label": "",
+                        "validation_rules": {
+                            "required": {
+                                "value": false,
+                                "message": "This field is required",
+                                "global_message": "This field is required",
+                                "global": true
+                            }
+                        },
+                        "conditional_logics": [],
+                        "is_unique": "no",
+                        "unique_validation_message": "This value need to be unique."
+                    },
+                    "editor_options": {
+                        "title": "Simple Text",
+                        "icon_class": "ff-edit-text",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_1781000192111"
+                },
+                {
+                    "index": 3,
+                    "element": "input_email",
+                    "attributes": {
+                        "type": "email",
+                        "name": "email",
+                        "value": "",
+                        "id": "",
+                        "class": "",
+                        "placeholder": ""
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "label": "Email",
+                        "admin_field_label": "Email",
+                        "help_message": "",
+                        "label_placement": "top",
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "message": "This field is required",
+                                "global": false,
+                                "global_message": "This field is required"
+                            },
+                            "email": {
+                                "value": true,
+                                "message": "This field must contain a valid email",
+                                "global": false,
+                                "global_message": "This field must contain a valid email"
+                            }
+                        },
+                        "conditional_logics": [],
+                        "is_unique": "no",
+                        "unique_validation_message": "Email address need to be unique.",
+                        "prefix_label": "",
+                        "suffix_label": ""
+                    },
+                    "editor_options": {
+                        "title": "Email Address",
+                        "icon_class": "ff-edit-email",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_adult_email"
+                },
+                {
+                    "index": 7,
+                    "element": "select",
+                    "attributes": {
+                        "name": "dropdown",
+                        "value": "Trial Class",
+                        "id": "",
+                        "class": ""
+                    },
+                    "settings": {
+                        "dynamic_default_value": "",
+                        "label": "Program",
+                        "admin_field_label": "",
+                        "help_message": "",
+                        "container_class": "",
+                        "label_placement": "",
+                        "placeholder": "- Select -",
+                        "advanced_options": [
+                            {
+                                "label": "2-Hour Workshop ($40)",
+                                "value": "2-Hour Workshop ($40)",
+                                "calc_value": "40",
+                                "id": 0
+                            },
+                            {
+                                "label": "Trial Class ($20)",
+                                "value": "Trial Class ($20)",
+                                "calc_value": "20",
+                                "image": "",
+                                "id": 1
+                            },
+                            {
+                                "label": "Weekly Art Course",
+                                "value": "Weekly Art Course",
+                                "calc_value": "0",
+                                "image": "",
+                                "id": 2
+                            },
+                            {
+                                "label": "Art Residency",
+                                "value": "Art Residency",
+                                "calc_value": "0",
+                                "image": "",
+                                "id": 3
+                            }
+                        ],
+                        "calc_value_status": true,
+                        "enable_image_input": false,
+                        "values_visible": false,
+                        "enable_select_2": "no",
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "message": "This field is required",
+                                "global_message": "This field is required",
+                                "global": true
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": false,
+                            "conditions": [
+                                {
+                                    "field": "",
+                                    "value": "",
+                                    "operator": ""
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "randomize_options": "no"
+                    },
+                    "editor_options": {
+                        "title": "Dropdown",
+                        "icon_class": "ff-edit-dropdown",
+                        "element": "select",
+                        "template": "select"
+                    },
+                    "uniqElKey": "el_1781047356446"
+                },
+                {
+                    "index": 7,
+                    "element": "select",
+                    "attributes": {
+                        "name": "dropdown_2",
+                        "value": "12 sessions",
+                        "id": "",
+                        "class": ""
+                    },
+                    "settings": {
+                        "dynamic_default_value": "",
+                        "label": "Courses",
+                        "admin_field_label": "",
+                        "help_message": "",
+                        "container_class": "",
+                        "label_placement": "",
+                        "placeholder": "- Select -",
+                        "advanced_options": [
+                            {
+                                "label": "6 sessions ($115)",
+                                "value": "6 sessions ($115)",
+                                "calc_value": "115",
+                                "id": 0
+                            },
+                            {
+                                "label": "12 sessions ($183)",
+                                "value": "12 sessions ($183)",
+                                "calc_value": "183",
+                                "id": 1
+                            }
+                        ],
+                        "calc_value_status": true,
+                        "enable_image_input": false,
+                        "values_visible": false,
+                        "enable_select_2": "no",
+                        "validation_rules": {
+                            "required": {
+                                "value": false,
+                                "message": "This field is required",
+                                "global_message": "This field is required",
+                                "global": true
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "dropdown",
+                                    "value": "Weekly Art Course",
+                                    "operator": "="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "randomize_options": "no"
+                    },
+                    "editor_options": {
+                        "title": "Dropdown",
+                        "icon_class": "ff-edit-dropdown",
+                        "element": "select",
+                        "template": "select"
+                    },
+                    "uniqElKey": "el_1781047686776"
+                },
+                {
+                    "index": 7,
+                    "element": "select",
+                    "attributes": {
+                        "name": "dropdown_3",
+                        "value": "1 week",
+                        "id": "",
+                        "class": ""
+                    },
+                    "settings": {
+                        "dynamic_default_value": "",
+                        "label": "Duration",
+                        "admin_field_label": "",
+                        "help_message": "",
+                        "container_class": "",
+                        "label_placement": "",
+                        "placeholder": "- Select -",
+                        "advanced_options": [
+                            {
+                                "label": "1 week ($135)",
+                                "value": "1 week ($135)",
+                                "calc_value": "135",
+                                "id": 0
+                            },
+                            {
+                                "label": "2 weeks ($250)",
+                                "value": "2 weeks ($250)",
+                                "calc_value": "250",
+                                "id": 1
+                            },
+                            {
+                                "label": "4 weeks ($480)",
+                                "value": "4 weeks ($480)",
+                                "calc_value": "480",
+                                "image": "",
+                                "id": 2
+                            }
+                        ],
+                        "calc_value_status": true,
+                        "enable_image_input": false,
+                        "values_visible": false,
+                        "enable_select_2": "no",
+                        "validation_rules": {
+                            "required": {
+                                "value": false,
+                                "message": "This field is required",
+                                "global_message": "This field is required",
+                                "global": true
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "dropdown",
+                                    "value": "Art Residency",
+                                    "operator": "="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "randomize_options": "no"
+                    },
+                    "editor_options": {
+                        "title": "Dropdown",
+                        "icon_class": "ff-edit-dropdown",
+                        "element": "select",
+                        "template": "select"
+                    },
+                    "uniqElKey": "el_1781047689660"
+                },
+                {
+                    "index": 7,
+                    "element": "select",
+                    "attributes": {
+                        "name": "dropdown_1",
+                        "value": "Still life drawing\/painting",
+                        "id": "",
+                        "class": ""
+                    },
+                    "settings": {
+                        "dynamic_default_value": "",
+                        "label": "Workshop",
+                        "admin_field_label": "",
+                        "help_message": "",
+                        "container_class": "",
+                        "label_placement": "",
+                        "placeholder": "- Select -",
+                        "advanced_options": [
+                            {
+                                "label": "Still life drawing\/painting",
+                                "value": "Still life drawing\/painting",
+                                "calc_value": "",
+                                "id": 0
+                            },
+                            {
+                                "label": "Nude model drawing",
+                                "value": "Nude model drawing",
+                                "calc_value": "",
+                                "id": 1
+                            },
+                            {
+                                "label": "Silk painting",
+                                "value": "Silk painting",
+                                "calc_value": "",
+                                "image": "",
+                                "id": 2
+                            }
+                        ],
+                        "calc_value_status": false,
+                        "enable_image_input": false,
+                        "values_visible": false,
+                        "enable_select_2": "no",
+                        "validation_rules": {
+                            "required": {
+                                "value": false,
+                                "message": "This field is required",
+                                "global_message": "This field is required",
+                                "global": true
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "dropdown",
+                                    "value": "2-Hour Workshop ($40)",
+                                    "operator": "="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "randomize_options": "no"
+                    },
+                    "editor_options": {
+                        "title": "Dropdown",
+                        "icon_class": "ff-edit-dropdown",
+                        "element": "select",
+                        "template": "select"
+                    },
+                    "uniqElKey": "el_1781002351576"
+                },
+                {
+                    "index": 5,
+                    "element": "select",
+                    "attributes": {
+                        "name": "material",
+                        "value": "Pencil",
+                        "id": "",
+                        "class": ""
+                    },
+                    "settings": {
+                        "label": "Material \/ medium",
+                        "admin_field_label": "Material",
+                        "help_message": "",
+                        "container_class": "",
+                        "label_placement": "top",
+                        "placeholder": "- Select -",
+                        "advanced_options": [
+                            {
+                                "label": "Pencil",
+                                "value": "Pencil",
+                                "calc_value": "",
+                                "id": 0
+                            },
+                            {
+                                "label": "Charcoal",
+                                "value": "Charcoal",
+                                "calc_value": "",
+                                "id": 1
+                            },
+                            {
+                                "label": "Oil pastel",
+                                "value": "Oil pastel",
+                                "calc_value": "",
+                                "id": 2
+                            },
+                            {
+                                "label": "Water color",
+                                "value": "Water color",
+                                "calc_value": "",
+                                "id": 3
+                            },
+                            {
+                                "label": "Oil\/Acrylic",
+                                "value": "Oil\/Acrylic",
+                                "calc_value": "",
+                                "id": 4
+                            },
+                            {
+                                "label": "Please let teacher choose for me",
+                                "value": "Please let teacher choose for me",
+                                "calc_value": "",
+                                "id": 5
+                            }
+                        ],
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "message": "This field is required",
+                                "global": false,
+                                "global_message": "This field is required"
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "dropdown",
+                                    "value": "Trial Class ($20)",
+                                    "operator": "="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "enable_select_2": "no",
+                        "dynamic_default_value": "",
+                        "randomize_options": "no",
+                        "values_visible": false
+                    },
+                    "editor_options": {
+                        "title": "Dropdown",
+                        "icon_class": "ff-edit-dropdown",
+                        "element": "select",
+                        "template": "select"
+                    },
+                    "uniqElKey": "el_adult_material"
+                },
+                {
+                    "index": 6,
+                    "element": "item_quantity_component",
+                    "attributes": {
+                        "type": "number",
+                        "name": "item-quantity",
+                        "value": "1",
+                        "id": "",
+                        "class": "",
+                        "placeholder": "",
+                        "data-quantity_item": "yes"
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "is_payment_field": "yes",
+                        "label": "Number of participants",
+                        "admin_field_label": "",
+                        "label_placement": "",
+                        "help_message": "",
+                        "number_step": "",
+                        "prefix_label": "",
+                        "suffix_label": "",
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "global": true,
+                                "message": "This field is required",
+                                "global_message": "This field is required"
+                            },
+                            "numeric": {
+                                "value": true,
+                                "global": true,
+                                "message": "This field must contain numeric value",
+                                "global_message": "This field must contain numeric value"
+                            },
+                            "min": {
+                                "value": "1",
+                                "global": true,
+                                "message": "Minimum value is 1",
+                                "global_message": "Validation fails for minimum value"
+                            },
+                            "max": {
+                                "value": "",
+                                "global": true,
+                                "message": "Validation fails for maximum value",
+                                "global_message": "Validation fails for maximum value"
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": false,
+                            "conditions": [
+                                {
+                                    "field": "",
+                                    "value": "",
+                                    "operator": ""
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "target_product": "payment_input"
+                    },
+                    "editor_options": {
+                        "title": "Item Quantity",
+                        "icon_class": "ff-edit-keyboard-o",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_1781010677972"
+                },
+                {
+                    "index": 8,
+                    "element": "custom_payment_component",
+                    "attributes": {
+                        "type": "number",
+                        "name": "payment_input",
+                        "value": "",
+                        "id": "",
+                        "class": "",
+                        "placeholder": "",
+                        "data-payment_item": "yes"
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "is_payment_field": "yes",
+                        "label": "Booking amount",
+                        "admin_field_label": "Payment total",
+                        "label_placement": "",
+                        "help_message": "",
+                        "number_step": "",
+                        "prefix_label": "$",
+                        "suffix_label": "",
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "global": true,
+                                "message": "This field is required",
+                                "global_message": "This field is required"
+                            },
+                            "numeric": {
+                                "value": true,
+                                "global": true,
+                                "message": "This field must contain numeric value",
+                                "global_message": "This field must contain numeric value"
+                            },
+                            "min": {
+                                "value": "1",
+                                "global": true,
+                                "message": "Minimum value is 1",
+                                "global_message": "Validation fails for minimum value"
+                            },
+                            "max": {
+                                "value": "",
+                                "global": true,
+                                "message": "Validation fails for maximum value",
+                                "global_message": "Validation fails for maximum value"
+                            }
+                        },
+                        "conditional_logics": [],
+                        "calculation_settings": {
+                            "status": true,
+                            "formula": "({select.dropdown} + {select.dropdown_2} + {select.dropdown_3})"
+                        },
+                        "numeric_formatter": ""
+                    },
+                    "editor_options": {
+                        "title": "Custom Payment Amount",
+                        "icon_class": "ff-edit-keyboard-o",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_1781047462788"
+                },
+                {
+                    "index": 13,
+                    "element": "input_date",
+                    "attributes": {
+                        "type": "text",
+                        "name": "datetime",
+                        "value": "",
+                        "id": "",
+                        "class": "",
+                        "placeholder": ""
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "label": "Date",
+                        "admin_field_label": "",
+                        "label_placement": "",
+                        "date_config": "",
+                        "date_format": "d\/m\/Y",
+                        "help_message": "",
+                        "is_time_enabled": true,
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "message": "This field is required",
+                                "global_message": "This field is required",
+                                "global": true
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "dropdown",
+                                    "value": "Weekly Art Course",
+                                    "operator": "!="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        }
+                    },
+                    "editor_options": {
+                        "title": "Time & Date",
+                        "icon_class": "ff-edit-date",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_1781000234416"
+                },
+                {
+                    "index": 7,
+                    "element": "input_radio",
+                    "attributes": {
+                        "type": "radio",
+                        "name": "time_slots",
+                        "value": "",
+                        "id": "",
+                        "class": ""
+                    },
+                    "settings": {
+                        "label": "Preferred time slots",
+                        "admin_field_label": "Time slots",
+                        "help_message": "Select one time slot that works for you.",
+                        "container_class": "",
+                        "label_placement": "top",
+                        "advanced_options": [
+                            {
+                                "label": "9:00 – 11:00",
+                                "value": "9:00 – 11:00",
+                                "calc_value": "",
+                                "id": 0
+                            },
+                            {
+                                "label": "9:30 – 11:30",
+                                "value": "9:30 – 11:30",
+                                "calc_value": "",
+                                "image": "",
+                                "id": 1
+                            },
+                            {
+                                "label": "10:00 – 12:00",
+                                "value": "10:00 – 12:00",
+                                "calc_value": "",
+                                "id": 2
+                            },
+                            {
+                                "label": "13;30 – 16:00",
+                                "value": "13;30 – 16:00",
+                                "calc_value": "",
+                                "image": "",
+                                "id": 3
+                            },
+                            {
+                                "label": "14:00 – 16:00",
+                                "value": "14:00 – 16:00",
+                                "calc_value": "",
+                                "id": 4
+                            },
+                            {
+                                "label": "17:00 – 18:30",
+                                "value": "17:00 – 18:30",
+                                "calc_value": "",
+                                "id": 5
+                            },
+                            {
+                                "label": "18:30 – 20:30",
+                                "value": "18:30 – 20:30",
+                                "calc_value": "",
+                                "id": 6
+                            }
+                        ],
+                        "validation_rules": {
+                            "required": {
+                                "value": true,
+                                "message": "This field is required",
+                                "global": false,
+                                "global_message": "This field is required"
+                            }
+                        },
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "dropdown",
+                                    "value": "2-Hour Workshop ($40)",
+                                    "operator": "="
+                                },
+                                {
+                                    "field": "dropdown",
+                                    "value": "Trial Class ($20)",
+                                    "operator": "="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "layout_class": "",
+                        "dynamic_default_value": "",
+                        "randomize_options": "no",
+                        "values_visible": false,
+                        "display_type": ""
+                    },
+                    "editor_options": {
+                        "title": "Radio Field",
+                        "icon_class": "ff-edit-radio",
+                        "template": "inputRadio"
+                    },
+                    "uniqElKey": "el_adult_time_slots"
+                },
+                {
+                    "index": 6,
+                    "element": "payment_coupon",
+                    "attributes": {
+                        "type": "text",
+                        "name": "payment-coupon",
+                        "value": "",
+                        "id": "",
+                        "class": "",
+                        "placeholder": "",
+                        "data-is_coupon": "yes"
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "is_payment_field": "yes",
+                        "label": "Coupon",
+                        "admin_field_label": "",
+                        "label_placement": "",
+                        "suffix_label": "Apply Coupon",
+                        "help_message": "",
+                        "validation_rules": {
+                            "required": {
+                                "value": false,
+                                "global": true,
+                                "message": "This field is required",
+                                "global_message": "This field is required"
+                            }
+                        },
+                        "conditional_logics": []
+                    },
+                    "editor_options": {
+                        "title": "Coupon",
+                        "icon_class": "el-icon-postcard",
+                        "template": "inputText"
+                    },
+                    "uniqElKey": "el_1781010559088"
+                },
+                {
+                    "index": 7,
+                    "element": "payment_summary_component",
+                    "attributes": [],
+                    "settings": {
+                        "html_codes": "<p>Payment Summary will be shown here<\/p>",
+                        "cart_empty_text": "No payment items has been selected yet",
+                        "show_close_button": false,
+                        "conditional_logics": [],
+                        "container_class": ""
+                    },
+                    "editor_options": {
+                        "title": "Payment Summary",
+                        "icon_class": "ff-edit-html",
+                        "template": "customHTML"
+                    },
+                    "uniqElKey": "el_178101070525713"
+                },
+                {
+                    "index": 10,
+                    "element": "payment_method",
+                    "attributes": {
+                        "name": "payment_method",
+                        "type": "radio",
+                        "value": ""
+                    },
+                    "settings": {
+                        "container_class": "",
+                        "label": "Payment Method",
+                        "default_method": "",
+                        "label_placement": "",
+                        "help_message": "",
+                        "payment_methods": {
+                            "stripe": {
+                                "title": "Credit\/Debit Card (Stripe)",
+                                "enabled": "yes",
+                                "method_value": "stripe",
+                                "settings": {
+                                    "option_label": {
+                                        "type": "text",
+                                        "template": "inputText",
+                                        "value": "Pay with Card (Stripe)",
+                                        "label": "Method Label"
+                                    },
+                                    "embedded_checkout": {
+                                        "type": "checkbox",
+                                        "template": "inputYesNoCheckbox",
+                                        "value": "yes",
+                                        "label": "Embedded Checkout"
+                                    },
+                                    "require_billing_info": {
+                                        "type": "checkbox",
+                                        "template": "inputYesNoCheckbox",
+                                        "value": "no",
+                                        "label": "Require Billing info",
+                                        "dependency": {
+                                            "depends_on": "embedded_checkout\/value",
+                                            "value": "yes",
+                                            "operator": "!="
+                                        }
+                                    },
+                                    "require_shipping_info": {
+                                        "type": "checkbox",
+                                        "template": "inputYesNoCheckbox",
+                                        "value": "no",
+                                        "label": "Collect Shipping Info",
+                                        "dependency": {
+                                            "depends_on": "embedded_checkout\/value",
+                                            "value": "yes",
+                                            "operator": "!="
+                                        }
+                                    },
+                                    "verify_zip_code": {
+                                        "type": "checkbox",
+                                        "template": "inputYesNoCheckbox",
+                                        "value": "no",
+                                        "label": "Verify Zip\/Postal Code"
+                                    }
+                                }
+                            },
+                            "paypal": {
+                                "title": "PayPal",
+                                "enabled": "yes",
+                                "method_value": "paypal",
+                                "settings": {
+                                    "option_label": {
+                                        "type": "text",
+                                        "template": "inputText",
+                                        "value": "Pay with PayPal",
+                                        "label": "Method Label"
+                                    },
+                                    "require_shipping_address": {
+                                        "type": "checkbox",
+                                        "template": "inputYesNoCheckbox",
+                                        "value": "no",
+                                        "label": "Require Shipping Address"
+                                    }
+                                }
+                            },
+                            "test": {
+                                "title": "Offline Payment",
+                                "enabled": "yes",
+                                "method_value": "test",
+                                "settings": {
+                                    "option_label": {
+                                        "type": "text",
+                                        "template": "inputText",
+                                        "value": "Bank QR code",
+                                        "label": "Method Label"
+                                    }
+                                }
+                            }
+                        },
+                        "validation_rules": {
+                            "required": {
+                                "value": false,
+                                "global": true,
+                                "message": "This field is required",
+                                "global_message": "This field is required"
+                            }
+                        },
+                        "admin_field_label": "",
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": false,
+                            "conditions": [
+                                {
+                                    "field": "",
+                                    "value": "",
+                                    "operator": ""
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        }
+                    },
+                    "editor_options": {
+                        "title": "Payment Method",
+                        "icon_class": "ff-edit-credit-card",
+                        "template": "inputPaymentMethods"
+                    },
+                    "uniqElKey": "el_1781014603976"
+                },
+                {
+                    "index": 17,
+                    "element": "custom_html",
+                    "attributes": [],
+                    "settings": {
+                        "html_codes": "<div class=\"ath-vietqr\">\n<p><strong>VIETCOMBANK<\/strong><\/p>\n<p>Account Number: 9971263202<\/p>\n<p>Account Name: Hoang Minh Anh<\/p>\n<p>Amount: <strong><span id=\"qr_amount_text\">—<\/span><\/strong><\/p>\n<span id=\"qr_amount\" style=\"display:none\">0<\/span>\n<p><img id=\"qr_img\" alt=\"VietQR payment code\" width=\"280\" height=\"280\" style=\"max-width:100%;height:auto;\" \/><\/p>\n<\/div>",
+                        "conditional_logics": {
+                            "type": "any",
+                            "status": true,
+                            "conditions": [
+                                {
+                                    "field": "payment_method",
+                                    "value": "test",
+                                    "operator": "="
+                                }
+                            ],
+                            "condition_groups": [
+                                {
+                                    "rules": [
+                                        {
+                                            "field": "",
+                                            "value": "",
+                                            "operator": ""
+                                        }
+                                    ],
+                                    "title": "",
+                                    "isEditingTitle": false,
+                                    "isPreviewOpen": false,
+                                    "isGroupOpen": true
+                                }
+                            ]
+                        },
+                        "container_class": ""
+                    },
+                    "editor_options": {
+                        "title": "Custom HTML",
+                        "icon_class": "ff-edit-html",
+                        "template": "customHTML"
+                    },
+                    "uniqElKey": "el_178101471040358"
+                }
+            ],
+            "submitButton": {
+                "uniqElKey": "el_adult_submit",
+                "element": "button",
+                "attributes": {
+                    "type": "submit",
+                    "class": ""
+                },
+                "settings": {
+                    "align": "left",
+                    "button_style": "default",
+                    "container_class": "",
+                    "help_message": "",
+                    "background_color": "#1a7efb",
+                    "button_size": "md",
+                    "color": "#ffffff",
+                    "button_ui": {
+                        "type": "default",
+                        "text": "Submit booking {payment_total}",
+                        "img_url": ""
+                    }
+                },
+                "editor_options": {
+                    "title": "Submit Button"
+                }
+            }
+        },
+        "has_payment": "1",
+        "type": "form",
+        "conditions": null,
+        "created_by": "2",
+        "created_at": null,
+        "updated_at": "2026-06-10 03:10:24",
+        "metas": [
+            {
+                "meta_key": "_custom_form_js",
+                "value": "(function () {\n  var RESIDENCY = 'Art Residency';\n  var NUDE_MODEL = 'Nude model drawing';\n  var NUDE_SLOT = '13;30 \\u2013 16:00';\n  var TUESDAY_SLOT = '18:30 \\u2013 20:30';\n  var SLOT_SELECTOR = 'input[name=\"time_slots\"]';\n  var attempts = 0;\n  var bound = false;\n  var dateHooked = false;\n\n  function getDisableRules(program, workshop) {\n    if (workshop === NUDE_MODEL) {\n      return [\n        function (date) {\n          return date.getDay() !== 6;\n        }\n      ];\n    }\n    if (program !== RESIDENCY) {\n      return [\n        function (date) {\n          return date.getDay() === 4;\n        }\n      ];\n    }\n    return [];\n  }\n\n  function isDateAllowed(date, program, workshop) {\n    if (workshop === NUDE_MODEL) {\n      return date.getDay() === 6;\n    }\n    if (program !== RESIDENCY && date.getDay() === 4) {\n      return false;\n    }\n    return true;\n  }\n\n  function isSlotAllowed(value, workshop, selectedDate) {\n    if (workshop === NUDE_MODEL) {\n      return value === NUDE_SLOT;\n    }\n    if (value === TUESDAY_SLOT) {\n      return !!(selectedDate && selectedDate.getDay() === 2);\n    }\n    return true;\n  }\n\n  function setSlotEnabled($input, allowed) {\n    $input.prop('disabled', !allowed);\n    $input.closest('label, .ff-el-form-check, .ff_item').css(\n      allowed ? { opacity: '', pointerEvents: '' } : { opacity: 0.35, pointerEvents: 'none' }\n    );\n    if (!allowed && $input.is(':checked')) {\n      $input.prop('checked', false).trigger('change');\n    }\n  }\n\n  function applyTimeSlotRules(workshop, selectedDate) {\n    $form.find(SLOT_SELECTOR).each(function () {\n      setSlotEnabled($(this), isSlotAllowed($(this).val(), workshop, selectedDate));\n    });\n  }\n\n  function hookDateChange(fp, workshopEl) {\n    if (!fp || dateHooked) {\n      return;\n    }\n    dateHooked = true;\n    fp.config.onChange = (fp.config.onChange || []).concat([\n      function (selectedDates) {\n        var workshop = workshopEl ? workshopEl.value : '';\n        applyTimeSlotRules(workshop, selectedDates[0] || null);\n      }\n    ]);\n  }\n\n  function applyRules() {\n    var programEl = $form.find('select[name=\"dropdown\"]')[0];\n    var workshopEl = $form.find('select[name=\"dropdown_1\"]')[0];\n    var dateEl = $form.find('input[name=\"datetime\"]')[0];\n    var fp = dateEl && dateEl._flatpickr;\n    var program;\n    var workshop;\n    var selected;\n\n    if (!programEl) {\n      return false;\n    }\n\n    program = programEl.value;\n    workshop = workshopEl ? workshopEl.value : '';\n    selected = fp && fp.selectedDates[0] ? fp.selectedDates[0] : null;\n\n    if (fp) {\n      fp.set('disable', getDisableRules(program, workshop));\n      if (selected && !isDateAllowed(selected, program, workshop)) {\n        fp.clear();\n        selected = null;\n      }\n      hookDateChange(fp, workshopEl);\n    }\n\n    applyTimeSlotRules(workshop, selected);\n    return true;\n  }\n\n  function bindListeners() {\n    if (bound) {\n      return;\n    }\n    bound = true;\n    $form.find('select[name=\"dropdown\"], select[name=\"dropdown_1\"]').on('change', applyRules);\n    $form.on('reInitExtras', function () {\n      setTimeout(applyRules, 50);\n    });\n  }\n\n  function tryInit() {\n    if (applyRules()) {\n      bindListeners();\n      return;\n    }\n    if (++attempts < 40) {\n      setTimeout(tryInit, 100);\n    }\n  }\n\n  tryInit();\n})();"
+            },
+            {
+                "meta_key": "_ff_form_styles",
+                "value": "{\"container_styles\":{\"backgroundImage\":{\"label\":\"Background Image\",\"key\":\"backgroundImage\",\"element\":\"ff_background_image\",\"value\":{\"type\":\"classic\",\"image\":{\"url\":\"\",\"position\":{\"value\":\"\",\"valueX\":{\"type\":\"px\",\"value\":\"\"},\"valueY\":{\"type\":\"px\",\"value\":\"\"}},\"size\":{\"value\":\"\",\"valueX\":{\"type\":\"px\",\"value\":\"\"},\"valueY\":{\"type\":\"px\",\"value\":\"\"}},\"attachment\":\"\",\"repeat\":\"\"},\"gradient\":{\"type\":\"radial\",\"position\":\"center center\",\"angle\":{\"type\":\"deg\",\"value\":0},\"primary\":{\"color\":\"\",\"location\":{\"type\":\"%\",\"value\":50}},\"secondary\":{\"color\":\"\",\"location\":{\"type\":\"%\",\"value\":50}}}}},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"Form Border Settings\",\"key\":\"border\",\"status_label\":\"Enable Form Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}},\"asterisk_styles\":{\"color_asterisk\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"}},\"inline_error_msg_style\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"allignment\":{\"label\":\"Alignment\",\"value\":\"left\",\"element\":\"ff_allignment_item\"},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}}},\"success_msg_style\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"allignment\":{\"label\":\"Alignment\",\"value\":\"left\",\"element\":\"ff_allignment_item\"},\"width\":{\"key\":\"width\",\"label\":\"Width\",\"element\":\"ff_unit_value\",\"units\":[\"%\",\"px\",\"em\",\"ram\",\"custom\"],\"config\":{\"px_max\":1200,\"em_rem_max\":100},\"value\":{\"type\":\"%\",\"value\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}},\"error_msg_style\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"allignment\":{\"label\":\"Alignment\",\"value\":\"left\",\"element\":\"ff_allignment_item\"},\"width\":{\"key\":\"width\",\"label\":\"Width\",\"element\":\"ff_unit_value\",\"units\":[\"%\",\"px\",\"em\",\"ram\",\"custom\"],\"config\":{\"px_max\":1200,\"em_rem_max\":100},\"value\":{\"type\":\"%\",\"value\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}},\"label_styles\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}}},\"input_styles\":{\"all_tabs\":{\"label\":\"\",\"element\":\"ff_tabs\",\"tabs\":{\"normal\":{\"key\":\"normal\",\"label\":\"Normal\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Use custom Border style\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"top\":\"1\",\"left\":\"1\",\"right\":\"1\",\"bottom\":\"1\",\"linked\":\"yes\",\"type\":\"px\"},\"border_type\":\"solid\",\"border_color\":\"rgba(79, 75, 75, 1)\",\"status\":\"no\"},\"type\":\"px\"}}},\"focus\":{\"key\":\"focus\",\"label\":\"Focus\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Use custom Border style\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"top\":\"1\",\"left\":\"1\",\"right\":\"1\",\"bottom\":\"1\",\"linked\":\"yes\",\"type\":\"px\"},\"border_type\":\"solid\",\"border_color\":\"rgba(79, 75, 75, 1)\",\"status\":\"no\"},\"type\":\"px\"}}}}}},\"placeholder_styles\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}}},\"submit_button_style\":{\"allignment\":{\"label\":\"Alignment\",\"element\":\"ff_allignment_item\",\"value\":\"\"},\"all_tabs\":{\"label\":\"\",\"element\":\"ff_tabs\",\"tabs\":{\"normal\":{\"key\":\"normal\",\"label\":\"Normal\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"height\":{\"key\":\"height\",\"label\":\"Button Height\",\"element\":\"ff_unit_value\",\"value\":{\"type\":\"px\",\"value\":\"\"}},\"width\":{\"label\":\"Button Width\",\"key\":\"width\",\"type\":\"custom\",\"value\":\"\"},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"Border\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}},\"hover\":{\"key\":\"hover\",\"label\":\"Hover\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"Border\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}}},\"status\":\"yes\"}},\"radio_checkbox_style\":{\"color\":{\"label\":\"Items Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"size\":{\"key\":\"size\",\"label\":\"Size\",\"element\":\"ff_unit_value\",\"config\":{\"px_max\":50,\"em_rem_max\":5},\"value\":{\"type\":\"px\",\"value\":\"\"}},\"radio_checkbox\":{\"label\":\"\",\"element\":\"ff_radio_checkbox\",\"status_label\":\"Enable Smart UI\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"active_color\":{\"label\":\"Checked Background Colors\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"margin\":{\"label\":\"Smart UI Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"border\":{\"label\":\"Custom Border\",\"key\":\"border\",\"status_label\":\"Use custom Border style\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"1\",\"left\":\"1\",\"right\":\"1\",\"bottom\":\"1\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"#404040\",\"status\":\"\",\"radio_border_status\":\"no\"},\"type\":\"px\"}},\"status\":\"no\"}},\"stripe_inline_element_style\":{\"input\":\"box-shadow: 0px 0px 0px 0px ;\",\"focusInput\":\"box-shadow: 0px 0px 0px 0px ;\",\"error_msg\":\"text-align: left;\"},\"sectionbreak_styles\":{\"all_tabs\":{\"label\":\"\",\"element\":\"ff_tabs\",\"tabs\":{\"LabelStyling\":{\"key\":\"LabelStyling\",\"label\":\"Label Styling\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"border\":{\"label\":\"Border\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}},\"DescriptionStyling\":{\"key\":\"DescriptionStyling\",\"label\":\"Description Styling\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"margin\":{\"label\":\"Margin\",\"element\":\"ff_around_item\",\"key\":\"margin\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"border\":{\"label\":\"Border\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}}}}},\"payment_summary_style\":{\"all_tabs\":{\"label\":\"\",\"element\":\"ff_tabs\",\"tabs\":{\"TableHead\":{\"key\":\"tableHead\",\"label\":\"Table Head\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"height\":{\"key\":\"height\",\"label\":\"Height\",\"element\":\"ff_unit_value\",\"value\":{\"type\":\"px\",\"value\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Enable Border\",\"element\":\"ff_border_config\",\"value\":{\"border_width\":{\"type\":\"px\",\"top\":\"1\",\"left\":\"1\",\"right\":\"1\",\"bottom\":\"1\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}},\"TableBody\":{\"key\":\"tableBody\",\"label\":\"Table Body\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"height\":{\"key\":\"height\",\"label\":\"Height\",\"element\":\"ff_unit_value\",\"value\":{\"type\":\"px\",\"value\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Enable Border\",\"element\":\"ff_border_config\",\"value\":{\"border_width\":{\"type\":\"px\",\"top\":\"1\",\"left\":\"1\",\"right\":\"1\",\"bottom\":\"1\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}},\"TableFooter\":{\"key\":\"tableFooter\",\"label\":\"Table Footer\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"height\":{\"key\":\"height\",\"label\":\"Height\",\"element\":\"ff_unit_value\",\"value\":{\"type\":\"px\",\"value\":\"\"}},\"padding\":{\"label\":\"Padding\",\"element\":\"ff_around_item\",\"key\":\"padding\",\"value\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"type\":\"px\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"\",\"key\":\"border\",\"status_label\":\"Enable Border\",\"element\":\"ff_border_config\",\"value\":{\"border_width\":{\"type\":\"px\",\"top\":\"1\",\"left\":\"1\",\"right\":\"1\",\"bottom\":\"1\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}}}}},\"payment_coupon_style\":{\"all_tabs\":{\"label\":\"\",\"element\":\"ff_tabs\",\"tabs\":{\"button\":{\"key\":\"button\",\"label\":\"Button\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"Border\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}},\"buttonHover\":{\"key\":\"buttonHover\",\"label\":\"Hover\",\"value\":{\"color\":{\"label\":\"Color\",\"key\":\"color\",\"element\":\"ff_color\",\"value\":\"\"},\"backgroundColor\":{\"label\":\"Background Color\",\"key\":\"backgroundColor\",\"element\":\"ff_color\",\"value\":\"\"},\"typography\":{\"label\":\"Typography\",\"key\":\"typography\",\"element\":\"ff_typography\",\"value\":{\"fontSize\":{\"type\":\"px\",\"value\":\"\"},\"fontWeight\":\"\",\"transform\":\"\",\"fontStyle\":\"\",\"textDecoration\":\"\",\"lineHeight\":{\"type\":\"px\",\"value\":\"\"},\"letterSpacing\":{\"type\":\"px\",\"value\":\"\"},\"wordSpacing\":{\"type\":\"px\",\"value\":\"\"}}},\"boxshadow\":{\"key\":\"boxshadow\",\"element\":\"ff_boxshadow_config\",\"label\":\"Box Shadow\",\"value\":{\"horizontal\":{\"type\":\"px\",\"value\":\"0\"},\"vertical\":{\"type\":\"px\",\"value\":\"0\"},\"blur\":{\"type\":\"px\",\"value\":\"0\"},\"spread\":{\"type\":\"px\",\"value\":\"0\"},\"color\":\"\",\"position\":\"\"}},\"border\":{\"label\":\"Border\",\"key\":\"border\",\"status_label\":\"Custom Border\",\"element\":\"ff_border_config\",\"value\":{\"border_radius\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_width\":{\"type\":\"px\",\"top\":\"\",\"left\":\"\",\"right\":\"\",\"bottom\":\"\",\"linked\":\"yes\"},\"border_type\":\"solid\",\"border_color\":\"\",\"status\":\"\"},\"type\":\"px\"}}}}}}}"
+            },
+            {
+                "meta_key": "_ff_selected_style",
+                "value": "ffs_default"
+            },
+            {
+                "meta_key": "_payment_settings",
+                "value": "{\"currency\":\"USD\",\"push_meta_to_stripe\":\"no\",\"receipt_email\":\"email\",\"transaction_type\":\"product\",\"stripe_checkout_methods\":[\"card\"],\"stripe_meta_data\":[{\"item_value\":\"\",\"label\":\"\"}]}"
+            },
+            {
+                "meta_key": "_primary_email_field",
+                "value": "email"
+            },
+            {
+                "meta_key": "ffs_default",
+                "value": ".fluentform_wrapper_40.ffs_default_wrap .ff-el-input--content .error , .fluentform_wrapper_40.ffs_default_wrap .error-text{ text-align: left; } .fluentform_wrapper_40.ffs_default_wrap .ff-message-success{ text-align: left; } .fluentform_wrapper_40.ffs_default_wrap .ff-errors-in-stack { text-align: left; }"
+            },
+            {
+                "meta_key": "form_save_state_status",
+                "value": "no"
+            },
+            {
+                "meta_key": "formSettings",
+                "value": "{\"confirmation\":{\"redirectTo\":\"customUrl\",\"customUrl\":\"http:\\\/\\\/localhost:8080\\\/thank-you\\\/?from=adult\",\"samePageFormBehavior\":\"hide_form\",\"messageToShow\":\"Thank you for your booking.\"},\"layout\":{\"labelPlacement\":\"top\",\"helpMessagePlacement\":\"with_label\",\"errorMessagePlacement\":\"inline\"}}"
+            },
+            {
+                "meta_key": "step_data_persistency_status",
+                "value": "no"
+            }
+        ]
+    }
+]

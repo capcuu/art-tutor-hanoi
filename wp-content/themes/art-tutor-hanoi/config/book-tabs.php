@@ -8,51 +8,51 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Fluent Form IDs — set after creating forms in WP Admin → Fluent Forms → All Forms.
+ * Override in functions.php via ath_adult_booking_form_id / ath_kids_booking_form_id filters.
+ */
+if ( ! defined( 'ATH_ADULT_BOOKING_FORM_ID' ) ) {
+	define( 'ATH_ADULT_BOOKING_FORM_ID', 40 );
+}
+if ( ! defined( 'ATH_KIDS_BOOKING_FORM_ID' ) ) {
+	define( 'ATH_KIDS_BOOKING_FORM_ID', 21 );
+}
+
+/**
+ * Legacy book tab slugs mapped to the current two-tab layout.
+ *
+ * @return array<string, string>
+ */
+function ath_book_tab_legacy_map() {
+	return array(
+		'trial'      => 'adult',
+		'workshops'  => 'adult',
+		'adults'     => 'adult',
+		'residency'  => 'adult',
+	);
+}
+
+/**
  * @return array<string, array{
  *   label: string,
  *   form_id: int|null,
- *   intro: string,
- *   workshops?: array<int, array{title: string, desc: string, url: string}>
+ *   intro: string
  * }>
  */
 function ath_book_tabs() {
+	$adult_form_id = (int) apply_filters( 'ath_adult_booking_form_id', ATH_ADULT_BOOKING_FORM_ID );
+	$kids_form_id  = (int) apply_filters( 'ath_kids_booking_form_id', ATH_KIDS_BOOKING_FORM_ID );
+
 	$tabs = array(
-		'trial' => array(
-			'label'   => 'Trial Class',
-			'form_id' => 13,
-			'intro'   => 'Try a guided 2-hour session for complete beginners. Personal feedback from instructors trained at Vietnam University of Fine Arts.',
+		'adult' => array(
+			'label'   => 'Adult',
+			'form_id' => $adult_form_id,
+			'intro'   => 'Book workshops, trial classes, weekly courses, or artist residency for adults.',
 		),
-		'workshops' => array(
-			'label'   => 'Workshops',
-			'form_id' => null,
-			'intro'   => 'One-off studio experiences — life drawing with a live model, silk painting, and seasonal workshops.',
-			'workshops' => array(
-				array(
-					'title' => 'Life Drawing',
-					'desc'  => 'Draw from a live model with guided support. Saturday afternoons in our Tay Ho studio.',
-					'url'   => ath_experience_url( 'life-drawing' ),
-				),
-				array(
-					'title' => 'Silk Painting',
-					'desc'  => 'Advanced silk painting workshop with Dr. Le Xuan Dzung.',
-					'url'   => ath_experience_url( 'silk-painting' ),
-				),
-			),
-		),
-		'adults' => array(
-			'label'   => 'Adult Classes',
-			'form_id' => 35,
-			'intro'   => 'Register for fine-art programs — pencil, charcoal, colour, oil painting, and structured courses for adults.',
-		),
-		'kids' => array(
-			'label'   => 'Kids Classes',
-			'form_id' => 21,
+		'kids'  => array(
+			'label'   => 'Kids',
+			'form_id' => $kids_form_id,
 			'intro'   => 'Enrol children aged 5–12 in drawing or contemporary art programs.',
-		),
-		'residency' => array(
-			'label'   => 'Art Residency',
-			'form_id' => 33,
-			'intro'   => 'Reserve independent studio time for 1–4 weeks. Work at your own pace with optional guidance.',
 		),
 	);
 
@@ -63,11 +63,16 @@ function ath_book_tabs() {
  * Active tab from ?tab= query string.
  */
 function ath_book_active_tab() {
-	$tabs = ath_book_tabs();
-	$tab  = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'trial'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	$tabs   = ath_book_tabs();
+	$legacy = ath_book_tab_legacy_map();
+	$tab    = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'adult'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+	if ( isset( $legacy[ $tab ] ) ) {
+		$tab = $legacy[ $tab ];
+	}
 
 	if ( ! isset( $tabs[ $tab ] ) ) {
-		$tab = 'trial';
+		$tab = 'adult';
 	}
 
 	return $tab;
@@ -78,10 +83,16 @@ function ath_book_active_tab() {
  *
  * @param string $tab Tab slug.
  */
-function ath_book_url( $tab = 'trial' ) {
-	$tabs = ath_book_tabs();
+function ath_book_url( $tab = 'adult' ) {
+	$tabs   = ath_book_tabs();
+	$legacy = ath_book_tab_legacy_map();
+
+	if ( isset( $legacy[ $tab ] ) ) {
+		$tab = $legacy[ $tab ];
+	}
+
 	if ( ! isset( $tabs[ $tab ] ) ) {
-		$tab = 'trial';
+		$tab = 'adult';
 	}
 
 	return add_query_arg( 'tab', $tab, ath_book_base_url() );

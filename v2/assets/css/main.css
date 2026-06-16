@@ -43,8 +43,11 @@ a {
 
 /* Header */
 .header {
+  position: relative;
+  z-index: 1000;
   background: var(--white);
   border-bottom: 1px solid #eee;
+  overflow: visible;
 }
 
 .header__inner {

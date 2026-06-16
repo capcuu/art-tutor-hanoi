@@ -7,10 +7,8 @@
  */
 return array(
 	'hero' => array(
-		'public_id'          => 'Hero_tshqwg',
-		'cloudinary_version' => 'v1780113519',
-		'in_folder'          => false,
-		'alt'                => 'Art Tutor Hanoi studio exterior',
+		'url' => 'https://res.cloudinary.com/dwy4wtjtc/image/upload/f_auto,q_auto:good,w_1280/v1781248050/HTT_1532_jjf7os_p6lknl',
+		'alt' => 'Art Tutor Hanoi studio exterior',
 	),
 	'studio_life' => array(
 		'public_id'          => 'HTT_1682_acmdzp_guf8u6',

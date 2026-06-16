@@ -20,14 +20,14 @@ add_action(
  */
 function ath_seed_pages() {
 	$templated = array(
-		'about'             => array( 'About', 'page-templates/about.php' ),
 		'students-artworks' => array( 'Students\' Artworks', 'page-templates/students-artworks.php' ),
 	);
 
 	$plain = array(
+		'about'        => 'About',
 		'courses'      => 'Courses',
 		'kids-courses' => 'Kids Courses',
-		'pricing'      => 'Programs & Pricing',
+		'pricing'      => 'Pricing',
 		'weekly-calendar' => 'Weekly Calendar',
 		'thank-you'    => 'Thank You',
 	);
@@ -82,6 +82,9 @@ function ath_seed_pages() {
 	ath_ensure_students_artworks_page();
 	ath_ensure_links_page();
 	ath_ensure_generic_v2_pages();
+	ath_ensure_guide_page();
+	ath_ensure_workshop_pages();
+	ath_ensure_adult_course_pages();
 }
 
 add_action( 'after_switch_theme', 'ath_seed_pages' );

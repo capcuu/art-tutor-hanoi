@@ -165,6 +165,159 @@ function ath_community_student_posts( $limit = 12 ) {
 }
 
 /**
+ * Category slugs treated as Studio News on the homepage carousel.
+ *
+ * @return string[]
+ */
+function ath_studio_news_category_slugs() {
+	return apply_filters(
+		'ath_studio_news_category_slugs',
+		array(
+			'studio-news',
+		)
+	);
+}
+
+/**
+ * Category term IDs for Studio News.
+ *
+ * @return int[]
+ */
+function ath_studio_news_category_ids() {
+	$ids = array();
+
+	foreach ( ath_studio_news_category_slugs() as $slug ) {
+		$term = get_category_by_slug( $slug );
+		if ( $term ) {
+			$ids[] = (int) $term->term_id;
+		}
+	}
+
+	if ( empty( $ids ) ) {
+		$categories = get_categories(
+			array(
+				'hide_empty' => false,
+			)
+		);
+
+		foreach ( $categories as $category ) {
+			$name = strtolower( $category->name );
+			if ( false !== strpos( $name, 'studio' ) && false !== strpos( $name, 'news' ) ) {
+				$ids[] = (int) $category->term_id;
+			}
+		}
+	}
+
+	return array_values( array_unique( array_map( 'intval', $ids ) ) );
+}
+
+/**
+ * Studio News posts for the homepage carousel — newest first.
+ *
+ * @param int $limit Max posts.
+ * @return WP_Post[]
+ */
+function ath_studio_news_posts( $limit = 6 ) {
+	$limit   = max( 1, (int) apply_filters( 'ath_studio_news_posts_limit', $limit ) );
+	$cat_ids = ath_studio_news_category_ids();
+
+	if ( empty( $cat_ids ) ) {
+		return array();
+	}
+
+	$cache_key = 'ath_studio_news_v1_' . (string) $limit;
+	$cached    = get_transient( $cache_key );
+
+	if ( is_array( $cached ) && ! empty( $cached ) ) {
+		$posts = array_values( array_filter( array_map( 'get_post', $cached ) ) );
+		if ( count( $posts ) === count( $cached ) ) {
+			return $posts;
+		}
+		delete_transient( $cache_key );
+	} elseif ( is_array( $cached ) && empty( $cached ) ) {
+		return array();
+	}
+
+	$query = new WP_Query(
+		array(
+			'post_type'           => 'post',
+			'post_status'         => 'publish',
+			'posts_per_page'      => $limit,
+			'ignore_sticky_posts' => true,
+			'no_found_rows'       => true,
+			'orderby'             => 'date',
+			'order'               => 'DESC',
+			'category__in'        => $cat_ids,
+		)
+	);
+
+	$post_ids = wp_list_pluck( $query->posts, 'ID' );
+	$post_ids = array_map( 'intval', $post_ids );
+	set_transient( $cache_key, $post_ids, 5 * MINUTE_IN_SECONDS );
+
+	return array_values( array_filter( array_map( 'get_post', $post_ids ) ) );
+}
+
+/**
+ * Featured image URL for a Studio News card.
+ *
+ * @param WP_Post|int|null $post Post object or ID.
+ */
+function ath_studio_news_post_image_url( $post = null ) {
+	$post = get_post( $post );
+	if ( ! $post ) {
+		return '';
+	}
+
+	foreach ( array( 'medium_large', 'medium', 'large' ) as $size ) {
+		$thumb = get_the_post_thumbnail_url( $post, $size );
+		if ( $thumb ) {
+			return $thumb;
+		}
+	}
+
+	if ( preg_match( '/<img[^>]+src=["\']([^"\']+)["\']/i', (string) $post->post_content, $matches ) ) {
+		return esc_url_raw( $matches[1] );
+	}
+
+	return '';
+}
+
+/**
+ * Studio News category archive URL (first matching category).
+ */
+function ath_studio_news_category_url() {
+	$cat_ids = ath_studio_news_category_ids();
+	if ( empty( $cat_ids ) ) {
+		return '';
+	}
+
+	$link = get_category_link( $cat_ids[0] );
+
+	return is_wp_error( $link ) ? '' : (string) $link;
+}
+
+/**
+ * Clear Studio News carousel cache when posts change.
+ */
+function ath_flush_studio_news_cache() {
+	global $wpdb;
+
+	// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+	$wpdb->query(
+		$wpdb->prepare(
+			"DELETE FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",
+			$wpdb->esc_like( '_transient_ath_studio_news_' ) . '%',
+			$wpdb->esc_like( '_transient_timeout_ath_studio_news_' ) . '%'
+		)
+	);
+}
+
+add_action( 'save_post_post', 'ath_flush_studio_news_cache', 10, 0 );
+add_action( 'deleted_post', 'ath_flush_studio_news_cache', 10, 0 );
+add_action( 'trashed_post', 'ath_flush_studio_news_cache', 10, 0 );
+
+/**
  * Carousel label, e.g. "Camila – South Africa".
  *
  * @param WP_Post|int|null $post Post object or ID.
@@ -181,7 +334,196 @@ function ath_community_student_label( $post = null ) {
 }
 
 /**
+ * Most recent approved comment date for a student profile (site timezone).
+ *
+ * @param WP_Post|int|null $post Post object or ID.
+ * @return int Unix timestamp, or 0 if none.
+ */
+function ath_student_post_last_comment_timestamp( $post = null ) {
+	$post = get_post( $post );
+	if ( ! $post ) {
+		return 0;
+	}
+
+	$comments = get_comments(
+		array(
+			'post_id'      => $post->ID,
+			'status'       => 'approve',
+			'number'       => 1,
+			'orderby'      => 'comment_date_gmt',
+			'order'        => 'DESC',
+			'type__not_in' => array( 'pingback', 'trackback' ),
+		)
+	);
+
+	if ( empty( $comments ) ) {
+		return 0;
+	}
+
+	$timestamp = mysql2date( 'U', $comments[0]->comment_date_gmt, true );
+
+	return $timestamp ? (int) $timestamp : 0;
+}
+
+/**
+ * Latest approved comment timestamps for many posts (single query).
+ *
+ * @param int[] $post_ids Post IDs.
+ * @return array<int, int> post_id => unix timestamp.
+ */
+function ath_student_post_last_comment_timestamps_map( array $post_ids ) {
+	$post_ids = array_values( array_unique( array_filter( array_map( 'intval', $post_ids ) ) ) );
+
+	if ( empty( $post_ids ) ) {
+		return array();
+	}
+
+	global $wpdb;
+
+	$placeholders = implode( ',', array_fill( 0, count( $post_ids ), '%d' ) );
+	$sql          = "
+		SELECT comment_post_ID, MAX(comment_date_gmt) AS last_comment_at
+		FROM {$wpdb->comments}
+		WHERE comment_approved = '1'
+			AND comment_type NOT IN ('pingback', 'trackback')
+			AND comment_post_ID IN ($placeholders)
+		GROUP BY comment_post_ID
+	";
+
+	// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- placeholders built from intval IDs.
+	$rows = $wpdb->get_results( $wpdb->prepare( $sql, $post_ids ) );
+
+	$map = array();
+	foreach ( $rows as $row ) {
+		$timestamp = mysql2date( 'U', $row->last_comment_at, true );
+		if ( $timestamp ) {
+			$map[ (int) $row->comment_post_ID ] = (int) $timestamp;
+		}
+	}
+
+	return $map;
+}
+
+/**
+ * "Last updated" label from the latest approved comment.
+ *
+ * @param WP_Post|int|null $post Post object or ID.
+ */
+function ath_student_post_last_updated_label( $post = null ) {
+	$timestamp = ath_student_post_last_comment_timestamp( $post );
+	if ( ! $timestamp ) {
+		return '';
+	}
+
+	return wp_date( get_option( 'date_format' ), $timestamp );
+}
+
+/**
+ * ISO 8601 date for the latest approved comment (for <time datetime>).
+ *
+ * @param WP_Post|int|null $post Post object or ID.
+ */
+function ath_student_post_last_updated_datetime( $post = null ) {
+	$timestamp = ath_student_post_last_comment_timestamp( $post );
+	if ( ! $timestamp ) {
+		return '';
+	}
+
+	return wp_date( 'c', $timestamp );
+}
+
+/**
+ * Cloudinary cloud name (WordPress Cloudinary plugin media).
+ */
+function ath_cloudinary_cloud_name() {
+	$connect = get_option( 'cloudinary_connect' );
+	if ( is_array( $connect ) && ! empty( $connect['cloud_name'] ) ) {
+		return (string) $connect['cloud_name'];
+	}
+
+	return (string) apply_filters( 'ath_cloudinary_cloud_name', 'dftadlujq' );
+}
+
+/**
+ * Delivery URL for a Cloudinary-synced attachment (grid/carousel thumbnails).
+ *
+ * Single post pages use the_post_thumbnail() so the plugin rewrites markup; this
+ * helper mirrors that for get_the_post_thumbnail_url() call sites.
+ *
+ * @param int    $attachment_id Attachment post ID.
+ * @param string $size          WordPress image size name.
+ */
+function ath_cloudinary_attachment_image_url( $attachment_id, $size = 'medium_large' ) {
+	$attachment_id = (int) $attachment_id;
+	if ( $attachment_id <= 0 ) {
+		return '';
+	}
+
+	$public_id = get_post_meta( $attachment_id, '_public_id', true );
+	if ( ! is_string( $public_id ) || $public_id === '' ) {
+		$raw_url = get_post_meta( $attachment_id, '_cloudinary_url', true );
+		if ( is_string( $raw_url ) && $raw_url !== '' && strpos( $raw_url, 'res.cloudinary.com' ) !== false ) {
+			if ( function_exists( 'v2_img_url' ) ) {
+				return v2_img_url( $raw_url, 'gallery' );
+			}
+
+			return $raw_url;
+		}
+
+		return '';
+	}
+
+	$version = get_post_meta( $attachment_id, '_cloudinary_version', true );
+	$src     = wp_get_attachment_image_src( $attachment_id, $size );
+	$width   = $src && ! empty( $src[1] ) ? (int) $src[1] : 768;
+	$path    = ( $version ? 'v' . $version . '/' : '' ) . ltrim( $public_id, '/' );
+
+	if ( function_exists( 'v2_cld_arttutor_url' ) ) {
+		return v2_cld_arttutor_url( $path, $width, null, 'limit', '40' );
+	}
+
+	$cloud = ath_cloudinary_cloud_name();
+
+	return sprintf(
+		'https://res.cloudinary.com/%s/images/f_auto,q_auto,w_%d,c_limit/%s',
+		$cloud,
+		min( $width, 2048 ),
+		$path
+	);
+}
+
+/**
+ * Featured image markup for a community/student card (Cloudinary-aware).
+ *
+ * Uses wp_get_attachment_image() so the Cloudinary plugin can rewrite delivery
+ * URLs the same way as single learner artwork pages.
+ *
+ * @param WP_Post|int|null $post  Post object or ID.
+ * @param array<string, string> $attrs Extra attributes for the img element.
+ */
+function ath_community_student_image_html( $post = null, array $attrs = array() ) {
+	$post = get_post( $post );
+	if ( ! $post || ! has_post_thumbnail( $post ) ) {
+		return '';
+	}
+
+	$defaults = array(
+		'alt'      => ath_community_student_label( $post ),
+		'decoding' => 'async',
+		'loading'  => 'lazy',
+	);
+
+	return get_the_post_thumbnail(
+		$post,
+		'medium_large',
+		array_merge( $defaults, $attrs )
+	);
+}
+
+/**
  * Featured image URL for a community card.
+ *
+ * Prefer ath_community_student_image_html() when rendering <img> markup.
  *
  * @param WP_Post|int|null $post Post object or ID.
  */
@@ -191,14 +533,29 @@ function ath_community_student_image_url( $post = null ) {
 		return '';
 	}
 
-	$thumb = get_the_post_thumbnail_url( $post, 'medium_large' );
-	if ( $thumb ) {
-		return $thumb;
+	$attachment_id = get_post_thumbnail_id( $post );
+	if ( $attachment_id ) {
+		$html = ath_community_student_image_html( $post );
+		if ( $html !== '' && preg_match( '/\bsrc=["\']([^"\']+)["\']/i', $html, $matches ) ) {
+			return $matches[1];
+		}
+		if ( $html !== '' && preg_match( '/\bdata-src=["\']([^"\']+)["\']/i', $html, $matches ) ) {
+			return $matches[1];
+		}
+
+		foreach ( array( 'medium_large', 'large', 'medium' ) as $size ) {
+			$cloudinary = ath_cloudinary_attachment_image_url( $attachment_id, $size );
+			if ( $cloudinary !== '' ) {
+				return $cloudinary;
+			}
+		}
 	}
 
-	$thumb = get_the_post_thumbnail_url( $post, 'medium' );
-	if ( $thumb ) {
-		return $thumb;
+	foreach ( array( 'medium_large', 'large', 'medium', 'full' ) as $size ) {
+		$thumb = get_the_post_thumbnail_url( $post, $size );
+		if ( $thumb ) {
+			return $thumb;
+		}
 	}
 
 	return '';
@@ -477,17 +834,209 @@ add_filter(
 	2
 );
 
+/**
+ * Whether a category term is Learner's artworks.
+ *
+ * @param WP_Term|int|null $term Term object or ID.
+ */
+function ath_is_learner_artwork_category( $term = null ) {
+	if ( $term === null ) {
+		$term = get_queried_object();
+	}
+
+	if ( $term instanceof WP_Term ) {
+		$category = $term;
+	} else {
+		$category = get_category( $term );
+	}
+
+	if ( ! $category || is_wp_error( $category ) ) {
+		return false;
+	}
+
+	foreach ( ath_learner_artwork_category_slugs() as $slug ) {
+		if ( $category->slug === $slug ) {
+			return true;
+		}
+	}
+
+	$name = strtolower( $category->name );
+
+	return false !== strpos( $name, 'learner' ) && false !== strpos( $name, 'artwork' );
+}
+
+/**
+ * Post list views that share single.php (search, author, date, blog index).
+ */
+function ath_uses_post_template() {
+	return is_search() || is_author() || is_date() || ( is_home() && ! is_front_page() );
+}
+
+/**
+ * Document title for post archive views rendered via single.php.
+ */
+function ath_post_archive_doc_title() {
+	if ( is_category() || is_tag() ) {
+		$term = get_queried_object();
+		if ( $term instanceof WP_Term && $term->name !== '' ) {
+			return $term->name . ' — Art Tutor Hanoi';
+		}
+	}
+
+	if ( is_search() ) {
+		$query = get_search_query();
+		if ( $query !== '' ) {
+			/* translators: %s: search query */
+			return sprintf( __( 'Search: %s', 'art-tutor-hanoi' ), $query ) . ' — Art Tutor Hanoi';
+		}
+	}
+
+	if ( is_author() ) {
+		$name = get_the_author();
+		if ( $name !== '' ) {
+			/* translators: %s: author display name */
+			return sprintf( __( 'Posts by %s', 'art-tutor-hanoi' ), $name ) . ' — Art Tutor Hanoi';
+		}
+	}
+
+	if ( is_date() ) {
+		if ( is_year() ) {
+			return get_the_date( 'Y' ) . ' — Art Tutor Hanoi';
+		}
+		if ( is_month() ) {
+			return wp_date( 'F Y' ) . ' — Art Tutor Hanoi';
+		}
+		if ( is_day() ) {
+			return wp_date( get_option( 'date_format' ) ) . ' — Art Tutor Hanoi';
+		}
+	}
+
+	if ( is_home() && ! is_front_page() ) {
+		$posts_page_id = (int) get_option( 'page_for_posts' );
+		if ( $posts_page_id ) {
+			$title = get_the_title( $posts_page_id );
+			if ( $title !== '' ) {
+				return $title . ' — Art Tutor Hanoi';
+			}
+		}
+
+		return __( 'Blog', 'art-tutor-hanoi' ) . ' — Art Tutor Hanoi';
+	}
+
+	return __( 'Archive', 'art-tutor-hanoi' ) . ' — Art Tutor Hanoi';
+}
+
+/**
+ * H1 heading for post archive views in partials/post-content.php.
+ */
+function ath_post_archive_heading() {
+	if ( is_category() || is_tag() ) {
+		$term = get_queried_object();
+		if ( $term instanceof WP_Term && $term->name !== '' ) {
+			return $term->name;
+		}
+	}
+
+	if ( is_search() ) {
+		$query = get_search_query();
+		if ( $query !== '' ) {
+			/* translators: %s: search query */
+			return sprintf( __( 'Search results for "%s"', 'art-tutor-hanoi' ), $query );
+		}
+
+		return __( 'Search results', 'art-tutor-hanoi' );
+	}
+
+	if ( is_author() ) {
+		$name = get_the_author();
+		if ( $name !== '' ) {
+			/* translators: %s: author display name */
+			return sprintf( __( 'Posts by %s', 'art-tutor-hanoi' ), $name );
+		}
+	}
+
+	if ( is_date() ) {
+		if ( is_year() ) {
+			return get_the_date( 'Y' );
+		}
+		if ( is_month() ) {
+			return wp_date( 'F Y' );
+		}
+		if ( is_day() ) {
+			return wp_date( get_option( 'date_format' ) );
+		}
+	}
+
+	if ( is_home() && ! is_front_page() ) {
+		$posts_page_id = (int) get_option( 'page_for_posts' );
+		if ( $posts_page_id ) {
+			$title = get_the_title( $posts_page_id );
+			if ( $title !== '' ) {
+				return $title;
+			}
+		}
+
+		return __( 'Blog', 'art-tutor-hanoi' );
+	}
+
+	return __( 'Archive', 'art-tutor-hanoi' );
+}
+
+/**
+ * Primary category for blog single layout (breadcrumb + meta).
+ *
+ * @return array{name: string, url: string}|null
+ */
+function ath_blog_post_primary_category() {
+	$categories = get_the_category();
+	if ( empty( $categories ) ) {
+		return null;
+	}
+
+	$cat_ids = ath_studio_news_category_ids();
+	foreach ( $categories as $category ) {
+		if ( in_array( (int) $category->term_id, $cat_ids, true ) ) {
+			$link = get_category_link( $category->term_id );
+
+			return array(
+				'name' => $category->name,
+				'url'  => is_wp_error( $link ) ? '' : (string) $link,
+			);
+		}
+	}
+
+	$category = $categories[0];
+	$link     = get_category_link( $category->term_id );
+
+	return array(
+		'name' => $category->name,
+		'url'  => is_wp_error( $link ) ? '' : (string) $link,
+	);
+}
+
 add_filter(
 	'template_include',
 	function ( $template ) {
-		if ( is_singular( 'post' ) && ath_is_learner_artwork_post() ) {
+		$blog_template = ATH_THEME_DIR . '/single.php';
+
+		if ( is_category() || is_tag() || ath_uses_post_template() ) {
+			return is_readable( $blog_template ) ? $blog_template : $template;
+		}
+
+		if ( ! is_singular( 'post' ) ) {
+			return $template;
+		}
+
+		if ( ath_is_learner_artwork_post() ) {
 			$learner_template = ATH_THEME_DIR . '/templates/single-learner-artwork.php';
 			if ( is_readable( $learner_template ) ) {
 				return $learner_template;
 			}
+
+			return $template;
 		}
 
-		return $template;
+		return is_readable( $blog_template ) ? $blog_template : $template;
 	},
 	99
 );

@@ -1,0 +1,543 @@
+/**
+ * Block editor preview — mirrors front-end page shells (generic, workshop, course).
+ */
+
+.editor-styles-wrapper {
+  --teal: #3db8b0;
+  --teal-dark: #2fa39c;
+  --text-dark: #2b2b2b;
+  --text-muted: #666666;
+  --text-body: #444444;
+  --white: #ffffff;
+  --navy: #1a3a5c;
+  --cream: #faf8f4;
+  --section-divider: #e8e4dc;
+
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background: var(--white);
+  max-width: 820px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 48px 32px 64px !important;
+}
+
+/* Workshop / course pages — cream canvas, wider (when hero blocks present) */
+.editor-styles-wrapper:has(.experience-hero),
+.editor-styles-wrapper:has(.course-hero) {
+  max-width: 960px !important;
+  background: var(--cream) !important;
+  padding: 32px 24px 48px !important;
+}
+
+.editor-styles-wrapper > :first-child {
+  margin-top: 0;
+}
+
+.editor-styles-wrapper p {
+  margin-bottom: 1em;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--navy);
+  margin: 1.75em 0 0.75em;
+  line-height: 1.3;
+}
+
+.editor-styles-wrapper h2,
+.editor-styles-wrapper .faq-section__title {
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+.editor-styles-wrapper h3,
+.editor-styles-wrapper .faq-qa__question {
+  font-size: clamp(18px, 2.5vw, 22px);
+}
+
+.editor-styles-wrapper .faq-intro {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.editor-styles-wrapper .faq-section__intro {
+  margin-bottom: 1em;
+}
+
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol {
+  margin: 0 0 1em;
+  padding-left: 1.4em;
+}
+
+.editor-styles-wrapper li + li {
+  margin-top: 0.35em;
+}
+
+.editor-styles-wrapper a {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.editor-styles-wrapper a:hover {
+  color: var(--teal-dark);
+}
+
+.editor-styles-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.editor-styles-wrapper .wp-block-image {
+  margin: 1.5em 0;
+}
+
+.editor-styles-wrapper .wp-block-separator,
+.editor-styles-wrapper hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid var(--section-divider);
+}
+
+.editor-styles-wrapper .faq-section__footer {
+  margin-top: 1.25em;
+  font-size: 15px;
+}
+
+.editor-styles-wrapper .faq-section__footer a {
+  text-decoration: none;
+}
+
+.editor-styles-wrapper .faq-section__footer a:hover {
+  text-decoration: underline;
+}
+
+.editor-styles-wrapper .courses-hero__subtitle {
+  font-size: clamp(17px, 2.2vw, 20px);
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Course / workshop Gutenberg groups */
+.editor-styles-wrapper .wp-block-group.course-block,
+.editor-styles-wrapper .course-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid #e8e4dc;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 0;
+  --wp--style--block-gap: 16px;
+}
+
+.editor-styles-wrapper .wp-block-group.course-block > .wp-block-heading,
+.editor-styles-wrapper .wp-block-group.course-block > .wp-block-paragraph,
+.editor-styles-wrapper .wp-block-group.course-block > .wp-block-list,
+.editor-styles-wrapper .course-block__heading,
+.editor-styles-wrapper .course-block__text,
+.editor-styles-wrapper .course-block__list {
+  margin: 0;
+}
+
+.editor-styles-wrapper .course-block__heading,
+.editor-styles-wrapper .wp-block-group.course-block > .wp-block-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.editor-styles-wrapper .course-block__text,
+.editor-styles-wrapper .wp-block-group.course-block > .wp-block-paragraph {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-body);
+}
+
+.editor-styles-wrapper .course-block__list,
+.editor-styles-wrapper .wp-block-group.course-block .wp-block-list {
+  padding-left: 1.35em;
+  list-style: disc;
+  list-style-position: outside;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-body);
+}
+
+.editor-styles-wrapper .course-block__list li + li,
+.editor-styles-wrapper .wp-block-group.course-block .wp-block-list li + li {
+  margin-top: 10px;
+}
+
+.editor-styles-wrapper .wp-block-group.workshops-hub__card {
+  padding: 24px;
+  margin-bottom: 16px;
+  background: var(--white);
+  border: 1px solid #e8e4dc;
+  border-radius: 8px;
+}
+
+.editor-styles-wrapper .workshops-hub__card-title {
+  margin: 0 0 12px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--navy);
+}
+
+.editor-styles-wrapper .workshops-hub__card-desc {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.editor-styles-wrapper .workshops-hub__card-meta {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.editor-styles-wrapper .workshops-hub__card-meta strong {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.editor-styles-wrapper .workshops-hub__card-link a {
+  font-weight: 700;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.editor-styles-wrapper .wp-block-button__link,
+.editor-styles-wrapper a.btn-view,
+.editor-styles-wrapper a.btn-contact,
+.editor-styles-wrapper a.courses-cta__btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--teal);
+  color: var(--white) !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  border-radius: 4px;
+}
+
+.editor-styles-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+.editor-styles-wrapper th,
+.editor-styles-wrapper td {
+  padding: 10px 12px;
+  border: 1px solid var(--section-divider);
+  text-align: left;
+}
+
+.editor-styles-wrapper th {
+  background: var(--cream, #faf8f4);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .editor-styles-wrapper {
+    padding: 36px 20px 48px !important;
+  }
+
+  .editor-styles-wrapper:has(.experience-hero),
+  .editor-styles-wrapper:has(.course-hero) {
+    padding: 24px 16px 40px !important;
+  }
+}
+
+/* ── Workshop pages (.experience-article blocks) ── */
+
+.editor-styles-wrapper .wp-block-group.experience-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  align-items: stretch;
+  background: var(--white);
+  border: 1px solid var(--section-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  --wp--style--block-gap: 0;
+}
+
+.editor-styles-wrapper .experience-hero__media .wp-block-image {
+  margin: 0;
+}
+
+.editor-styles-wrapper .experience-hero__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.editor-styles-wrapper .wp-block-group.experience-hero__content {
+  padding: 32px 32px 32px 0;
+  --wp--style--block-gap: 0;
+}
+
+.editor-styles-wrapper .experience-hero__category {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.editor-styles-wrapper .experience-hero__title,
+.editor-styles-wrapper h1.experience-hero__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 3.5vw, 38px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.editor-styles-wrapper .experience-hero__subtitle {
+  margin: 0 0 16px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.editor-styles-wrapper .experience-hero__price {
+  display: inline-block;
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.editor-styles-wrapper .experience-hero__price-note {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.editor-styles-wrapper .experience-hero__intro {
+  margin: 0 0 24px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.editor-styles-wrapper a.experience-hero__btn,
+.editor-styles-wrapper .experience-hero__btn .wp-block-button__link {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--teal);
+  color: var(--white) !important;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  text-decoration: none !important;
+}
+
+.editor-styles-wrapper .wp-block-group.experience-meta {
+  margin-bottom: 32px;
+  background: var(--white);
+  border: 1px solid var(--section-divider);
+  border-radius: 8px;
+  padding: 24px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px 32px;
+}
+
+.editor-styles-wrapper .experience-meta__item {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.editor-styles-wrapper .experience-meta__item strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 4px;
+}
+
+.editor-styles-wrapper .wp-block-group.experience-body,
+.editor-styles-wrapper .wp-block-group.course-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.editor-styles-wrapper .wp-block-group.courses-cta {
+  margin-top: 8px;
+}
+
+.editor-styles-wrapper .courses-cta__inner,
+.editor-styles-wrapper .wp-block-group.courses-cta__inner {
+  text-align: center;
+  padding: 40px 24px;
+  background: var(--white);
+  border: 1px solid var(--section-divider);
+  border-radius: 8px;
+}
+
+.editor-styles-wrapper .courses-cta__text {
+  margin-bottom: 16px;
+}
+
+.editor-styles-wrapper .courses-cta__note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.editor-styles-wrapper .courses-cta__links a {
+  text-decoration: none;
+}
+
+.editor-styles-wrapper .courses-cta__links a:hover {
+  text-decoration: underline;
+}
+
+.editor-styles-wrapper .wp-block-group.course-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.editor-styles-wrapper .wp-block-group.course-gallery__item {
+  overflow: hidden;
+  border-radius: 6px;
+  background: #eee;
+}
+
+.editor-styles-wrapper .course-gallery__item .wp-block-image {
+  margin: 0;
+}
+
+.editor-styles-wrapper .course-gallery__item img {
+  border-radius: 0;
+}
+
+/* ── Course detail pages (.course-article blocks) ── */
+
+.editor-styles-wrapper .wp-block-group.course-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 0;
+  background: var(--white);
+  border: 1px solid var(--section-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.editor-styles-wrapper .course-hero__media .wp-block-image {
+  margin: 0;
+}
+
+.editor-styles-wrapper .course-hero__media img {
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.editor-styles-wrapper .wp-block-group.course-hero__content {
+  padding: 32px;
+}
+
+.editor-styles-wrapper .course-hero__pathway {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.editor-styles-wrapper .course-hero__pathway a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.editor-styles-wrapper .course-hero__title,
+.editor-styles-wrapper h1.course-hero__title {
+  font-size: clamp(28px, 3.5vw, 38px);
+  margin: 0 0 12px;
+}
+
+.editor-styles-wrapper .course-hero__sessions {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  background: #efcc55;
+  border-radius: 999px;
+}
+
+.editor-styles-wrapper .course-hero__intro {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.editor-styles-wrapper .wp-block-group.course-sessions {
+  background: var(--white);
+  border: 1px solid var(--section-divider);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+/* Legacy Astra group backgrounds inside migrated pages → white cards */
+.editor-styles-wrapper .wp-block-group.experience-body .wp-block-group.has-background,
+.editor-styles-wrapper .wp-block-group.course-body .wp-block-group.has-background {
+  background-color: var(--white) !important;
+  border: 1px solid var(--section-divider);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+
+@media (max-width: 768px) {
+  .editor-styles-wrapper .wp-block-group.experience-hero,
+  .editor-styles-wrapper .wp-block-group.course-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-styles-wrapper .wp-block-group.experience-hero__content,
+  .editor-styles-wrapper .wp-block-group.course-hero__content {
+    padding: 24px 20px;
+  }
+
+  .editor-styles-wrapper .wp-block-group.experience-meta {
+    padding: 20px;
+  }
+
+  .editor-styles-wrapper .wp-block-group.course-gallery__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

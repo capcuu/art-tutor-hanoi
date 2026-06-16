@@ -1,0 +1,31 @@
+---
+description: New WordPress pages use default page.php template and Gutenberg blocks
+alwaysApply: true
+---
+
+# Gutenberg pages (Art Tutor Hanoi theme)
+
+When creating or migrating **any content page** in `wp-content/themes/art-tutor-hanoi/`:
+
+## Default
+
+- **Template:** WordPress default (`page.php`) — never assign `page-templates/*.php` unless the page is in `ath_dedicated_v2_page_templates()` (currently only `book`, `students-artworks`).
+- **Content:** Native Gutenberg blocks (`<!-- wp:paragraph -->`, `heading`, `list`, `group`, `image`, `[ath_btn]` shortcode) — not a single Custom HTML block wrapping full page markup.
+- **Migration meta:** `_ath_gutenberg_migrated = 1`, no `_ath_gutenberg_full_layout` (theme shell comes from `partials/page-content.php`).
+- **Seed data:** optional `data/*.php` + `ath_*_to_gutenberg_blocks()` for first import only; editors change content in WP Admin afterward.
+
+## Do not
+
+- Add new `page-templates/*.php` for static/marketing pages.
+- Add new routed PHP partials in `ath_routed_page_partials()` for pages that should be editor-editable.
+- Bake entire `<main>` HTML into one Custom HTML block.
+
+## Helpers (use these)
+
+- `ath_insert_gutenberg_page()` / `ath_prepare_gutenberg_page()` — `inc/page-defaults.php`
+- `ath_gutenberg_*()` block builders — `inc/gutenberg-blocks.php`
+- `ath_migrate_*_to_gutenberg` patterns — `inc/gutenberg-migration.php`, `inc/workshop-pages.php`, `inc/course-detail-pages.php`
+
+## Exceptions (dynamic PHP only)
+
+- Book (Fluent Forms tabs), thank-you (query variants), calendar (TablePress), students-artworks (post grid), links (admin filter).

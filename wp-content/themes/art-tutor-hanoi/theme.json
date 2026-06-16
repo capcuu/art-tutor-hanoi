@@ -2,19 +2,82 @@
   "$schema": "https://schemas.wp.org/wp/6.5/theme.json",
   "version": 3,
   "settings": {
+    "layout": {
+      "contentSize": "820px",
+      "wideSize": "820px"
+    },
     "color": {
       "palette": [
         {
-          "slug": "primary",
-          "color": "#501511",
-          "name": "Primary"
+          "slug": "teal",
+          "color": "#3db8b0",
+          "name": "Teal"
         },
         {
-          "slug": "background",
-          "color": "#fff8ee",
-          "name": "Background"
+          "slug": "navy",
+          "color": "#1a3a5c",
+          "name": "Navy"
+        },
+        {
+          "slug": "text-dark",
+          "color": "#2b2b2b",
+          "name": "Text"
+        },
+        {
+          "slug": "text-muted",
+          "color": "#666666",
+          "name": "Muted"
+        },
+        {
+          "slug": "white",
+          "color": "#ffffff",
+          "name": "White"
+        },
+        {
+          "slug": "cream",
+          "color": "#faf8f4",
+          "name": "Cream"
         }
       ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "'Montserrat', Arial, sans-serif",
+          "name": "Montserrat",
+          "slug": "montserrat"
+        },
+        {
+          "fontFamily": "'Playfair Display', Georgia, serif",
+          "name": "Playfair Display",
+          "slug": "playfair"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--montserrat)",
+      "fontSize": "16px",
+      "lineHeight": "1.7"
+    },
+    "color": {
+      "text": "#2b2b2b"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--playfair)"
+        },
+        "color": {
+          "text": "#1a3a5c"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#3db8b0"
+        }
+      }
     }
   }
 }

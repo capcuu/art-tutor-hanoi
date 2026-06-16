@@ -12,7 +12,7 @@ return array(
 		'price'       => '$40',
 		'price_note'  => 'We accept Stripe, PayPal and bank transfer',
 		'image'       => array(
-			'url' => $cld . '/v1767942119/Arttutor_Pics/TrialArtClass_119508bc00/TrialArtClass_119508bc00.jpg',
+			'url' => 'https://res.cloudinary.com/dftadlujq/image/upload/v1766205032/Arttutor_Pics/daniel-garber-september-morning-detail-4.jpg',
 			'alt' => 'Trial art class at Art Tutor Hanoi',
 		),
 		'intro'       => 'The trial session introduces our academic approach to drawing and painting, focusing on fundamentals and instructor feedback — not on completing a finished artwork.',
@@ -50,7 +50,7 @@ return array(
 		'policy'      => 'Free cancellation or reschedule up to 24 hours in advance. Contact us or see our FAQ.',
 		'book'        => array(
 			'label' => 'Book your Trial Class',
-			'url'   => 'https://arttutorhanoi.com/book-a-trial-art-session-art-tutor-hanoi/',
+			'url'   => 'trial',
 		),
 	),
 	'life-drawing' => array(
@@ -131,7 +131,7 @@ return array(
 		'policy'      => 'Free cancellation up to 24 hours in advance. To cancel or reschedule, contact our admin or see our FAQ.',
 		'book'        => array(
 			'label' => 'Book Life Drawing',
-			'url'   => 'https://arttutorhanoi.com/nude-drawing-class/',
+			'url'   => 'workshops',
 		),
 	),
 	'silk-painting' => array(
@@ -195,7 +195,7 @@ return array(
 		),
 		'book'        => array(
 			'label' => 'Register now',
-			'url'   => 'https://arttutorhanoi.com/silk-painting-advanced-workshop/',
+			'url'   => 'workshops',
 		),
 	),
 	'artist-residency' => array(
@@ -272,7 +272,7 @@ return array(
 		),
 		'book'        => array(
 			'label' => 'Book Private Studio',
-			'url'   => 'https://arttutorhanoi.com/artist-residency-in-hanoi/',
+			'url'   => 'residency',
 		),
 	),
 );
