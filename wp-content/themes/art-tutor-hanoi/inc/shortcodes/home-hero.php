@@ -21,6 +21,7 @@ function ath_home_hero_default_atts() {
 		'video_version'     => 'v1780352977',
 		'video_width'       => '1920',
 		'cloudinary_folder' => 'video',
+		'brand_h1'          => 'Art Tutor Hanoi',
 		'autoplay'          => '1',
 		'muted'             => '1',
 		'loop'              => '1',
@@ -79,7 +80,7 @@ function ath_home_hero_shortcode_string( array $overrides = array() ) {
 function ath_resolve_hero_poster_url( $poster ) {
 	$poster = trim( (string) $poster );
 	if ( $poster === '' ) {
-		$poster = 'hero2.jpg';
+		return '';
 	}
 
 	if ( preg_match( '#^https?://#i', $poster ) ) {
@@ -138,6 +139,7 @@ function ath_render_home_hero_block( array $args = array() ) {
 	$poster_url        = ath_resolve_hero_poster_url( $args['poster'] );
 	$video_url         = ath_resolve_hero_video_url( $args );
 	$cloudinary_folder = (string) $args['cloudinary_folder'];
+	$brand_h1          = (string) ( $args['brand_h1'] ?? 'Art Tutor Hanoi' );
 	$autoplay          = ath_shortcode_flag_enabled( $args['autoplay'] );
 	$muted             = ath_shortcode_flag_enabled( $args['muted'] );
 	$loop              = ath_shortcode_flag_enabled( $args['loop'] );

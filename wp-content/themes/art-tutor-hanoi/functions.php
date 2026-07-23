@@ -21,6 +21,7 @@ require_once ATH_THEME_DIR . '/inc/thank-you-page.php';
 require_once ATH_THEME_DIR . '/inc/links-page.php';
 require_once ATH_THEME_DIR . '/inc/generic-page.php';
 require_once ATH_THEME_DIR . '/inc/shortcodes/home-hero.php';
+require_once ATH_THEME_DIR . '/inc/art-feedback-page.php';
 require_once ATH_THEME_DIR . '/inc/shortcodes/home-intro.php';
 require_once ATH_THEME_DIR . '/inc/shortcodes/courses-hub.php';
 require_once ATH_THEME_DIR . '/inc/shortcodes/kids-courses-hub.php';
