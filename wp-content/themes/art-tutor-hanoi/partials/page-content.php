@@ -79,14 +79,23 @@ while ( have_posts() ) {
 			$main_class = 'courses-page courses-page--kids';
 		} elseif ( $slug === 'hanoi-art-supply-map' ) {
 			$main_class = 'generic-page generic-page--art-supplies';
+		} elseif ( $slug === 'free-art-feedback' ) {
+			$main_class = 'generic-page generic-page--art-feedback';
 		}
 		?>
 <main class="<?php echo esc_attr( $main_class ); ?>">
+		<?php
+		if ( $slug === 'free-art-feedback' && function_exists( 'ath_render_art_feedback_video_banner' ) ) {
+			ath_render_art_feedback_video_banner();
+		}
+		?>
   <section class="courses-hero" aria-labelledby="generic-page-heading">
     <div class="courses-hero__inner">
       <h1 id="generic-page-heading" class="courses-hero__title"><?php echo esc_html( ath_page_seo_h1() ); ?></h1>
 			<?php
-			if ( $hub_layout ) {
+			if ( $slug === 'free-art-feedback' && function_exists( 'ath_render_art_feedback_hero_meta' ) ) {
+				ath_render_art_feedback_hero_meta();
+			} elseif ( $hub_layout ) {
 				echo ath_render_hub_hero_subtitle(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- do_blocks output.
 			}
 			?>
@@ -97,7 +106,7 @@ while ( have_posts() ) {
   <?php the_content(); ?>
 		<?php else : ?>
   <section class="generic-page__body" aria-label="Page content">
-    <div class="generic-page__inner generic-page__content">
+    <div class="generic-page__inner generic-page__content<?php echo $slug === 'free-art-feedback' ? ' generic-page__content--art-feedback' : ''; ?>">
       <?php the_content(); ?>
     </div>
   </section>
