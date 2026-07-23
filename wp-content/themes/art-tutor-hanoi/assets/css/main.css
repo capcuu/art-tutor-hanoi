@@ -4903,6 +4903,22 @@ a {
   margin: 1.5em 0;
 }
 
+.generic-page__content .art-feedback-banner--video,
+.generic-page__content figure.art-feedback-banner {
+  margin: 1.5em 0;
+}
+
+.generic-page__content .art-feedback-banner__video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 920 / 278;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #111;
+}
+
 .generic-page__content .wp-block-separator,
 .generic-page__content hr {
   margin: 2em 0;

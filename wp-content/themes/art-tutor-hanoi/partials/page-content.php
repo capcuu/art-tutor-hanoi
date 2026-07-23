@@ -84,11 +84,6 @@ while ( have_posts() ) {
 		}
 		?>
 <main class="<?php echo esc_attr( $main_class ); ?>">
-		<?php
-		if ( $slug === 'free-art-feedback' && function_exists( 'ath_render_art_feedback_video_banner' ) ) {
-			ath_render_art_feedback_video_banner();
-		}
-		?>
   <section class="courses-hero" aria-labelledby="generic-page-heading">
     <div class="courses-hero__inner">
       <h1 id="generic-page-heading" class="courses-hero__title"><?php echo esc_html( ath_page_seo_h1() ); ?></h1>
