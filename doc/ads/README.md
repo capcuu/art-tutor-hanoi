@@ -187,3 +187,63 @@ Liên quan: `data/links.php` (mục *2025 – Opencall*), `partials/footer.php` 
 | **Tự làm chủ credential** | Studio **đã là** đơn vị tổ chức triển lãm quốc tế: Living Colors 1.000+ bài, 40+ quốc gia, chọn 100+, certificate, in và treo tại studio | **Khác biệt mạnh nhất**: đối thủ phải đi thuê tên bảo tàng, ta tự cấp được sự công nhận — và nói thật được 100% |
 
 Định vị nên chốt: **"studio tổ chức triển lãm quốc tế, đồng thời luyện và gửi bài cho các cuộc thi quốc tế miễn phí"** — cho phụ huynh đúng vinh quang họ muốn mà không cần dựa vào một hội trường cho thuê.
+
+---
+
+## 11. Nhắm khách Việt hay giữ expat nói tiếng Anh?
+
+**Không phải chọn một.** Tách theo **sản phẩm + kênh**: ngân sách **Meta ads đổ vào phụ huynh Việt**, còn expat/khách du lịch giữ nguyên nhưng **nuôi bằng kênh khác** (OTA + SEO tiếng Anh + word of mouth), không dùng Meta prospecting.
+
+### Vì sao ngân sách Meta phải là tập Việt
+
+| Tiêu chí | Phụ huynh Việt (Hà Nội) | Phụ huynh expat (Hà Nội) |
+|---|---|---|
+| Insight "vinh quang" | **Có, đo được**: Toyota nhận >6,8 tr tranh từ VN = 67% toàn cầu; IAP 1.700 bài từ 334 trường | Yếu — động cơ là enrichment / hoạt động bằng tiếng Anh, credential (nếu có) là **portfolio nộp trường quốc tế**, thường 14–17 tuổi |
+| Quy mô addressable | ~**1–2 triệu** (Hà Nội ~8,5 tr dân, trẻ 6–16 khoảng 1,1–1,4 tr) | Toàn Hà Nội chỉ **45.000–100.000** người nước ngoài; lọc ra phụ huynh có con 6–16 còn **vài chục nghìn** |
+| Meta thích quy mô nào | 500K–2M là dải tối ưu cho campaign conversion ✅ | **Dưới 100K → CPM tăng vọt** do lặp tần suất ❌ |
+| Giá auction | VN: **CPM $2–6, CPC $0,10–0,50, CPL $3–15** | Profile tiếng Anh/thu nhập cao: CPM $8–25, CPC $1–4, CPL $20–80 |
+| Thoát learning phase (50 conversion/tuần/ad set) | Khả thi: ~**$21–107/ngày** | Gần như **không bao giờ đạt** ⇒ ad set treo "learning limited" vĩnh viễn |
+| LTV | Khoá tuần, nhiều năm; thang bậc **cuộc thi → portfolio → du học mỹ thuật** | Ngắn: work permit 1–2 năm, luân chuyển đi |
+| Góc Louvre / thi quốc tế | Chạy được (nếu minh bạch phí) | **Rủi ro** — nhóm này biết Carrousel là TTTM (§10) |
+
+### Dữ liệu GSC của chính site đã nghiêng về VN
+
+| Chỉ số | Số | Đọc ra gì |
+|---|---|---|
+| Vietnam (geo) | **488 clicks / 226.236 impressions** = **44% clicks, 84,5% impressions** toàn site; CTR chỉ 0,22% ở vị trí 4,78 | Nhu cầu đang đứng trước mặt site chủ yếu ở VN, nhưng **không click** — sai ngôn ngữ / sai thông điệp |
+| Mobile vs desktop | Mobile 714 clicks / 21.274 impr, **CTR 3,36%**; desktop 360 clicks / 245.338 impr, **CTR 0,15%** | Người thật ở mobile; khối impression desktop là rác. Phụ huynh VN gần như 100% mobile ⇒ khớp |
+| Trang tiếng Việt duy nhất `/lop-ve-cho-tre-em-tay-ho-ha-noi/` | 5 clicks / **175 impressions**, CTR **2,86%** | CTR tốt gấp ~13× trung bình site nhưng **gần như không có độ phủ** — đây là vấn đề **thiếu nguồn cung trang**, không phải thiếu nhu cầu |
+| Trang JP | 15 clicks/84 impr (**17,86%**) và 5/30 (**16,67%**) | Xác nhận: trang bản địa hoá luôn ăn CTR rất cao. Có 1 trang → chỉ được 84 impression |
+| Clicks từ nước ngoài | US 139, AU 61, UK 50, DE 30, SG 25, CA 21… | Đây là **khách du lịch đang lên kế hoạch**, không phải expat thường trú — nhóm này thuộc phễu workshop/OTA, không phải phễu lớp học dài hạn |
+
+Lưu ý trung thực: bucket "Vietnam" của GSC là **geo**, gồm cả người Việt, expat thường trú **và** khách du lịch đang ở Hà Nội — dữ liệu này không tách được theo ngôn ngữ. Nhưng danh sách query thì tách được: toàn tiếng Anh (*kids art classes near me*, *children art workshop*, *tutoring near me for kids* — 748 impressions, **0 click**), tức **bề mặt tiếng Việt chưa tồn tại để mà được tìm**.
+
+### Điểm mấu chốt: đừng bỏ định vị tiếng Anh — hãy **bán nó cho phụ huynh Việt**
+
+Nhắm tập Việt **không** có nghĩa là hạ định vị "English-speaking studio". Ngược lại, chính nó là bằng chứng "được bên ngoài công nhận" mà §4 cần, và không trung tâm mỹ thuật Việt nào copy được:
+
+- Dạy bằng tiếng Anh ⇒ phụ huynh được **hai giá trị trong một học phí** (vẽ + tiếng Anh).
+- **150+ học viên từ 40+ quốc gia** ⇒ con học cùng bạn quốc tế.
+- Studio **tự tổ chức** triển lãm quốc tế (Living Colors) ⇒ không phải đi thuê tên bảo tàng như đối thủ.
+
+⇒ Thông điệp cho tập Việt: *"Studio quốc tế ở Tây Hồ — con vẽ cùng học viên từ 40+ quốc gia, tranh được chọn vào triển lãm quốc tế do chính studio tổ chức."*
+
+### Ba việc phải xong trước khi tiêu tiền vào tập Việt
+
+| Blocker | Hiện trạng | Vì sao chặn |
+|---|---|---|
+| Bề mặt tiếng Việt | **1 trang duy nhất** (175 impressions). Không có open call VN, không có pricing/booking VN, form tiếng Anh | Ads VN → landing EN = message mismatch, đốt ngân sách ngay ở bước click |
+| Sản phẩm 12–16 tuổi | Theme chỉ có kids **5–11 / 5–12** (`data/kids-pathways.php`, `config/book-tabs.php`) | Cuộc thi chia khối THCS/THPT; đối thủ có tầng 11–14 và 15–17 + du học mỹ thuật. Đúng nhóm chịu chi nhất thì ta **chưa có gì bán** |
+| Đo lường | Không Pixel/CAPI/UTM (§9) | Không có 50 conversion/tuần được ghi nhận ⇒ Meta học sai đối tượng, CPL đắt giả |
+
+### Phân bổ đề xuất
+
+| Kênh | Tập | Thông điệp | Ngân sách |
+|---|---|---|---|
+| Meta prospecting (VN, mobile-first) | Phụ huynh Việt, Hà Nội, con 6–16 | Open call → triển lãm → mentorship (§1–6) | **~80%** |
+| Meta retargeting + lookalike (EN) | Expat thường trú + người đã vào site | **Không dùng góc Louvre**: portfolio nộp trường quốc tế, lớp tiếng Anh, trial | ~20% |
+| OTA (GetYourGuide, Airbnb, Viator, Tripadvisor 40+ reviews) | Khách du lịch | Workshop 2h, trải nghiệm văn hoá | Giữ nguyên, không cần Meta |
+| SEO tiếng Anh (đang chạy tốt: `/free-art-feedback/` 183 clicks, `/hanoi-art-supply-map/` 171 clicks) | Hobbyist + traveler quốc tế | Lead magnet | Giữ nguyên |
+| SEO tiếng Việt | Phụ huynh Việt | **Đang bỏ trống** — mở rộng từ 1 trang lên cụm trang | Ưu tiên mới |
+
+Ràng buộc cần biết: studio ở **Tây Hồ** — khu expat; đối thủ GreenSum đặt cơ sở ở **Keangnam Landmark 72** và **Times City**, tức các cụm dân cư Việt thu nhập cao. Lớp **tuần** kéo gia đình Việt từ Cầu Giấy/Hai Bà Trưng sang Tây Hồ là ma sát thật. Nhưng sản phẩm cuộc thi/open call là **tần suất thấp** (gửi 1 bức tranh, sprint luyện ngắn, mentor có thể online) nên chịu được khoảng cách — đây thêm một lý do để **cuộc thi là cửa vào**, lớp tuần là bán sau.
