@@ -322,3 +322,74 @@ Open call không biến mất — nó chuyển vai: **không phải campaign ri�
 | Vai trò nên giao | **Tập chính nuôi phễu** | **Cơ chế giữ khách + upsell** áp lên chính tập trên |
 
 **Kết luận §12:** chạy gia đình trẻ làm tập chính, hook là **free art feedback** (không phải open call), landing tiếng Việt, radius Tây Hồ, và **phải sửa trial/giá VND/lịch trước** — nếu không, ad rẻ nhưng chốt đơn sẽ chết ở bước cuối. Cuộc thi/triển lãm giữ lại làm bậc thang vinh quang để gia đình ở lại nhiều năm.
+
+---
+
+## 13. Hook cụ thể — 3 bản ad dán chạy được
+
+**Hook không phải câu chữ, hook là cái offer.** Offer ở đây:
+
+> **Gửi tối đa 3 bức tranh con vẽ ở nhà → hoạ sĩ thật của studio xem và nhận xét → miễn phí.**
+
+Vì sao chính nó: động cơ số 1 của phụ huynh con 3–8 là *"con tôi có năng khiếu không?"*; đây là câu trả lời với rào cản **0đ**; trang đã tồn tại (`/free-art-feedback/`) và đang là trang mạnh thứ 2 toàn site (183 clicks, CTR 3,55%); và nó tạo **hiện vật để khoe** — thứ mở đường cho vinh quang về sau.
+
+### Ad 1 — Xác nhận năng khiếu (chủ lực, ~60% ngân sách)
+
+| Thành phần | Nội dung |
+|---|---|
+| **Primary text** | *"Tranh con vẽ ở nhà, gửi lên đây. Hoạ sĩ của studio sẽ xem và nhận xét thật — miễn phí, tối đa 3 bức."* (100 ký tự, không bị cắt)<br><br>*"Không phải AI, không phải lời khen cho có. Hoạ sĩ sẽ nói rõ con đang mạnh ở đâu, nên luyện gì tiếp, và bức nào đủ tốt để gửi vào triển lãm quốc tế do studio tổ chức — năm ngoái 1.000+ tranh từ 40+ quốc gia, hơn 100 bức được chọn in và trưng bày.*<br>*Dành cho các bạn nhỏ 5–12 tuổi. Studio ở Tây Hồ, giáo viên nói tiếng Anh."* |
+| **Headline** | **Nhận xét thật cho tranh con** (27) |
+| **Description** | **Miễn phí · Tối đa 3 bức** (23) |
+| **CTA** | `Sign Up` / `Đăng ký` (nếu form trên site) hoặc `Send Message` (nếu nhận qua Zalo). *Meta không có nút "Gửi tranh" — đừng chờ nó* |
+| **Creative** | Video dọc 10–15s: điện thoại chụp tranh con vẽ trên giấy → cận cảnh hoạ sĩ thật viết nhận xét tay lên bản in → tranh được treo lên tường studio. Bản thay thế: carousel 3 tranh học viên thật + 3 dòng nhận xét thật |
+| **Landing** | `/free-art-feedback/` **bản tiếng Việt** + form Fluent Forms (upload ảnh, tên con, tuổi, SĐT/Zalo) |
+
+### Ad 2 — Không màn hình (khác trục, để test angle)
+
+| Thành phần | Nội dung |
+|---|---|
+| **Primary text** | *"Chủ nhật, 90 phút con không nhìn màn hình. Chỉ có giấy, màu và một việc phải làm bằng tay."* (90 ký tự)<br><br>*"Lớp nhỏ, giáo viên nói tiếng Anh, toàn bộ hoạ cụ studio chuẩn bị. Con học quan sát trước rồi mới vẽ — bắt đầu từ hình khối, sau đó sáng tối. Tranh con làm được mang về, bức tốt được chọn vào triển lãm của studio.*<br>*Dành cho các bạn nhỏ 5–12 tuổi, studio ở Tây Hồ."* |
+| **Headline** | **Buổi vẽ không màn hình** (22) |
+| **Description** | **90 phút · Tây Hồ · 5–12 tuổi** (28) |
+| **CTA** | `Learn More` / `Đăng ký` |
+| **Creative** | Ảnh/video bàn vẽ **không có điện thoại nào trong khung**, tay trẻ đang tô, mặt tập trung. Tuyệt đối không dùng ảnh dàn hàng chụp tập thể |
+
+### Ad 3 — Vinh quang nhẹ (retarget người đã gửi tranh / đã vào site)
+
+| Thành phần | Nội dung |
+|---|---|
+| **Primary text** | *"Năm ngoái studio nhận 1.000+ tranh từ 40+ quốc gia, chọn hơn 100 bức để in và triển lãm. Miễn phí gửi bài."* (106 ký tự)<br><br>*"Không cần kinh nghiệm, không giới hạn phong cách — tranh con đang vẽ ở nhà cũng gửi được. Bức được chọn sẽ được in, trưng bày tại studio Tây Hồ và có giấy chứng nhận.*<br>*Dành cho các bạn nhỏ 5–12 tuổi."* |
+| **Headline** | **Tranh của con được chọn** (23) |
+| **Description** | **Miễn phí gửi bài** (16) |
+| **CTA** | `Apply Now` / `Đăng ký` |
+| **Creative** | Ảnh tranh trẻ em **đang treo trên tường triển lãm** + giấy chứng nhận có tên. Đây là ảnh quan trọng nhất của cả campaign — nếu chưa có, chụp lại từ Living Colors 2025 |
+
+### Bước sau khi họ gửi tranh — chỗ hook thật sự sinh tiền
+
+Hook chỉ hoạt động nếu **khoảnh khắc được công nhận** được dựng đúng. Trình tự:
+
+| # | Việc | Chi tiết |
+|---|---|---|
+| 1 | Trả nhận xét trong **48–72h** | Dạng ảnh/PDF một trang: **tên con**, tên + chữ ký hoạ sĩ, logo studio. Đây là **hiện vật để phụ huynh khoe** — chi phí gần 0, giá trị cảm xúc cao nhất trong cả phễu |
+| 2 | Cấu trúc nhận xét cố định 3 phần | (a) **một điểm mạnh cụ thể** (không khen chung), (b) **một việc nên luyện tiếp**, (c) **một lời mời**: tranh đủ tốt → mời gửi triển lãm; chưa đủ → mời buổi vẽ thử |
+| 3 | Follow-up qua **Zalo** | Site đã dùng Zalo/WhatsApp — nhắn kèm ảnh nhận xét, không nhắn chào hàng khan |
+| 4 | Retarget theo hành vi | Đã gửi tranh nhưng chưa đặt lớp → ad tiếp theo mới nói **lịch + học phí VND + địa chỉ**. Đã nhận nhận xét → Ad 3 (triển lãm) |
+| 5 | **Chặn trần số lượng** | Nhận xét là lao động tay thật. Cap ví dụ **30–50 bài/tuần** — vừa bảo vệ giáo viên, vừa tạo scarcity thật (*"tuần này còn N suất"*). CAC thật của hook này là **thời gian giáo viên**, không phải tiền ad |
+
+### Tuyệt đối không đưa vào ad đầu phễu
+
+| Không viết | Vì sao |
+|---|---|
+| *"khoá học"*, *"học phí"*, *"mentorship"*, *"luyện thi"* | Chuyển frame từ được-công-nhận sang mua-hàng, kéo phản đối giá lên trước khi có mong muốn (§4) |
+| *"Con bạn 5 tuổi có…?"* | Personal attributes — nguyên nhân bị từ chối phổ biến nhất (§8). Dùng *"Dành cho các bạn nhỏ 5–12 tuổi"* |
+| *"Louvre"*, *"bảo tàng danh giá nhất thế giới"* | §10 — hội trường cho thuê, và ta không cần |
+| *"chắc chắn được triển lãm"*, *"cam kết đạt giải"* | Misleading claims. Nói xác suất thật: *1.000+ gửi, hơn 100 được chọn* |
+
+### KPI đọc theo đúng thứ tự
+
+1. **Cost per bài tranh gửi về** (không phải cost per click) — mốc khởi điểm tham chiếu CPL Việt Nam $3–15.
+2. **% người gửi tranh đọc nhận xét** (mở link/ảnh).
+3. **% người gửi tranh đặt buổi vẽ thử** — đây là số quyết định hook có kinh tế hay không.
+4. **% học viên trial → khoá 12 buổi**, và **giữ được bao nhiêu tháng**.
+
+Nếu (1) tốt mà (3) tệ, vấn đề không ở ad mà ở **giá trial $40 và lịch chỉ Chủ nhật** (§12).
