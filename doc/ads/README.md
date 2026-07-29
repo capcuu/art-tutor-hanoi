@@ -393,3 +393,63 @@ Hook chỉ hoạt động nếu **khoảnh khắc được công nhận** đư�
 4. **% học viên trial → khoá 12 buổi**, và **giữ được bao nhiêu tháng**.
 
 Nếu (1) tốt mà (3) tệ, vấn đề không ở ad mà ở **giá trial $40 và lịch chỉ Chủ nhật** (§12).
+
+---
+
+## 14. "Vẽ cùng con" — dùng, nhưng **không** làm hook chính
+
+Câu trả lời ngắn: **"vẽ cùng con" là hook số 2, không phải số 1.** Nó bán **trải nghiệm**; hook số 1 bán **sự công nhận**. Chúng giải hai bài toán khác nhau và không thay thế được nhau.
+
+### Vì sao không nên đặt nó ở vị trí số 1
+
+| Điểm mạnh của *"vẽ cùng con"* | Điểm yếu chí tử |
+|---|---|
+| Khớp động cơ #4 của gia đình trẻ (*cuối tuần làm gì với con*) | **Không tạo công nhận nào** — mà §4 nói rõ: vinh quang cần người ngoài phán xét. Ad này không cho phụ huynh biết con có năng khiếu hay không |
+| Nỗi sợ = 0. Không ai bị đánh giá, không có thắng/thua | Là **mô tả hoạt động**, không phải kết quả ⇒ đúng lỗi headline mà §2 cảnh báo |
+| Creative mạnh nhất, CTR cao (cả gia đình cùng vẽ, dễ share) | **CTR rẻ ≠ nhập học.** Đây là bẫy giống contest ở §6 trong bộ áo khác: người mua một buổi cuối tuần vui, không phải người mua lộ trình 6 năm |
+| Biến thời gian phụ huynh *"wait in the studio lounge"* thành doanh thu | Kinh tế là **one-off, ticket nhỏ, LTV ngắn** — gần với workshop khách du lịch ($40/buổi) hơn là khoá 12 buổi |
+| Khác biệt với hàng loạt trung tâm ở HN chỉ nhận trẻ | Bản thân cụm từ **quá phổ thông**, nhiều nơi dùng ⇒ không phải lợi thế nhận diện |
+
+### Cách khiến nó mạnh: **ghép công nhận vào trong buổi vẽ**
+
+Đừng chọn một trong hai — gộp. Sản phẩm nên là:
+
+> **Buổi cuối tuần 90 phút: bố mẹ và con cùng vẽ. Cuối buổi, hoạ sĩ nhận xét riêng tranh của con và nói con nên học gì tiếp.**
+
+Lúc này phụ huynh nhận **cả hai**: trải nghiệm gia đình **và** khoảnh khắc được công nhận — diễn ra **ngay tại studio, có giáo viên đứng cạnh**. Đó là điều kiện chốt khoá tốt nhất có thể có, tốt hơn nhiều so với nhận xét gửi qua email.
+
+### Headline cho hướng này (đã đếm ký tự, ≤27)
+
+| Headline | Ký tự | Ghi chú |
+|---|---|---|
+| **Vẽ cùng con, có nhận xét** | 24 | **Ưu tiên** — có cả trải nghiệm và công nhận |
+| Vẽ cùng con, không màn hình | 27 | Ghép với trục screen-free (§12) |
+| Vẽ cùng con 90 phút, Tây Hồ | 27 | Cụ thể hoá: thời lượng + địa điểm |
+| Cuối tuần vẽ cùng con | 21 | Bản mộc, dùng làm control |
+| 90 phút vẽ cùng con | 19 | Ngắn nhất, an toàn mọi placement |
+| Bố mẹ vẽ cùng con | 17 | Nói rõ ai tham gia |
+| EN: Paint Together, No Screens | 26 | Dùng lại được cho khách du lịch/expat |
+| EN: Draw With Your Child | 20 | Bản mộc EN |
+
+Tránh: *"Vẽ cùng con, biết con giỏi gì"* (29) và *"Vẽ cùng con, hoạ sĩ nhận xét"* (28) — vượt ngưỡng mobile, bị cắt.
+
+### Một lợi thế riêng: hook này chạy được **cả hai tập**
+
+Khác với mọi hook trước, *"vẽ cùng con"* dùng chung được cho **gia đình trẻ Việt** và **gia đình khách du lịch/expat** — cùng creative, chỉ đổi ngôn ngữ. Studio đã có bằng chứng nhóm sau: *"We were a family of 7 with four kids, including one with a disability… A total highlight of our trip!"* (`data/home-testimonials.php`). Nghĩa là một lần sản xuất creative, hai thị trường dùng.
+
+### Phân vai ba hook và ngân sách
+
+| Hook | Mục tiêu | Đo bằng | Ngân sách |
+|---|---|---|---|
+| **1. "Nhận xét thật cho tranh con"** (§13) | Lead cho **khoá tuần** — nơi có LTV | Cost per bài gửi → % đặt trial | **~55%** |
+| **2. "Vẽ cùng con, có nhận xét"** | **Doanh thu cuối tuần ngay** + lấp slot trống + đưa người sợ cam kết **đặt chân vào studio** | Cost per booking buổi cuối tuần → % chuyển sang khoá 12 buổi | **~30%** |
+| **3. "Tranh của con được chọn"** (§13) | **Giữ khách + upsell** cho người đã trong phễu | % gửi bài triển lãm → tỉ lệ tái tục khoá | **~15%**, chỉ retarget |
+
+### Điều kiện tiên quyết trước khi chạy hook 2
+
+| Việc | Vì sao |
+|---|---|
+| Mở **slot T7 + CN, sáng + chiều** | Hook cuối tuần mà chỉ có CN 10:00–11:30 thì ad chạy vào chỗ không có hàng (§12) |
+| Định giá **buổi gia đình bằng VND**, tính theo cặp bố/mẹ + con | Trial $40/người sẽ thành hơn 2 triệu cho một cặp — không ai mua |
+| Quy định rõ **1 phụ huynh + 1 con** hay theo nhóm | Ảnh hưởng trực tiếp tới sức chứa phòng và giá |
+| Chuẩn bị **mẫu nhận xét tại chỗ** (in sẵn, ghi tay, có tên con) | Đây là hiện vật khiến phụ huynh khoe và là lý do họ quay lại (§13 bước 1) |
