@@ -247,3 +247,78 @@ Nhắm tập Việt **không** có nghĩa là hạ định vị "English-speakin
 | SEO tiếng Việt | Phụ huynh Việt | **Đang bỏ trống** — mở rộng từ 1 trang lên cụm trang | Ưu tiên mới |
 
 Ràng buộc cần biết: studio ở **Tây Hồ** — khu expat; đối thủ GreenSum đặt cơ sở ở **Keangnam Landmark 72** và **Times City**, tức các cụm dân cư Việt thu nhập cao. Lớp **tuần** kéo gia đình Việt từ Cầu Giấy/Hai Bà Trưng sang Tây Hồ là ma sát thật. Nhưng sản phẩm cuộc thi/open call là **tần suất thấp** (gửi 1 bức tranh, sprint luyện ngắn, mentor có thể online) nên chịu được khoảng cách — đây thêm một lý do để **cuộc thi là cửa vào**, lớp tuần là bán sau.
+
+---
+
+## 12. Nếu nhắm **gia đình trẻ Việt Nam** (phụ huynh ~28–38, con ~3–8)
+
+Đây là tập **khớp nhất với sản phẩm đang có**, nhưng **đổi hook, đổi offer, và làm lộ 3 rào cản giá/lịch** mà tập 6–16 không gặp.
+
+### Tin tốt: blocker lớn nhất của §11 biến mất
+
+| §11 nói | Với gia đình trẻ |
+|---|---|
+| Thiếu sản phẩm 12–16 tuổi | Không còn là vấn đề — kids **5–12** hiện có (`data/kids-pathways.php`: Drawing 5–11, Contemporary Art 7+, Watercolour, Comics, Home tutoring) phủ đúng tập này |
+| LTV expat ngắn | Nhận trẻ 5–8 tuổi = **6–8 năm** khoá tuần nếu giữ được ⇒ LTV cao nhất trong mọi tập |
+| Cần bằng chứng "được quốc tế công nhận" | Vẫn dùng được: Toyota có nhóm **dưới 8 tuổi** và đã có **thí sinh 5 tuổi ở Hà Nội đạt Khuyến khích quốc tế**; Kao từ 6 tuổi; Living Colors của studio **không giới hạn tuổi, "no experience needed"** |
+
+### Nhưng động cơ mua **không phải** vinh quang thi cử
+
+Thứ tự động cơ của phụ huynh con 3–8, khác hẳn phụ huynh con 12–16:
+
+1. **"Con tôi có năng khiếu không?"** — cần người có chuyên môn **xác nhận**, càng sớm càng tốt.
+2. **Tách con khỏi màn hình** — theme đã có sẵn đúng chữ: *"A calm, **screen-free** space"* (`data/kids-pathways.php`). Đây là hook mạnh nhất cho tập này ở VN.
+3. **Có cái để khoe** — tranh được chọn/in/treo, ảnh đẹp để đăng.
+4. **Cuối tuần làm gì với con** — cần hoạt động cho **cả gia đình**, không chỉ gửi con.
+
+⇒ Vinh quang vẫn còn nhưng ở dạng nhẹ: **được công nhận "có năng khiếu"**, chưa phải huy chương quốc tế. Nên hook đầu phễu **không phải** open call.
+
+### Hook đúng cho tập này **đã có sẵn** và đang là lead magnet mạnh nhất site
+
+`/free-art-feedback/` — **183 clicks, CTR 3,55%**, trang #2 toàn site sau homepage (`doc/seo/Pages.csv`). Nội dung: *"Send your drawing, get real Free Art Feedback from artists — for free (up to 3 artwork)"*, *"Real Advice, No AI"*, *"100% human"*.
+
+Đây chính xác là câu trả lời cho động cơ #1, với rào cản bằng 0. Phễu nên là:
+
+**Ad (gửi tranh của con — miễn phí) → nhận nhận xét thật từ hoạ sĩ → gợi ý gửi Living Colors / Toyota / Kao → được chọn, có certificate → lớp tuần → nhiều năm.**
+
+Open call không biến mất — nó chuyển vai: **không phải campaign riêng cho tập khác, mà là lý do khiến gia đình trẻ ở lại nhiều năm** (con 6 tuổi bắt đầu vẽ, 7 tuổi có tranh vào triển lãm, 8 tuổi gửi Toyota).
+
+### Ba rào cản thương mại — đều là số đang nằm trong theme
+
+| Rào cản | Số hiện tại | Vấn đề với gia đình trẻ VN |
+|---|---|---|
+| **Giá học thử** | Trial Art Class **$40** / 2 tiếng ≈ **1.040.000đ** (`data/pricing-programs.php`) | Chuẩn thị trường VN là **học thử miễn phí hoặc 150–300k**. Đây là chốt chặn chết người ⇒ cần trial riêng cho tập VN, hoặc **dùng free art feedback thay trial** |
+| **Giá khoá** | Kids **$183 / 12 buổi** ≈ **4,76 triệu ≈ ~400k/buổi**; **niêm yết bằng USD** | Bán được nhưng **không bán bằng giá** — phải bán giá trị kép (vẽ + tiếng Anh + triển lãm quốc tế). Bắt buộc có **bảng giá VND** |
+| **Lịch** | Drawing Class chỉ **Chủ nhật 10:00–11:30** (`data/kids-pathways.php`) | Gia đình trẻ cần **T7 + CN, sáng + chiều**. Một slot/tuần vừa chặn trần doanh thu vừa mất khách ngay ở bước "lịch không khớp" |
+
+### Sản phẩm còn thiếu — đều dễ làm và đúng insight
+
+| Sản phẩm | Vì sao | Bằng chứng trong repo |
+|---|---|---|
+| **Lớp bố mẹ vẽ cùng con** | FAQ hiện nói phụ huynh *"may wait in the studio lounge"* — đang biến thời gian chờ thành thời gian chết. Đây cũng là **creative Meta mạnh nhất** cho tập này (ảnh/video cả gia đình cùng vẽ) | `data/faq-page.php` |
+| **Workshop gia đình / sinh nhật cuối tuần** | Bán ngay, giá cao, không cần cam kết dài; studio đã làm de facto | Testimonial: *"We were a family of 7 with four kids, including one with a disability… A total highlight of our trip!"* (`data/home-testimonials.php`) |
+| **Thang bậc sau 11–12 tuổi** | Kids dừng ở 11–12 ⇒ **churn cliff đúng lúc phụ huynh chịu chi nhất**. Đối thủ có 11–14, 15–17 và du học mỹ thuật | `data/kids-pathways.php`, `config/book-tabs.php` |
+
+### Cách mua media cho tập này
+
+| Việc | Chi tiết |
+|---|---|
+| **Bán kính, không phải toàn Hà Nội** | Trẻ 3–8 học tuần ⇒ phụ huynh phải chở đi. Radius **3–5km** quanh Tây Hồ (Ciputra, Võ Chí Công, Xuân Diệu, Nghĩa Đô, bắc Cầu Giấy) vẫn đủ vài trăm nghìn người — nằm trong dải Meta chạy ổn |
+| Lead ngoài bán kính | Đừng bỏ — đẩy sang **Home Tutoring** (đã có sẵn) |
+| Placement | **Reels + Stories dọc 9:16** ưu tiên; video 10–15s: con vẽ → tranh được treo lên tường |
+| Creative | Cả gia đình cùng vẽ; bàn không có màn hình; tranh có tên con + certificate |
+| Headline (theo §5, đổi trục) | **"Nhận xét thật cho tranh con"** (27) · **"Gửi tranh, hoạ sĩ nhận xét"** (26) · **"Buổi vẽ không màn hình"** (22) · **"Tranh của con được chọn"** (23). Tránh dạng câu hỏi ngôi thứ hai kiểu *"Con bạn có năng khiếu không?"* — rủi ro personal attributes |
+| Chính sách Meta | Vẫn không được viết *"Con bạn 5 tuổi…"* — độ tuổi/tình trạng gia đình là personal attribute (§8). Dùng ngôi thứ ba: *"Dành cho các bạn nhỏ 5–12 tuổi"* |
+
+### Trade-off so với tập 6–16 hướng thi cử
+
+| | Gia đình trẻ (con 3–8) | Phụ huynh hướng thi (con 6–16) |
+|---|---|---|
+| Khớp sản phẩm hiện có | **Cao** — không cần xây gì mới | Thấp — thiếu 12–16 |
+| LTV | **Dài nhất** (6–8 năm) | Ngắn hơn (2–4 năm rồi thi đại học/du học) |
+| Ticket & độ chịu chi ban đầu | Thấp hơn, **nhạy giá** | **Cao hơn** — sẵn trả cho certificate/triển lãm |
+| Mật độ cạnh tranh ở HN | **Rất dày**, nhiều lớp vẽ 150–300k/buổi | Ít hơn, nhưng có GreenSum/Legend Art đi trước |
+| Rào cản chốt đơn | **Lịch cuối tuần + giá trial** | Sản phẩm cho khối THCS/THPT |
+| Vai trò nên giao | **Tập chính nuôi phễu** | **Cơ chế giữ khách + upsell** áp lên chính tập trên |
+
+**Kết luận §12:** chạy gia đình trẻ làm tập chính, hook là **free art feedback** (không phải open call), landing tiếng Việt, radius Tây Hồ, và **phải sửa trial/giá VND/lịch trước** — nếu không, ad rẻ nhưng chốt đơn sẽ chết ở bước cuối. Cuộc thi/triển lãm giữ lại làm bậc thang vinh quang để gia đình ở lại nhiều năm.
