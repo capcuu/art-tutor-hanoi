@@ -52,7 +52,7 @@ Ghi chú: đây là benchmark ngành, **không phải số của tài khoản Ar
 | **Toyota "Chiếc ô tô mơ ước"** (≤15 tuổi, 151 quốc gia) | VN gửi **>6,8 triệu tranh sau 15 năm = 67% tổng lượng bài toàn thế giới**; VN có 1 Vàng, 1 Bạc, 1 Đồng, 6 Khuyến khích quốc tế | Bằng chứng mạnh nhất: phụ huynh + trường VN **đã** đổ vào thi vẽ ở quy mô không nước nào bằng. Nhu cầu không cần tạo, chỉ cần bắt |
 | **Kao — Vẽ tranh quốc tế về môi trường** (6–15 tuổi) | Lần 16: **25.159 tác phẩm** (1.011 từ Nhật, 24.148 từ nước khác), miễn phí | Khung tuổi gần như trùng 6–16 của ta; free-entry là chuẩn thị trường |
 | **IAP "Triển lãm Bảo tàng Louvre"** — MiaArt VN, <18 tuổi | ~**1.500–1.700 bài từ 334 trường** chỉ ở HN + TP.HCM trong ~2 tháng. Giải: 6 Nhất, 12 Nhì, 18 Ba, **145 Creative Talents, 223 Rising Artist** ⇒ ~400 giải/1.700 bài ≈ **1/4 thí sinh có giải**. Phí triển lãm **1.000 USD/tác phẩm**, tài trợ 100% cho giải Nhất, 50% cho Nhì/Ba, còn lại **phụ huynh tự trả** | (a) Phụ huynh **sẵn sàng trả tiền lớn** cho giấy chứng nhận + suất triển lãm. (b) Thiết kế bán được là **xác suất được ghi nhận cao** — đúng thuốc cho nỗi sợ "con chả được gì" |
-| **GreenSum Hanoi** (đối thủ trực tiếp, Hà Nội) | Bán đúng thứ ta gọi là A: *"Mentorship Program – Louvre 2025–2026"*, 1:1. Nhưng **headline công khai của họ là kết quả**: *"CƠ HỘI TRƯNG BÀY TẠI LOUVRE PHÁP – BẢO TÀNG NGHỆ THUẬT DANH GIÁ NHẤT THẾ GIỚI"*; kèm thành tích học viên *"2/3 Giải Nhất; 6/6 Giải Nhì"* | Thị trường **đã validate**: hook = vinh quang + địa danh + người ngoài công nhận; **mentorship là offer bán sau hook, không bao giờ là hook** |
+| **GreenSum Hanoi** (đối thủ trực tiếp, Hà Nội) | Bán đúng thứ ta gọi là A: *"Mentorship Program – Louvre 2025–2026"*, 1:1. Nhưng **headline công khai của họ là kết quả**: *"CƠ HỘI TRƯNG BÀY TẠI LOUVRE PHÁP – BẢO TÀNG NGHỆ THUẬT DANH GIÁ NHẤT THẾ GIỚI"*; kèm thành tích học viên *"2/3 Giải Nhất; 6/6 Giải Nhì"* | Thị trường **đã validate**: hook = vinh quang + địa danh + người ngoài công nhận; **mentorship là offer bán sau hook, không bao giờ là hook**. Credential "Louvre" của họ là **đi vay, không tự phát** — xem §10 |
 | **Baltic Open Submission** (UK, Youth 11–17) | *"Ever dreamed of displaying your art at Baltic?"* + *"no formal training, qualifications, or exhibiting experience necessary"* + **1.400 gửi, 104 được chọn** | Công thức open call chuẩn: **giấc mơ + cho phép người mới + số liệu làm social proof** |
 | **Living Colors 2025 — của chính studio** (`/call-for-artists/`) | **1.000+ bài quốc tế**, chọn **100+** trưng bày, 4 giải; free; top 3 có **certificate Art-Tutor + tranh được in và triển lãm tại studio**; giải nhất từ Cameroon, Bangladesh, Nhật, Nigeria | Ta **đã có** tài sản thật để nói: studio là **đơn vị tổ chức triển lãm quốc tế**, không phải trung tâm dạy vẽ xin công nhận từ ai. Copy cũ đã có sẵn câu gỡ sợ: *"Everyone is welcome… no experience needed!"* |
 
@@ -157,3 +157,33 @@ Chạy **Meta A/B test**, 1 biến duy nhất là headline, **creative + primary
 | 5 | Mục **Official rules + release Meta** trong trang open call | Điều kiện chạy ads cho contest |
 
 Liên quan: `data/links.php` (mục *2025 – Opencall*), `partials/footer.php` (link Exhibition 2026), `config/book-tabs.php` (tab kids 5–12 — lệch với khung 6–16 đang định quảng cáo, cần thống nhất).
+
+---
+
+## 10. Credential "Louvre" của GreenSum đến từ đâu — và ta có lấy được không
+
+**Không phải họ tự phát.** GreenSum chỉ là **trung tâm gửi bài**, không phải đơn vị tổ chức. Toàn bộ headline của họ là credential đi vay qua 4 tầng:
+
+| Tầng | Ai | Làm gì | Bằng chứng |
+|---|---|---|---|
+| 1. Địa điểm | **Viparis** vận hành **Les Salles du Carrousel** (trong khu Carrousel du Louvre — tổ hợp thương mại/hội chợ **dưới** Louvre) | Cho thuê hội trường; ai trả tiền cũng thuê được. Bảo tàng Louvre **không** giám tuyển, không tham gia | viparis.com đăng đúng sự kiện *"IAP INTERNATIONAL ART EXHIBITION 2026"*, 16–17/1/2026, địa điểm **Les Salles du Carrousel** |
+| 2. Đơn vị tổ chức quốc tế | **IAP (International Art Panorama) Committee** | Tổ chức triển lãm teen thường niên tại Carrousel, ~18–20 quốc gia; phát **certificate IAP**; cấp **thư giới thiệu từ Hiệu trưởng ESA Dunkerque–Tourcoing**; thu **phí triển lãm 1.000 USD/tác phẩm** | Bản tin IAP 2025 khai mạc 7/2/2025 tại *Le Carrousel du Louvre*, 14 quốc gia |
+| 3. Chi nhánh VN | **MiaArt Việt Nam** + **bảo trợ truyền thông của Báo Thiếu niên Tiền phong và Nhi đồng** | Chạy vòng quốc gia **miễn phí**, chấm công khai tại khách sạn Grand Plaza, giám khảo có GS ĐH Dongguk (Hàn), ĐH Mỹ thuật VN, Hội Mỹ thuật VN. **Trường học / trung tâm mỹ thuật đăng ký gửi bài tập thể** | 2025–26: **1.700+ bài từ 334 trường**. Giải Nhất khu vực TP.HCM thuộc học viên **Legend Art** — tức nhiều trung tâm cùng chơi kênh này |
+| 4. Trung tâm | **GreenSum Hanoi** (và các trung tâm khác) | Gửi bài học viên → có giải → **bán "Mentorship Program – Louvre"** với học phí | 2024: *"gần 700 tác phẩm từ 33 trường"*, GreenSum *"2/3 Giải Nhất; 6/6 Giải Nhì; 3/6 Giải Ba"* |
+
+**Hệ quả 1 — đây không phải moat.** Kênh này mở cho mọi trung tâm mỹ thuật ở VN, vòng quốc gia miễn phí. Art Tutor Hanoi có thể vào ngay với tư cách đơn vị gửi bài (MiaArt: miaartvn@gmail.com). Thứ GreenSum thực sự sở hữu chỉ là **đi trước** + **thành tích học viên có bằng chứng** + **cách đóng gói mentorship**. Cái thứ hai là thứ duy nhất đáng copy.
+
+**Hệ quả 2 — có bẫy uy tín.** "Triển lãm tại Bảo tàng Louvre" thực chất là **hội trường cho thuê ở Carrousel**, cộng **1.000 USD/tác phẩm** mà ngoài top giải là phụ huynh tự trả. Mô hình pay-to-display kiểu này đã bị báo chí mỹ thuật Trung Quốc, Hungary (PAKS/MAMAG, 900–2.850 EUR/tranh) và các blog art-scam mổ xẻ nhiều năm; vụ "Louvre NFT" 2023 cũng vỡ vì đúng nhầm lẫn Carrousel ↔ museum. Rủi ro cụ thể cho ta:
+
+- **Với khách expat/EN — nhóm chính của site**: xác suất họ biết Carrousel là trung tâm thương mại **cao**. Dùng góc Louvre ở đây là tự bắn vào chân.
+- **Với phụ huynh VN**: góc này *chạy được*, nhưng vi phạm nguyên tắc misleading claims của Meta nếu không nói rõ phí và bản chất địa điểm — và mất trắng niềm tin khi một phụ huynh tra Google.
+
+**Vì vậy chọn hướng nào:**
+
+| Hướng | Nội dung | Đánh giá |
+|---|---|---|
+| Vay credential như GreenSum | Đăng ký gửi bài IAP/MiaArt, quảng cáo "chuẩn bị + gửi bài" | Làm được, nhưng **phải công khai phí 1.000 USD và ghi đúng địa điểm** (*Carrousel du Louvre*), không viết "trưng bày trong Bảo tàng Louvre" |
+| Vay credential **miễn phí, sạch** | **Toyota "Chiếc ô tô mơ ước"** (≤15 tuổi) và **Kao Môi trường** (6–15 tuổi): miễn phí hoàn toàn, không phí triển lãm, có giải quốc gia + vòng quốc tế thật | **Ưu tiên** — cùng loại vinh quang, không có bẫy tiền, khớp đúng khung 6–16 |
+| **Tự làm chủ credential** | Studio **đã là** đơn vị tổ chức triển lãm quốc tế: Living Colors 1.000+ bài, 40+ quốc gia, chọn 100+, certificate, in và treo tại studio | **Khác biệt mạnh nhất**: đối thủ phải đi thuê tên bảo tàng, ta tự cấp được sự công nhận — và nói thật được 100% |
+
+Định vị nên chốt: **"studio tổ chức triển lãm quốc tế, đồng thời luyện và gửi bài cho các cuộc thi quốc tế miễn phí"** — cho phụ huynh đúng vinh quang họ muốn mà không cần dựa vào một hội trường cho thuê.
