@@ -37,6 +37,7 @@ require_once ATH_THEME_DIR . '/inc/urls.php';
 require_once ATH_THEME_DIR . '/inc/shortcodes/button.php';
 require_once ATH_THEME_DIR . '/inc/content-mode.php';
 require_once ATH_THEME_DIR . '/inc/gutenberg-blocks.php';
+require_once ATH_THEME_DIR . '/inc/kids-art-exhibition-page.php';
 require_once ATH_THEME_DIR . '/inc/workshop-pages.php';
 require_once ATH_THEME_DIR . '/inc/course-gallery-images.php';
 require_once ATH_THEME_DIR . '/inc/course-detail-pages.php';

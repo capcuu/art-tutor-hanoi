@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Gói dịch vụ triển lãm quốc tế — Art Tutor Hanoi</title>
+  <style>
+    @font-face {
+      font-family: "Poster Sans";
+      src: url("fonts/NotoSans-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Poster Sans";
+      src: url("fonts/NotoSans-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      background: #f4eee4;
+      color: #14304a;
+      font-family: "Poster Sans", "Noto Sans", "Source Sans 3", sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .sheet {
+      width: 210mm;
+      height: 297mm;
+      display: flex;
+      flex-direction: column;
+      padding: 11mm 12mm 10mm;
+      background:
+        radial-gradient(120% 70% at 100% 0%, rgba(61, 184, 176, 0.14), transparent 55%),
+        #f4eee4;
+    }
+    .head {
+      display: flex;
+      align-items: center;
+      gap: 10mm;
+      padding-bottom: 7mm;
+      border-bottom: 0.6mm solid #14304a;
+    }
+    .logo-wrap {
+      flex: 0 0 auto;
+      background: #000;
+      border-radius: 3mm;
+      padding: 2.5mm 4mm 2mm;
+    }
+    .logo-wrap img {
+      display: block;
+      height: 22mm;
+      width: auto;
+    }
+    .head-copy { flex: 1; min-width: 0; }
+    .kicker {
+      font-size: 9.5pt;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #2fa39c;
+      font-weight: 700;
+      margin-bottom: 2mm;
+    }
+    h1 {
+      font-size: 22pt;
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      margin-top: 2mm;
+      font-size: 11pt;
+      color: #445566;
+    }
+    .packs {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5mm;
+      padding: 8mm 0 6mm;
+    }
+    .pack {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 16mm 1fr auto;
+      gap: 5mm;
+      align-items: center;
+      background: #fff;
+      border: 0.45mm solid rgba(20, 40, 70, 0.16);
+      border-radius: 4mm;
+      padding: 6mm 7mm;
+      box-shadow: 0 1.5mm 4mm rgba(20, 40, 70, 0.06);
+    }
+    .pack--featured {
+      border-color: #3db8b0;
+      background: linear-gradient(180deg, #fff 0%, #eef8f7 100%);
+    }
+    .num {
+      width: 14mm;
+      height: 14mm;
+      border-radius: 50%;
+      background: #14304a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13pt;
+    }
+    .pack--featured .num { background: #3db8b0; }
+    .pack h2 {
+      font-size: 13.5pt;
+      font-weight: 700;
+      margin-bottom: 1.2mm;
+    }
+    .pack p {
+      font-size: 10pt;
+      line-height: 1.4;
+      color: #445566;
+    }
+    .who {
+      margin-top: 1.5mm;
+      font-size: 9.5pt;
+      font-style: italic;
+      color: #1f7a74;
+    }
+    .price {
+      text-align: right;
+      white-space: nowrap;
+    }
+    .price strong {
+      display: block;
+      font-size: 16pt;
+      font-weight: 700;
+      color: #14304a;
+      letter-spacing: -0.02em;
+    }
+    .price span {
+      display: block;
+      margin-top: 1mm;
+      font-size: 8.5pt;
+      color: #667788;
+    }
+    .student {
+      margin-top: 2mm;
+      display: inline-block;
+      background: #14304a;
+      color: #fff;
+      font-size: 8.5pt;
+      font-weight: 700;
+      font-style: normal;
+      padding: 1.2mm 2.5mm;
+      border-radius: 1.2mm;
+    }
+    .foot {
+      border-top: 0.45mm solid rgba(20, 40, 70, 0.2);
+      padding-top: 5mm;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 6mm;
+      font-size: 8.5pt;
+      line-height: 1.45;
+      color: #445566;
+    }
+    .foot strong { color: #14304a; }
+    .foot ul { list-style: none; }
+    .foot li + li { margin-top: 1mm; }
+    .contact {
+      text-align: right;
+    }
+    .contact a { color: #14304a; text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <article class="sheet">
+    <header class="head">
+      <div class="logo-wrap">
+        <img src="../images/logo.png" alt="Art Tutor Hanoi">
+      </div>
+      <div class="head-copy">
+        <p class="kicker">Art Tutor Hanoi · Tây Hồ</p>
+        <h1>Hỗ trợ bé gửi tranh<br>triển lãm quốc tế</h1>
+        <p class="sub">Ba gói dịch vụ — trao sau buổi tư vấn tại studio.</p>
+      </div>
+    </header>
+
+    <section class="packs" aria-label="Ba gói dịch vụ">
+      <article class="pack">
+        <div class="num" aria-hidden="true">1</div>
+        <div>
+          <h2>Gói 1 — Hồ sơ + gửi dự thi + follow up</h2>
+          <p>Art Tutor hoàn thiện hồ sơ, gửi dự thi, và follow up đến khi có kết quả.</p>
+          <p class="who">Khi tranh đã sẵn sàng nộp.</p>
+        </div>
+        <div class="price">
+          <strong>1.200.000đ</strong>
+        </div>
+      </article>
+
+      <article class="pack">
+        <div class="num" aria-hidden="true">2</div>
+        <div>
+          <h2>Gói 2 — Chỉnh tranh + nộp + follow up</h2>
+          <p>Đánh giá tranh, bảng điểm từ họa sĩ, gợi ý sửa chữa hoàn thiện, rồi submit và follow up.</p>
+          <p class="who">Khi đã có tranh, muốn hoàn thiện và nộp.</p>
+        </div>
+        <div class="price">
+          <strong>2.500.000đ</strong>
+        </div>
+      </article>
+
+      <article class="pack pack--featured">
+        <div class="num" aria-hidden="true">3</div>
+        <div>
+          <h2>Gói 3 — Sáng tác từ đầu (6 buổi) + nộp</h2>
+          <p>Sáu buổi tại studio, đánh giá chuyên nghiệp, định hướng họa sĩ, submit và follow up.</p>
+          <p class="who">Khi cần sáng tác từ đầu.</p>
+          <p class="student">Học viên đang học tại Art Tutor Hanoi: 500.000đ</p>
+        </div>
+        <div class="price">
+          <strong>5.500.000đ</strong>
+          <span>giá gia đình mới</span>
+        </div>
+      </article>
+    </section>
+
+    <footer class="foot">
+      <ul>
+        <li><strong>Không gồm</strong> phí ban tổ chức (vd. Colibri 10–30 USD) và cước gửi — tính riêng theo từng cuộc thi.</li>
+        <li><strong>Không cam kết</strong> được nhận vào cuộc thi hay trúng giải. Kết quả thuộc ban tổ chức.</li>
+      </ul>
+      <div class="contact">
+        <p><strong>Studio Tây Hồ</strong></p>
+        <p>82 Ngách 264/15, Ngõ 374 Âu Cơ</p>
+        <p><a href="tel:+84988288302">(+84) 98 828 8302</a> · Zalo</p>
+        <p>arttutorhanoi.com</p>
+      </div>
+    </footer>
+  </article>
+</body>
+</html>
