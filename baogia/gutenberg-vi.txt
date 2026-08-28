@@ -1,0 +1,90 @@
+<!-- wp:paragraph -->
+<p>Sau buổi tư vấn tại studio Tây Hồ. Chọn gói theo tình trạng tranh hiện tại của bé.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Ba gói dịch vụ</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"course-block"} -->
+<div class="wp-block-group course-block">
+<!-- wp:heading {"level":3,"className":"course-block__heading"} -->
+<h3 class="wp-block-heading course-block__heading">Gói 1 — 1.200.000đ</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text"><strong>Hồ sơ + gửi dự thi + follow up.</strong> Art Tutor hoàn thiện hồ sơ, gửi dự thi, và follow up đến khi có kết quả.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text">Khi tranh đã sẵn sàng nộp.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"course-block"} -->
+<div class="wp-block-group course-block">
+<!-- wp:heading {"level":3,"className":"course-block__heading"} -->
+<h3 class="wp-block-heading course-block__heading">Gói 2 — 2.500.000đ</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text"><strong>Chỉnh tranh + nộp + follow up.</strong> Art Tutor đánh giá tranh, có bảng điểm từ họa sĩ, gợi ý sửa chữa hoàn thiện, rồi submit và follow up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text">Khi đã có tranh, muốn hoàn thiện và nộp.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"course-block"} -->
+<div class="wp-block-group course-block">
+<!-- wp:heading {"level":3,"className":"course-block__heading"} -->
+<h3 class="wp-block-heading course-block__heading">Gói 3 — 5.500.000đ</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text"><strong>Sáng tác từ đầu (6 buổi) + nộp.</strong> Sáu buổi tại studio, đánh giá chuyên nghiệp, định hướng từ họa sĩ, submit và follow up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text">Khi cần sáng tác từ đầu.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lưu ý</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item -->
+<li>Không gồm phí ban tổ chức (vd. Colibri 10–30 USD) và cước gửi — tính riêng theo từng cuộc thi.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Không cam kết được nhận vào cuộc thi hay trúng giải. Kết quả thuộc ban tổ chức.</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Liên hệ</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Studio Tây Hồ — 82 Ngách 264/15, Ngõ 374 Âu Cơ, Hà Nội</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="tel:+84988288302">(+84) 98 828 8302</a> · Zalo</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[ath_btn label="Nhắn Zalo" link="https://zalo.me/0988288302" link_type="url" style="cta"]
+<!-- /wp:shortcode -->
+
+<!-- wp:shortcode -->
+[ath_btn label="Trang triển lãm" link="https://arttutorhanoi.com/kids-art-exhibition/" link_type="url" style="view"]
+<!-- /wp:shortcode -->

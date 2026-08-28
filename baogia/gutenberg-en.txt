@@ -1,0 +1,90 @@
+<!-- wp:paragraph -->
+<p>After the studio consult in Tay Ho. Choose the package that matches the child’s current artwork.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Three packages</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"course-block"} -->
+<div class="wp-block-group course-block">
+<!-- wp:heading {"level":3,"className":"course-block__heading"} -->
+<h3 class="wp-block-heading course-block__heading">Package 1 — 1,200,000 VND</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text"><strong>Docs + submit + follow up.</strong> Art Tutor prepares the application, submits the entry, and follows up until results are in.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text">When the artwork is ready to submit.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"course-block"} -->
+<div class="wp-block-group course-block">
+<!-- wp:heading {"level":3,"className":"course-block__heading"} -->
+<h3 class="wp-block-heading course-block__heading">Package 2 — 2,500,000 VND</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text"><strong>Refine + submit + follow up.</strong> Artist review and score sheet, notes to finish the piece, then submit and follow up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text">When you already have artwork and want to finish and submit.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"course-block"} -->
+<div class="wp-block-group course-block">
+<!-- wp:heading {"level":3,"className":"course-block__heading"} -->
+<h3 class="wp-block-heading course-block__heading">Package 3 — 5,500,000 VND</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text"><strong>Create from scratch (6 sessions) + submit.</strong> Six studio sessions, professional review, artist direction, then submit and follow up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"course-block__text"} -->
+<p class="course-block__text">When you need to create from scratch.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Notes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+<!-- wp:list-item -->
+<li>Organizer fees (e.g. Colibri USD 10–30) and shipping are not included — billed separately per contest.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>No guarantee of acceptance or a prize. Results belong to the organizer.</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Contact</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tay Ho studio — 82 Ngach 264/15, Ngo 374 Au Co, Hanoi</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="tel:+84988288302">(+84) 98 828 8302</a> · Zalo</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:shortcode -->
+[ath_btn label="Message on Zalo" link="https://zalo.me/0988288302" link_type="url" style="cta"]
+<!-- /wp:shortcode -->
+
+<!-- wp:shortcode -->
+[ath_btn label="Exhibition page" link="https://arttutorhanoi.com/kids-art-exhibition-en/" link_type="url" style="view"]
+<!-- /wp:shortcode -->
