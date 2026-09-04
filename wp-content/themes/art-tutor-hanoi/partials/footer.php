@@ -22,6 +22,7 @@ defined( 'ABSPATH' ) || exit;
           <li><a href="<?php echo esc_url( ath_students_artworks_url() ); ?>">Students&rsquo; Artworks</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'art-supplies' ) ); ?>">Art Supplies</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'exhibition' ) ); ?>">Exhibition 2026</a></li>
+          <li><a href="<?php echo esc_url( ath_page_url( 'kids-international-exhibition' ) ); ?>">Kids Exhibition Support</a></li>
           <li><a href="<?php echo esc_url( ath_page_url( 'links' ) ); ?>">More links</a></li>
         </ul>
       </div>

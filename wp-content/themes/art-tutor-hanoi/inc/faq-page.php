@@ -37,6 +37,7 @@ function ath_faq_inline_links( $text ) {
 		'pricing'      => ath_page_url( 'pricing' ),
 		'courses'      => ath_page_url( 'courses' ),
 		'kids-courses' => ath_page_url( 'kids-courses' ),
+		'kids-international-exhibition' => ath_page_url( 'kids-international-exhibition' ),
 		'workshops'    => ath_page_url( 'workshops' ),
 		'calendar'     => ath_page_url( 'calendar' ),
 		'life-drawing' => ath_experience_url( 'life-drawing' ),
@@ -59,10 +60,10 @@ function ath_faq_inline_links( $text ) {
 		return '<a href="' . $url . '">' . $label . '</a>';
 	};
 
-	$text = preg_replace_callback( '/\{(\w+):([^}]+)\}/', $replace_pair, $text );
+	$text = preg_replace_callback( '/\{([\w-]+):([^}]+)\}/', $replace_pair, $text );
 
 	$text = preg_replace_callback(
-		'/\{(\w+)\}(.+?)\{\/\1\}/s',
+		'/\{([\w-]+)\}(.+?)\{\/\1\}/s',
 		$replace_pair,
 		$text
 	);

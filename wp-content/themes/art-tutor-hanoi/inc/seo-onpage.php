@@ -14,11 +14,12 @@ defined( 'ABSPATH' ) || exit;
  */
 function ath_page_seo_h1_map() {
 	return array(
-		'workshops'    => 'Art Workshops in Hanoi',
-		'courses'      => 'Art Classes in Hanoi',
-		'kids-courses' => 'Kids Art Classes in Hanoi',
-		'pricing'      => 'Art Class Pricing in Hanoi',
-		'book'         => 'Book a Trial Art Class',
+		'workshops'                         => 'Art Workshops in Hanoi',
+		'courses'                           => 'Art Classes in Hanoi',
+		'kids-courses'                      => 'Kids Art Classes in Hanoi',
+		'pricing'                           => 'Art Class Pricing in Hanoi',
+		'book'                              => 'Book a Trial Art Class',
+		'kids-international-art-exhibition' => 'Kids International Art Exhibition Support',
 	);
 }
 
@@ -234,6 +235,10 @@ function ath_render_commercial_crosslinks( $current = '' ) {
 		'courses'      => array( 'label' => 'Art classes', 'url' => ath_page_url( 'courses' ) ),
 		'workshops'    => array( 'label' => 'Workshops', 'url' => ath_page_url( 'workshops' ) ),
 		'kids-courses' => array( 'label' => 'Kids classes', 'url' => ath_page_url( 'kids-courses' ) ),
+		'kids-international-exhibition' => array(
+			'label' => 'Kids exhibition support',
+			'url'   => ath_page_url( 'kids-international-exhibition' ),
+		),
 		'pricing'      => array( 'label' => 'Pricing', 'url' => ath_page_url( 'pricing' ) ),
 		'book'         => array( 'label' => 'Book a trial', 'url' => ath_book_url( 'adult' ) ),
 		'calendar'     => array( 'label' => 'Calendar', 'url' => ath_page_url( 'calendar' ) ),

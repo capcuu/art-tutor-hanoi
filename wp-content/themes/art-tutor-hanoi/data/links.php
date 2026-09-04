@@ -40,6 +40,10 @@ return array(
 	),
 	'links' => array(
 		array(
+			'label' => 'Kids international exhibition support',
+			'url'   => 'kids-international-art-exhibition',
+		),
+		array(
 			'label' => '2025 – Opencall',
 			'url'   => 'call-for-artists',
 		),

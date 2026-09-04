@@ -60,7 +60,7 @@ function ath_local_business_facts() {
 		'email'       => 'contact@arttutorhanoi.com',
 		'telephone'   => '+84-988-288-302',
 		'address'     => 'Tay Ho, Hanoi, Vietnam',
-		'description' => 'English-speaking fine art studio offering adult and kids art courses, life drawing, and creative workshops in Hanoi.',
+		'description' => 'English-speaking fine art studio offering adult and kids art courses, life drawing, creative workshops, and kids international exhibition submission support in Hanoi.',
 	);
 }
 
@@ -169,6 +169,11 @@ function ath_rank_math_page_defaults() {
 			'title'          => 'Join Our Art Community | Art Tutor Hanoi',
 			'description'    => 'Connect with artists and learners at Art Tutor Hanoi. Community events, exhibitions, and creative meetups in Tay Ho, Hanoi.',
 			'focus_keyword'  => 'art community hanoi',
+		),
+		'kids-international-art-exhibition' => array(
+			'title'          => 'Kids International Art Exhibition Support | Art Tutor Hanoi',
+			'description'    => 'Help your child submit artwork to international art exhibitions. Art Tutor Hanoi prepares files, artist bio, and open-call applications for kids in Tay Ho, Hanoi.',
+			'focus_keyword'  => 'kids international art exhibition',
 		),
 	);
 }

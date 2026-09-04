@@ -180,6 +180,7 @@ function ath_kids_courses_benefits_block() {
 					'Certificate after course completion',
 					'Artwork portfolio to bring home',
 					'Optional guided visit to an art museum or exhibition',
+					'Support submitting work to selected international kids art exhibitions',
 				),
 				'courses-benefits__list'
 			),
@@ -286,7 +287,9 @@ function ath_kids_courses_cta_blocks() {
 						),
 						ath_gutenberg_btn( 'Book a Kids Class', ath_book_url( 'kids' ), 'cta', 'courses-cta__btn' ),
 						ath_gutenberg_paragraph_html(
-							'<a href="' . esc_url( ath_page_url( 'pricing' ) ) . '">View pricing</a> '
+							'<a href="' . esc_url( ath_page_url( 'kids-international-exhibition' ) ) . '">Kids international exhibition support</a> '
+							. '<span aria-hidden="true">·</span> '
+							. '<a href="' . esc_url( ath_page_url( 'pricing' ) ) . '">View pricing</a> '
 							. '<span aria-hidden="true">·</span> '
 							. '<a href="' . esc_url( ath_page_url( 'calendar' ) ) . '">Weekly calendar</a>',
 							'courses-cta__links'

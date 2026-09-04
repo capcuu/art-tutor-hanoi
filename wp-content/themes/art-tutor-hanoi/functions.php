@@ -44,6 +44,7 @@ require_once ATH_THEME_DIR . '/inc/kids-courses-hub.php';
 require_once ATH_THEME_DIR . '/inc/courses-hub.php';
 require_once ATH_THEME_DIR . '/inc/pricing-page.php';
 require_once ATH_THEME_DIR . '/inc/faq-page.php';
+require_once ATH_THEME_DIR . '/inc/kids-international-exhibition-page.php';
 require_once ATH_THEME_DIR . '/inc/page-defaults.php';
 require_once ATH_THEME_DIR . '/inc/gutenberg-migration.php';
 require_once ATH_THEME_DIR . '/inc/posts.php';

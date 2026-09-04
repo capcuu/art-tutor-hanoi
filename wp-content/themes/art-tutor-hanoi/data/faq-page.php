@@ -220,8 +220,12 @@ return array(
 					'q' => 'Kids drawing class vs Contemporary Art — which for my child?',
 					'a' => 'Contemporary Art suits younger children exploring creativity. Pencil Basics and structured courses suit older kids building academic skills. See {kids-courses}kids courses{/kids-courses} for pathways.',
 				),
+				array(
+					'q' => 'Do you help kids submit artwork to international exhibitions?',
+					'a' => 'Yes. Our {kids-international-exhibition:kids international art exhibition support} package helps prepare files, artist bio, and open-call submissions for selected exhibitions. Ask us about the next deadline.',
+				),
 			),
-			'footer' => '{kids-courses:Kids courses} · {book-kids:Book kids class}',
+			'footer' => '{kids-courses:Kids courses} · {kids-international-exhibition:Exhibition support} · {book-kids:Book kids class}',
 		),
 		array(
 			'id'    => 'location-logistics',

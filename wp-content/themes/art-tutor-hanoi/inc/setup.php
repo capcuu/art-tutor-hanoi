@@ -83,6 +83,7 @@ function ath_seed_pages() {
 	ath_ensure_links_page();
 	ath_ensure_generic_v2_pages();
 	ath_ensure_guide_page();
+	ath_ensure_kids_international_exhibition_page();
 	ath_ensure_workshop_pages();
 	ath_ensure_adult_course_pages();
 }

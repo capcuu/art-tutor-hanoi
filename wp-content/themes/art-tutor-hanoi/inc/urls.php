@@ -29,6 +29,7 @@ function ath_page_slugs() {
 		'art-feedback' => 'free-art-feedback',
 		'community'    => 'join-our-art-community',
 		'exhibition'   => '2026-exhibition-goihe',
+		'kids-international-exhibition' => 'kids-international-art-exhibition',
 		'links'        => 'link',
 		'students-artworks' => 'students-artworks',
 		'about-artists'=> 'meet-the-artists',

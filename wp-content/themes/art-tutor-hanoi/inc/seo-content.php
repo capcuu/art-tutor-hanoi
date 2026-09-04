@@ -92,18 +92,31 @@ function ath_faq_schema_entities() {
 }
 
 /**
- * FAQPage schema on /faq/.
+ * FAQPage schema on /faq/ and kids international exhibition landing page.
  *
  * @param array<string, mixed> $data   Schema graph.
  * @param object               $jsonld Rank Math JSON-LD instance.
  * @return array<string, mixed>
  */
 function ath_rank_math_faq_schema( $data, $jsonld ) {
-	if ( ! is_page( 'faq' ) ) {
-		return $data;
+	$entities = array();
+
+	if ( is_page( 'faq' ) ) {
+		$entities = ath_faq_schema_entities();
+	} elseif ( function_exists( 'ath_kids_international_exhibition_slug' )
+		&& is_page( ath_kids_international_exhibition_slug() ) ) {
+		foreach ( ath_kids_international_exhibition_faq_rows() as $row ) {
+			$entities[] = array(
+				'@type'          => 'Question',
+				'name'           => wp_strip_all_tags( $row['q'] ),
+				'acceptedAnswer' => array(
+					'@type' => 'Answer',
+					'text'  => wp_strip_all_tags( $row['a'] ),
+				),
+			);
+		}
 	}
 
-	$entities = ath_faq_schema_entities();
 	if ( empty( $entities ) ) {
 		return $data;
 	}

@@ -97,6 +97,7 @@ function ath_generic_v2_page_slugs() {
 		'art-tutor-for-kids-eng',
 		'art-tutor-fine-art-courses-hanoi',
 		'call-for-artists',
+		'kids-international-art-exhibition',
 		'practice-at-home',
 		'discount-code',
 		'quotation-table',

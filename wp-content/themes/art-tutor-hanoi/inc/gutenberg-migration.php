@@ -606,6 +606,17 @@ function ath_handle_gutenberg_migration_actions() {
 		exit;
 	}
 
+	if ( $action === 'migrate_kids_international_exhibition' ) {
+		$results = ath_migrate_kids_international_exhibition_page( true );
+		if ( empty( $results['errors'] ) ) {
+			update_option( 'ath_kids_intl_exhibition_gutenberg_version', '1', false );
+			update_option( 'ath_content_mode', 'hybrid', false );
+		}
+		set_transient( 'ath_migration_results', $results, 60 );
+		wp_safe_redirect( add_query_arg( 'ath_msg', 'kids_intl_exhibition_migrated', admin_url( 'tools.php?page=ath-content-migration' ) ) );
+		exit;
+	}
+
 	if ( $action === 'migrate_pricing' ) {
 		$results = ath_migrate_pricing_page( true );
 		if ( empty( $results['errors'] ) ) {
@@ -866,6 +877,9 @@ function ath_render_gutenberg_migration_page() {
 					case 'faq_migrated':
 						echo 'FAQ page updated from theme seed (native Gutenberg blocks).';
 						break;
+					case 'kids_intl_exhibition_migrated':
+						echo 'Kids international exhibition landing page created/updated from theme seed.';
+						break;
 					case 'pricing_migrated':
 						echo 'Pricing page reset: intro + accordion ([ath_pricing]).';
 						break;
@@ -1076,6 +1090,11 @@ function ath_render_gutenberg_migration_page() {
 			<?php wp_nonce_field( 'ath_content_migration' ); ?>
 			<input type="hidden" name="ath_content_action" value="migrate_faq">
 			<?php submit_button( 'Update FAQ page', 'secondary', 'submit', false ); ?>
+		</form>
+		<form method="post" style="margin-top:8px;" onsubmit="return confirm('Create or reset /kids-international-art-exhibition/ from theme seed? Overwrites existing editor content.');">
+			<?php wp_nonce_field( 'ath_content_migration' ); ?>
+			<input type="hidden" name="ath_content_action" value="migrate_kids_international_exhibition">
+			<?php submit_button( 'Kids international exhibition page', 'secondary', 'submit', false ); ?>
 		</form>
 		<?php endif; ?>
 		<p>Stays legacy (dynamic): <code><?php echo esc_html( implode( ', ', $legacy ) ); ?></code></p>

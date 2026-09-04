@@ -82,6 +82,7 @@ $pathways = require ATH_THEME_DIR . '/data/kids-pathways.php';
       <li>Certificate after course completion</li>
       <li>Artwork portfolio to bring home</li>
       <li>Optional guided visit to an art museum or exhibition</li>
+      <li>Support submitting work to selected international kids art exhibitions</li>
     </ul>
   </div>
 </section>
