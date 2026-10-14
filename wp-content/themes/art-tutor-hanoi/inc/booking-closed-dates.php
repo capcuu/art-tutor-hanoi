@@ -70,3 +70,71 @@ function ath_enqueue_booking_closed_dates() {
 }
 
 add_action( 'wp_enqueue_scripts', 'ath_enqueue_booking_closed_dates', 30 );
+
+/**
+ * Fluent Forms date field "Custom config" for Nude Life Drawing is:
+ *   return date.getDay() !== 6
+ * which leaves only Saturday selectable. Friday is 5.
+ *
+ * @param string $config Raw flatpickr config from the date field.
+ * @return string
+ */
+function ath_life_drawing_date_config_to_friday( $config ) {
+	if ( ! is_string( $config ) || $config === '' ) {
+		return $config;
+	}
+
+	$replacements = array(
+		'date.getDay() !== 6' => 'date.getDay() !== 5',
+		'date.getDay() != 6'  => 'date.getDay() != 5',
+		'date.getDay() === 6' => 'date.getDay() === 5',
+		'date.getDay() == 6'  => 'date.getDay() == 5',
+	);
+
+	return str_replace( array_keys( $replacements ), array_values( $replacements ), $config );
+}
+
+/**
+ * Rewrite form 40's life-drawing date config before Fluent Forms prints it.
+ *
+ * @param object $form Form model.
+ * @return object
+ */
+function ath_booking_form_life_drawing_friday( $form ) {
+	if ( empty( $form->id ) || (int) $form->id !== 40 || empty( $form->form_fields ) || ! is_string( $form->form_fields ) ) {
+		return $form;
+	}
+
+	$form->form_fields = ath_life_drawing_date_config_to_friday( $form->form_fields );
+
+	return $form;
+}
+
+add_filter( 'fluentform/rendering_form', 'ath_booking_form_life_drawing_friday', 20 );
+
+/**
+ * Same replacement on the finished book-page HTML, in case the field config
+ * is printed from a cached form object.
+ *
+ * @param string $html Page HTML.
+ * @return string
+ */
+function ath_booking_page_life_drawing_friday_html( $html ) {
+	if ( ! is_string( $html ) ) {
+		return $html;
+	}
+
+	return ath_life_drawing_date_config_to_friday( $html );
+}
+
+add_action(
+	'template_redirect',
+	function () {
+		if ( ! function_exists( 'ath_is_book_page' ) || ! ath_is_book_page() ) {
+			return;
+		}
+
+		ob_start( 'ath_booking_page_life_drawing_friday_html' );
+	},
+	0
+);

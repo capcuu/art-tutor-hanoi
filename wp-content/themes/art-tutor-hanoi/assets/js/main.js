@@ -659,3 +659,135 @@
     }
   }
 })();
+
+/**
+ * Nude Life Drawing date field (Fluent Forms custom config) only enables Saturday:
+ *   return date.getDay() !== 6
+ * Friday is getDay() === 5. This runs after that config and after the cached
+ * book-date script so the open calendar follows Friday.
+ */
+(function () {
+  var LIFE = 'Nude Life Drawing';
+  var FRIDAY = 5;
+
+  function dateKey(date) {
+    var m = String(date.getMonth() + 1);
+    var d = String(date.getDate());
+    if (m.length < 2) m = '0' + m;
+    if (d.length < 2) d = '0' + d;
+    return date.getFullYear() + '-' + m + '-' + d;
+  }
+
+  function isClosed(date) {
+    var list = window.ATH_CLOSED_DATES || [];
+    return list.indexOf(dateKey(date)) !== -1;
+  }
+
+  function workshopSelect(root) {
+    return root ? root.querySelector('select[name="dropdown_4"]') : null;
+  }
+
+  function isLife(root) {
+    var sel = workshopSelect(root);
+    if (!sel) return false;
+    if (String(sel.value || '').indexOf(LIFE) !== -1) return true;
+    var opt = sel.options[sel.selectedIndex];
+    return !!(opt && String(opt.text || '').indexOf(LIFE) !== -1);
+  }
+
+  function isResidency(root) {
+    var sel = workshopSelect(root);
+    return !!(sel && String(sel.value || '').indexOf('Art Residency') !== -1);
+  }
+
+  function fridayRule(input) {
+    return function (date) {
+      var root = input.closest('form');
+      if (isClosed(date)) return true;
+      if (isLife(root)) return date.getDay() !== FRIDAY;
+      if (!isResidency(root) && date.getDay() === 4) return true;
+      return false;
+    };
+  }
+
+  function applyFriday(input) {
+    var fp = input && input._flatpickr;
+    var root;
+    var rule;
+    if (!fp) return;
+
+    root = input.closest('form');
+    if (!isLife(root)) return;
+
+    rule = fridayRule(input);
+    fp.config.disable = [rule];
+
+    if (!fp._athFridaySet) {
+      fp._athFridaySet = fp.set ? fp.set.bind(fp) : null;
+      fp.set = function (key, val) {
+        var result;
+        if (key === 'disable' && isLife(input.closest('form'))) {
+          val = [fridayRule(input)];
+        }
+        if (fp._athFridaySet) {
+          result = fp._athFridaySet(key, val);
+        } else if (key === 'disable') {
+          fp.config.disable = val;
+          result = fp;
+        }
+        if (key === 'disable' && isLife(input.closest('form'))) {
+          fp.config.disable = [fridayRule(input)];
+        }
+        return result;
+      };
+    }
+
+    if (typeof fp.open === 'function' && !fp._athFridayOpen) {
+      fp._athFridayOpen = fp.open.bind(fp);
+      fp.open = function () {
+        var ret;
+        if (isLife(input.closest('form'))) {
+          fp.config.disable = [fridayRule(input)];
+        }
+        ret = fp._athFridayOpen.apply(fp, arguments);
+        if (isLife(input.closest('form'))) {
+          fp.config.disable = [fridayRule(input)];
+          if (fp.selectedDates && fp.selectedDates[0] && fp.selectedDates[0].getDay() !== FRIDAY) {
+            if (typeof fp.clear === 'function') fp.clear();
+          }
+          if (typeof fp.redraw === 'function') fp.redraw();
+        }
+        return ret;
+      };
+    }
+
+    if (fp.selectedDates && fp.selectedDates[0] && fp.selectedDates[0].getDay() !== FRIDAY) {
+      if (typeof fp.clear === 'function') fp.clear();
+    }
+    if (typeof fp.redraw === 'function') fp.redraw();
+  }
+
+  function scan() {
+    var root = document.getElementById('fluentform_40');
+    if (!root) return;
+    Array.prototype.forEach.call(root.querySelectorAll('input'), function (input) {
+      if (input._flatpickr) applyFriday(input);
+    });
+    if (!root._athFridayWatch) {
+      root._athFridayWatch = true;
+      root.addEventListener('change', function (event) {
+        if (!event.target || event.target.name !== 'dropdown_4') return;
+        setTimeout(scan, 0);
+        setTimeout(scan, 60);
+        setTimeout(scan, 300);
+      });
+    }
+  }
+
+  scan();
+  var tries = 0;
+  var timer = setInterval(function () {
+    scan();
+    if (++tries > 100) clearInterval(timer);
+  }, 150);
+})();
