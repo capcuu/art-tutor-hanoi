@@ -1,10 +1,8 @@
 /**
- * /book/ date rules: studio closed dates, weekly Thursday closure, workshop life drawing.
+ * /book/ date rules: studio closed dates and weekly Thursday closure.
  *
- * Nude Life Drawing is Fridays only (Date.getDay() === 5). The form date field
- * and this file must use the same day. While that workshop is selected, this
- * script replaces the field's disable list so an old Saturday rule (getDay() !== 6)
- * cannot cancel Friday and blank the calendar.
+ * The Nude Life Drawing date field (datetime_1) is not touched. Its days come
+ * only from that field's Fluent Forms custom config.
  */
 (function ($) {
   'use strict';
@@ -23,7 +21,6 @@
   var residencyNeedle = String(cfg.residencyValue || 'Art Residency');
   var programField = String(cfg.programField || 'dropdown');
   var workshopField = String(cfg.workshopField || 'dropdown_4');
-  var LIFE_DRAWING_DAY = 5;
 
   function dateKey(date) {
     var y = date.getFullYear();
@@ -127,29 +124,6 @@
     return null;
   }
 
-  function isLifeDrawingSelected(formRoot) {
-    var selectEl;
-
-    if (!formRoot || getFormId(formRoot) !== workshopFormId) {
-      return false;
-    }
-
-    selectEl = findWorkshopSelect(formRoot);
-    if (!selectEl) {
-      return false;
-    }
-
-    if (matchesNeedle(getSelectValue(selectEl), lifeDrawingNeedle)) {
-      return true;
-    }
-
-    if (selectEl.selectedIndex >= 0 && selectEl.options[selectEl.selectedIndex]) {
-      return matchesNeedle(selectEl.options[selectEl.selectedIndex].text, lifeDrawingNeedle);
-    }
-
-    return false;
-  }
-
   function isArtResidencySelected(inputEl) {
     var formRoot = getFormRoot(inputEl);
     var selectEl;
@@ -167,14 +141,38 @@
     return matchesNeedle(getSelectValue(selectEl), residencyNeedle);
   }
 
-  function shouldDisableDate(date, inputEl) {
-    var formRoot = getFormRoot(inputEl);
+  function isLifeDrawingDateInput(inputEl) {
+    var named = '';
+    var source;
 
-    if (isClosedDate(date)) {
+    if (!inputEl) {
+      return false;
+    }
+
+    if (inputEl.getAttribute) {
+      named = inputEl.getAttribute('name') || '';
+    }
+    if (named === 'datetime_1') {
+      return true;
+    }
+    if (inputEl.id && String(inputEl.id).indexOf('datetime_1') !== -1) {
       return true;
     }
 
-    if (isLifeDrawingSelected(formRoot) && date.getDay() !== LIFE_DRAWING_DAY) {
+    source = inputEl._flatpickr && inputEl._flatpickr.input;
+    if (source && source.getAttribute && source.getAttribute('name') === 'datetime_1') {
+      return true;
+    }
+
+    return false;
+  }
+
+  function shouldDisableDate(date, inputEl) {
+    if (isLifeDrawingDateInput(inputEl)) {
+      return false;
+    }
+
+    if (isClosedDate(date)) {
       return true;
     }
 
@@ -199,10 +197,9 @@
     var themeRule = themeDisableRule(inputEl);
     var hasTheme = false;
     var j;
-    var formRoot = getFormRoot(inputEl);
 
-    if (isLifeDrawingSelected(formRoot)) {
-      return [themeRule];
+    if (isLifeDrawingDateInput(inputEl)) {
+      return [];
     }
 
     if (Array.isArray(val)) {
@@ -266,6 +263,10 @@
     var fp = inputEl && inputEl._flatpickr;
     var rule;
 
+    if (isLifeDrawingDateInput(inputEl)) {
+      return false;
+    }
+
     if (!fp) {
       return false;
     }
@@ -289,6 +290,10 @@
     var origSet;
     var origOnOpen;
     var origOnReady;
+
+    if (isLifeDrawingDateInput(inputEl)) {
+      return;
+    }
 
     if (!fp || fp._athBookDatesPatched) {
       return;
