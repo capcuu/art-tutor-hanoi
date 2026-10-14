@@ -1,9 +1,10 @@
 /**
  * /book/ date rules: studio closed dates, weekly Thursday closure, workshop life drawing.
  *
- * Life drawing (Nude Life Drawing) is bookable on Fridays. The Fluent Forms date
- * field still disables every day except Saturday; while that workshop is selected
- * this script replaces that list so Friday stays selectable.
+ * Nude Life Drawing is Fridays only (Date.getDay() === 5). The form date field
+ * and this file must use the same day. While that workshop is selected, this
+ * script replaces the field's disable list so an old Saturday rule (getDay() !== 6)
+ * cannot cancel Friday and blank the calendar.
  */
 (function ($) {
   'use strict';
