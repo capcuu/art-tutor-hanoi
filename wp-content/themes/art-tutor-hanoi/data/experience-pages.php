@@ -67,7 +67,7 @@ return array(
 		'intro'       => 'This class follows an academic life drawing approach, focusing on anatomy, proportion, and observation through guided practice — not on producing finished artworks.',
 		'meta'        => array(
 			array( 'label' => 'Duration', 'value' => '2.5 hours' ),
-			array( 'label' => 'Schedule', 'value' => 'Saturday, 1:30 pm – 4:00 pm' ),
+			array( 'label' => 'Schedule', 'value' => 'Friday, 1:30 pm – 4:00 pm' ),
 			array( 'label' => 'Materials', 'value' => 'All provided' ),
 		),
 		'blocks'      => array(

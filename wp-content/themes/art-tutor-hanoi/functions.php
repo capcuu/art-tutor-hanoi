@@ -16,6 +16,7 @@ define( 'ATH_THEME_URI', get_stylesheet_directory_uri() );
  * Section renders only when published posts exist in that category.
  */
 require_once ATH_THEME_DIR . '/inc/book-page.php';
+require_once ATH_THEME_DIR . '/inc/booking-closed-dates.php';
 require_once ATH_THEME_DIR . '/inc/fluent-qr.php';
 require_once ATH_THEME_DIR . '/inc/thank-you-page.php';
 require_once ATH_THEME_DIR . '/inc/links-page.php';
