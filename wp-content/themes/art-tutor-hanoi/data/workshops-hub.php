@@ -15,7 +15,7 @@ return array(
 		'heading' => 'Schedule',
 		'items'   => array(
 			'Most workshops: 2–2.5 hours per session',
-			'Nude model drawing: Saturdays only, 13:30–16:00 (weekly)',
+			'Nude model drawing: Fridays only, 13:30–16:00 (weekly)',
 			'Silk painting & residency: see each workshop page for dates',
 		),
 	),
@@ -25,7 +25,7 @@ return array(
 			'title'    => 'Nude Model Drawing',
 			'desc'     => 'Academic life drawing with a professional model — anatomy, proportion, and observation in a small-group studio.',
 			'duration' => '2.5 hours',
-			'schedule' => 'Saturdays, 13:30–16:00',
+			'schedule' => 'Fridays, 13:30–16:00',
 		),
 		array(
 			'slug'     => 'silk-painting',

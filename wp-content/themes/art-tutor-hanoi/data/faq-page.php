@@ -64,7 +64,7 @@ return array(
 				),
 				array(
 					'q' => 'I\'m visiting Hanoi for 2–3 days — which class should I take?',
-					'a' => 'Try a {book:trial class}, join {life-drawing:Saturday life drawing}, or browse our {workshops}2-hour workshops{/workshops}. Most sessions include materials and English instruction.',
+					'a' => 'Try a {book:trial class}, join {life-drawing:Friday life drawing}, or browse our {workshops}2-hour workshops{/workshops}. Most sessions include materials and English instruction.',
 				),
 			),
 			'footer' => '{book:Book now} · {calendar:Weekly calendar}',
@@ -168,7 +168,7 @@ return array(
 				),
 				array(
 					'q' => 'When is life drawing held?',
-					'a' => 'Life drawing runs on Saturdays, 13:30–16:00 (2.5 hours). Book via {book:Book a Class} or see {life-drawing:life drawing details}.',
+					'a' => 'Life drawing runs on Fridays, 13:30–16:00 (2.5 hours). Book via {book:Book a Class} or see {life-drawing:life drawing details}.',
 				),
 				array(
 					'q' => 'I\'ve never drawn from a model before — is it OK?',
